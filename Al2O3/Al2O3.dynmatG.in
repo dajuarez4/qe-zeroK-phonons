@@ -1,0 +1,6 @@
+&input
+  fildyn = 'Al2O3.G.dyn'
+  asr    = 'crystal'
+  filout = 'Al2O3.G.modes'
+  filmol = 'Al2O3.G.mold'
+/

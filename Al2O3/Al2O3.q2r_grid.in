@@ -1,0 +1,5 @@
+&input
+  fildyn = 'Al2O3.dyn',
+  flfrc  = 'Al2O3.fc',
+  zasr   = 'crystal'
+/

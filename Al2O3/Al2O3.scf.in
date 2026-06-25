@@ -1,0 +1,50 @@
+&CONTROL
+  calculation = 'scf'
+  prefix      = 'Al2O3-Bands'
+  outdir      = './tmp'
+  pseudo_dir  = './pseudo'
+  verbosity   = 'high'
+/
+
+&SYSTEM
+  ibrav     = 0
+  nat       = 10
+  ntyp      = 2
+  input_dft = 'PBE'
+
+  ecutwfc   = 80
+  ecutrho   = 640
+
+  occupations = 'fixed'
+/
+
+&ELECTRONS
+  electron_maxstep = 150
+  conv_thr         = 1.0d-8
+  mixing_beta      = 0.2
+  diagonalization  = 'david'
+/
+
+ATOMIC_SPECIES
+O   15.999   O.pbe-n-kjpaw_psl.1.0.0.UPF
+Al  26.982   Al.pbe-n-kjpaw_psl.1.0.0.UPF
+
+CELL_PARAMETERS angstrom
+  5.186866583     -0.005920746     -0.004048425
+  2.948682814      4.267187582     -0.004048405
+  2.948682810      1.544471530      3.977878067
+
+ATOMIC_POSITIONS crystal
+O    0.944159875    0.555840122    0.249999995
+O    0.444159873    0.749999998    0.055840126
+O    0.555840125    0.250000000    0.944159874
+O    0.249999998    0.944159869    0.555840125
+O    0.750000001    0.055840131    0.444159873
+O    0.055840125    0.444159878    0.750000007
+Al   0.147074858    0.147074854    0.147074854
+Al   0.352925144    0.352925142    0.352925140
+Al   0.647074857    0.647074858    0.647074858
+Al   0.852925141    0.852925145    0.852925144
+
+K_POINTS automatic
+12 12 12 0 0 0

@@ -1,0 +1,101 @@
+
+     Program Q2R v.7.0 starts on 24Jun2026 at 18:43: 1 
+
+     This program is part of the open-source Quantum ESPRESSO suite
+     for quantum simulation of materials; please cite
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 21 395502 (2009);
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 29 465901 (2017);
+         "P. Giannozzi et al., J. Chem. Phys. 152 154105 (2020);
+          URL http://www.quantum-espresso.org", 
+     in publications or presentations arising from this work. More details at
+     http://www.quantum-espresso.org/quote
+
+     Parallel version (MPI), running on     1 processors
+
+     MPI processes distributed on     1 nodes
+     151881 MiB available memory on the printing compute node when the environment starts
+
+
+     reading grid info from file Al2O3.dyn0    
+  reading force constants from file Al2O3.dyn1
+ macroscopic fields = T
+   3.26402  -0.01482  -0.01014
+  -0.01482   3.28456  -0.00531
+  -0.01014  -0.00531   3.28869
+  na=            1
+  -1.85428   0.12779  -0.29418
+   0.12779  -2.03132  -0.15409
+  -0.20474  -0.10724  -2.09147
+  na=            2
+  -1.85435  -0.22779   0.22581
+  -0.14444  -2.17200  -0.05250
+   0.19336  -0.09935  -1.95095
+  na=            3
+  -1.85435  -0.22779   0.22581
+  -0.14444  -2.17200  -0.05250
+   0.19336  -0.09935  -1.95095
+  na=            4
+  -2.24323   0.12494   0.08543
+   0.04159  -1.78310   0.21552
+   0.02844   0.21553  -1.95095
+  na=            5
+  -2.24323   0.12494   0.08543
+   0.04159  -1.78310   0.21552
+   0.02844   0.21553  -1.95095
+  na=            6
+  -1.85428   0.12779  -0.29418
+   0.12779  -2.03132  -0.15409
+  -0.20474  -0.10724  -2.09147
+  na=            7
+   2.97084  -0.02267   0.00618
+  -0.00246   2.98824  -0.03271
+  -0.02337   0.02371   2.99175
+  na=            8
+   2.97084  -0.00246  -0.02337
+  -0.02267   2.98824   0.02371
+   0.00619  -0.03272   2.99175
+  na=            9
+   2.97084  -0.00246  -0.02337
+  -0.02267   2.98824   0.02371
+   0.00619  -0.03272   2.99175
+  na=           10
+   2.97084  -0.02267   0.00618
+  -0.00246   2.98824  -0.03271
+  -0.02337   0.02371   2.99175
+Norm of the difference between old and new effective charges:    0.01095935667263668242
+  nqs=            1
+ q=   0.00000000  0.00000000  0.00000000
+  reading force constants from file Al2O3.dyn2
+  nqs=            1
+ q=  -0.00050880 -0.00026650 -0.65148399
+  reading force constants from file Al2O3.dyn3
+  nqs=            1
+ q=  -0.00050880 -0.60718670  0.23612661
+  reading force constants from file Al2O3.dyn4
+  nqs=            1
+ q=  -0.00101759 -0.60745320 -0.41535739
+  reading force constants from file Al2O3.dyn5
+  nqs=            1
+ q=  -0.49942199  0.34533119  0.23612660
+  reading force constants from file Al2O3.dyn6
+  nqs=            1
+ q=  -0.49993078  0.34506469 -0.41535739
+  reading force constants from file Al2O3.dyn7
+  nqs=            1
+ q=  -0.49993078 -0.26185551  0.47225321
+  reading force constants from file Al2O3.dyn8
+  nqs=            1
+ q=  -0.50043958 -0.26212201 -0.17923078
+
+      q-space grid ok, #points =    8
+
+      fft-check warning: sum of imaginary terms = 1.072805E-07
+
+     Q2R          :      0.05s CPU      0.07s WALL
+
+
+   This run was terminated on:  18:43: 1  24Jun2026            
+
+=------------------------------------------------------------------------------=
+   JOB DONE.
+=------------------------------------------------------------------------------=

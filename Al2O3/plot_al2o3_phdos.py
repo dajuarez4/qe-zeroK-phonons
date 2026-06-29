@@ -26,7 +26,7 @@ plt.rcParams.update(
 fig, ax = plt.subplots(figsize=(7, 5))
 ax.plot(freq, dos, color="black", linewidth=1.5)
 ax.set_xlabel(r"Frequency (cm$^{-1}$)")
-ax.set_ylabel(r"Phonon DOS (states/cm$^{-1}$)")
+ax.set_ylabel(r"Density of States")
 ax.set_xlim(left=0)
 ax.set_ylim(bottom=0)
 ax.tick_params(direction="in", length=6, width=1.2)

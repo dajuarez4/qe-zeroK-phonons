@@ -11,7 +11,7 @@ This repository is designed as a reusable template for different materials. The 
 The general workflow is:
 
 ```text
-SCF calculation → phonon q-grid → force constants → phonon dispersion → plot
+SCF calculation → phonon q-grid → force constants → phonon dispersion / phonon DOS → plot
 ```
 
 Using Quantum ESPRESSO executables:
@@ -20,8 +20,126 @@ Using Quantum ESPRESSO executables:
 pw.x      → ground-state SCF calculation
 ph.x      → dynamical matrices on a q-point grid
 q2r.x     → real-space interatomic force constants
-matdyn.x  → phonon frequencies along a selected q-path
+matdyn.x  → phonon frequencies along a selected q-path or phonon DOS
 ```
+
+---
+
+## Al2O3 Case In This Repository
+
+This repository already contains a complete Al$_2$O$_3$ example in the [`Al2O3/`](./Al2O3) folder. The files in that folder can be used as a worked case for the full 0 K phonon workflow.
+
+### Main Al2O3 Inputs
+
+* SCF input: [`Al2O3/Al2O3.scf.in`](./Al2O3/Al2O3.scf.in)
+* Phonon q-grid input: [`Al2O3/Al2O3.ph_grid.in`](./Al2O3/Al2O3.ph_grid.in)
+* q2r input: [`Al2O3/Al2O3.q2r_grid.in`](./Al2O3/Al2O3.q2r_grid.in)
+* Dispersion `matdyn` input: [`Al2O3/Al2O3.matdyn.in`](./Al2O3/Al2O3.matdyn.in)
+* DOS `matdyn` input: [`Al2O3/Al2O3.phdos.in`](./Al2O3/Al2O3.phdos.in)
+* Gamma-point phonon input: [`Al2O3/Al2O3.phG.in`](./Al2O3/Al2O3.phG.in)
+* Dispersion plotting notebook: [`Al2O3/plot_freq.ipynb`](./Al2O3/plot_freq.ipynb)
+* Dispersion plotting script: [`Al2O3/plot_al2o3_freq.py`](./Al2O3/plot_al2o3_freq.py)
+* DOS plotting script: [`Al2O3/plot_al2o3_phdos.py`](./Al2O3/plot_al2o3_phdos.py)
+* Slurm script for DOS: [`Al2O3/run_phdos.sbatch`](./Al2O3/run_phdos.sbatch)
+
+### Al2O3 Calculation Settings
+
+The Al$_2$O$_3$ example uses:
+
+* PBE exchange-correlation functional
+* PAW pseudopotentials for Al and O
+* 10-atom unit cell
+* `12×12×12` k-point mesh
+* `ecutwfc = 80 Ry`
+* `ecutrho = 640 Ry`
+* `conv_thr = 1.0d-8`
+* `mixing_beta = 0.2`
+* `2×2×2` phonon q-grid
+
+The dispersion path used in [`Al2O3/Al2O3.matdyn.in`](./Al2O3/Al2O3.matdyn.in) is:
+
+```text
+Gamma → M → K → Gamma → A → L → H → A
+```
+
+### Al2O3 Files Already Present
+
+The folder already contains calculated data and plots, including:
+
+* SCF output: [`Al2O3/Al2O3.scf.out`](./Al2O3/Al2O3.scf.out)
+* q-grid phonon output: [`Al2O3/Al2O3.ph_grid.out`](./Al2O3/Al2O3.ph_grid.out)
+* q2r output: [`Al2O3/Al2O3.q2r_grid.out`](./Al2O3/Al2O3.q2r_grid.out)
+* Force constants: [`Al2O3/Al2O3.fc`](./Al2O3/Al2O3.fc)
+* Dispersion output: [`Al2O3/Al2O3.matdyn.out`](./Al2O3/Al2O3.matdyn.out)
+* Raw dispersion frequencies: [`Al2O3/Al2O3.freq`](./Al2O3/Al2O3.freq)
+* Plot-ready dispersion data: [`Al2O3/Al2O3.freq.gp`](./Al2O3/Al2O3.freq.gp)
+* Gamma-point phonon output: [`Al2O3/Al2O3.phG.out`](./Al2O3/Al2O3.phG.out)
+* Gamma-point mode files: [`Al2O3/Al2O3.G.dyn`](./Al2O3/Al2O3.G.dyn), [`Al2O3/Al2O3.G.modes`](./Al2O3/Al2O3.G.modes)
+* Dispersion figure: [`Al2O3/Al2O3_black_phonon_dispersion.png`](./Al2O3/Al2O3_black_phonon_dispersion.png)
+* Gamma-point figures: [`Al2O3/Al2O3_Gamma_phonons.png`](./Al2O3/Al2O3_Gamma_phonons.png), [`Al2O3/Al2O3_Gamma_phonons_sticks.png`](./Al2O3/Al2O3_Gamma_phonons_sticks.png)
+
+### Al2O3 Reproduction Commands
+
+Inside the `Al2O3/` directory:
+
+```bash
+pw.x < Al2O3.scf.in > Al2O3.scf.out
+ph.x < Al2O3.ph_grid.in > Al2O3.ph_grid.out
+q2r.x < Al2O3.q2r_grid.in > Al2O3.q2r_grid.out
+matdyn.x < Al2O3.matdyn.in > Al2O3.matdyn.out
+python plot_al2o3_freq.py
+```
+
+For the Gamma-point phonons:
+
+```bash
+ph.x < Al2O3.phG.in > Al2O3.phG.out
+dynmat.x < Al2O3.dynmatG.in > Al2O3.dynmatG.out
+```
+
+For the phonon DOS:
+
+```bash
+matdyn.x < Al2O3.phdos.in > Al2O3.phdos.out
+python plot_al2o3_phdos.py
+```
+
+If `matdyn.x` cannot find MKL or other runtime libraries in an interactive shell, submit the DOS step through Slurm:
+
+```bash
+sbatch run_phdos.sbatch
+```
+
+### Al2O3 DOS Input
+
+The DOS calculation in [`Al2O3/Al2O3.phdos.in`](./Al2O3/Al2O3.phdos.in) uses:
+
+```fortran
+&input
+  asr = 'crystal',
+  dos = .true.,
+  flfrc = 'Al2O3.fc',
+  fldos = 'Al2O3.phdos.dat',
+  nk1 = 16,
+  nk2 = 16,
+  nk3 = 16,
+  deltaE = 1.0,
+/
+```
+
+This computes the total phonon DOS from the real-space force constants already present in the `Al2O3/` folder.
+
+### Note On Comparison With Materials Project
+
+The Al$_2$O$_3$ dispersion in this repository can be compared qualitatively with Materials Project entry `mp-1143`:
+
+https://legacy.materialsproject.org/materials/mp-1143/
+
+The overall phonon structure is similar, but direct point-by-point comparison should be made carefully because:
+
+* the Materials Project path is different from the path used here
+* the Materials Project phonons were generated with a different code/workflow
+* this local example uses a relatively small `2×2×2` q-grid
 
 ---
 
@@ -30,26 +148,20 @@ matdyn.x  → phonon frequencies along a selected q-path
 ```text
 qe-zerok-phonons/
 ├── README.md
-├── .gitignore
-├── examples/
-│   └── material_example/
-│       ├── scf.in
-│       ├── ph_grid.in
-│       ├── q2r.in
-│       ├── matdyn.in
-│       └── run_all.sh
-├── scripts/
-│   ├── run_qe_phonons.sh
-│   └── plot_phonons.py
-├── templates/
-│   ├── scf.template.in
-│   ├── ph_grid.template.in
-│   ├── q2r.template.in
-│   └── matdyn.template.in
-├── pseudos/
-│   └── README.md
-└── results/
-    └── README.md
+└── Al2O3/
+    ├── Al2O3.scf.in
+    ├── Al2O3.ph_grid.in
+    ├── Al2O3.q2r_grid.in
+    ├── Al2O3.matdyn.in
+    ├── Al2O3.phdos.in
+    ├── plot_freq.ipynb
+    ├── plot_al2o3_freq.py
+    ├── plot_al2o3_phdos.py
+    ├── run_phdos.sbatch
+    ├── Al2O3.freq
+    ├── Al2O3.freq.gp
+    ├── Al2O3.fc
+    └── ...
 ```
 
 ---
@@ -191,7 +303,42 @@ The `.freq.gp` file can be used directly for plotting.
 
 ---
 
-## 5. Plot the Phonon Dispersion
+## 5. Calculate Phonon DOS
+
+The same `matdyn.x` executable can also be used to compute the phonon density of states from the force constants.
+
+Example input:
+
+```fortran
+&input
+  asr = 'crystal',
+  dos = .true.,
+  flfrc = 'material.fc',
+  fldos = 'material.phdos.dat',
+  nk1 = 16,
+  nk2 = 16,
+  nk3 = 16,
+  deltaE = 1.0,
+/
+```
+
+Run:
+
+```bash
+matdyn.x < phdos.in > phdos.out
+```
+
+Main output:
+
+```text
+material.phdos.dat
+```
+
+This file can then be plotted as the total phonon DOS.
+
+---
+
+## 6. Plot the Phonon Dispersion
 
 A Python script can be used to plot the phonon dispersion from the `material.freq.gp` file.
 
@@ -338,6 +485,8 @@ material.fc          real-space force constants
 matdyn.out           matdyn output
 material.freq        phonon frequencies
 material.freq.gp     plottable phonon dispersion data
+phdos.out            phonon DOS output
+material.phdos.dat   plottable phonon DOS data
 *.png                phonon dispersion figure
 ```
 

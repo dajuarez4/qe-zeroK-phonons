@@ -1,0 +1,10 @@
+&input
+  asr = 'crystal',
+  dos = .true.,
+  flfrc = 'Al2O3.fc',
+  fldos = 'Al2O3.phdos.dat',
+  nk1 = 16,
+  nk2 = 16,
+  nk3 = 16,
+  deltaE = 1.0,
+/

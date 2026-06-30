@@ -1,0 +1,10 @@
+&input
+  asr = 'crystal',
+  flfrc = 'Al2O3.fc',
+  flfrq = 'Al2O3.exp_ga.freq',
+  q_in_cryst_coord = .true.,
+  q_in_band_form = .true.
+/
+2
+0.000000000 0.000000000 0.000000000 60
+0.000000000 0.500000000 0.000000000 1

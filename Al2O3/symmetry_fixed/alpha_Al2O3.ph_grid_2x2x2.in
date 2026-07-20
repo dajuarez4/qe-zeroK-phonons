@@ -1,0 +1,15 @@
+Phonons of symmetry-fixed alpha-Al2O3 on a 2x2x2 q grid
+
+&INPUTPH
+  prefix   = 'alpha-Al2O3-sym'
+  outdir   = './tmp'
+  fildyn   = 'alpha_Al2O3.dyn'
+  tr2_ph   = 1.0d-14
+  ldisp    = .true.
+  nq1      = 2
+  nq2      = 2
+  nq3      = 2
+  epsil    = .true.
+  trans    = .true.
+  recover  = .true.
+/

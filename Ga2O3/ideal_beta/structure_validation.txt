@@ -1,0 +1,12 @@
+Ideal beta-Ga2O3 structure validation
+=======================================
+Conventional atoms: 20
+Primitive atoms: 10
+Formula: Ga2O3
+Space group: C2/m (12)
+Point group: 2/m
+Conventional a,b,c (angstrom): 12.225300 3.036360 5.806450
+Conventional alpha,beta,gamma (degree): 90.000000 103.754000 90.000000
+Conventional volume (angstrom^3): 209.357371
+Primitive volume (angstrom^3): 104.678685
+Path: Gamma-Y-F-L-I | I1-Z-F1 | Y-X1 | X-Gamma-N | M-Gamma

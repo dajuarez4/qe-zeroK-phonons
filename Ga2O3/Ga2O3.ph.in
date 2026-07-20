@@ -1,0 +1,12 @@
+Ga2O3 phonon grid
+&inputph
+  prefix  = 'Ga2O3-Bands',
+  outdir  = './tmp',
+  fildyn  = 'Ga2O3.dyn',
+  tr2_ph  = 1.0d-12,
+
+  ldisp = .true.,
+  nq1 = 2,
+  nq2 = 2,
+  nq3 = 2,
+/

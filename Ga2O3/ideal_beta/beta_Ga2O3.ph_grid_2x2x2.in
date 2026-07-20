@@ -1,0 +1,15 @@
+Phonons of ideal beta-Ga2O3 on a 2x2x2 q grid
+
+&INPUTPH
+  prefix   = 'beta-Ga2O3'
+  outdir   = './tmp'
+  fildyn   = 'beta_Ga2O3.dyn'
+  tr2_ph   = 1.0d-14
+  ldisp    = .true.
+  nq1      = 2
+  nq2      = 2
+  nq3      = 2
+  epsil    = .true.
+  trans    = .true.
+  recover  = .true.
+/

@@ -1,0 +1,47 @@
+&CONTROL
+  calculation = 'scf'
+  prefix      = 'alpha-Al2O3-sym'
+  outdir      = './tmp'
+  pseudo_dir  = '../pseudo'
+  verbosity   = 'high'
+  tstress     = .true.
+  tprnfor     = .true.
+/
+
+&SYSTEM
+  ibrav       = 5
+  celldm(1)   = 9.8017666786
+  celldm(4)   = 0.5675506303
+  nat         = 10
+  ntyp        = 2
+  input_dft   = 'PBE'
+  ecutwfc     = 80
+  ecutrho     = 640
+  occupations = 'fixed'
+/
+
+&ELECTRONS
+  electron_maxstep = 200
+  conv_thr         = 1.0d-10
+  mixing_beta      = 0.2
+  diagonalization  = 'david'
+/
+
+ATOMIC_SPECIES
+O   15.999  O.pbe-n-kjpaw_psl.1.0.0.UPF
+Al  26.982  Al.pbe-n-kjpaw_psl.1.0.0.UPF
+
+ATOMIC_POSITIONS crystal
+O    0.944159874000   0.555840126000   0.250000000000
+O    0.444159874000   0.750000000000   0.055840126000
+O    0.555840126000   0.250000000000   0.944159874000
+O    0.250000000000   0.944159874000   0.555840126000
+O    0.750000000000   0.055840126000   0.444159874000
+O    0.055840126000   0.444159874000   0.750000000000
+Al   0.147074856917   0.147074856917   0.147074856917
+Al   0.352925143083   0.352925143083   0.352925143083
+Al   0.647074856917   0.647074856917   0.647074856917
+Al   0.852925143083   0.852925143083   0.852925143083
+
+K_POINTS automatic
+12 12 12 0 0 0

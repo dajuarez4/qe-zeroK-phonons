@@ -1,0 +1,20 @@
+Symmetry-fixed alpha-Al2O3 validation
+=========================================
+Source: ../Al2O3.scf.in
+Atoms: 10
+Formula: Al2O3
+Space group: R-3c (167)
+Point group: -3m
+Symmetry operations: 12
+Rhombohedral a (angstrom): 5.18687155
+Rhombohedral angle (degree): 55.42040023
+Primitive volume (angstrom^3): 88.17815078
+Minimum interatomic distance (angstrom): 1.87521389
+Path: Gamma-L-B1 | B-Z-Gamma-X | Q-F-P1-Z | L-P
+
+Existing-run audit:
+Optical branches are positive.
+Minimum interpolated frequency: -9.6361 cm^-1 (acoustic artifact).
+Existing QE symmetry operations: 2 (identity and inversion only).
+Expected R-3c symmetry operations: 12.
+Existing matdyn maximum non-Hermiticity: 0.017658.

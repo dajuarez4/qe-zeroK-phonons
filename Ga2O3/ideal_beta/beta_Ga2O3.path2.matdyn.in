@@ -1,0 +1,11 @@
+&input
+  asr              = 'crystal',
+  flfrc            = 'beta_Ga2O3.fc',
+  flfrq            = 'beta_Ga2O3.path2.freq',
+  q_in_cryst_coord = .true.,
+  q_in_band_form   = .true.,
+/
+3
+    0.2581632146  -0.2581632146   0.5000000000  30
+    0.0000000000   0.0000000000   0.5000000000  30
+    0.3973130884   0.3973130884   0.5897307556  1

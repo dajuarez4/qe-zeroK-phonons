@@ -35,12 +35,31 @@ This repository already contains a complete Al$_2$O$_3$ example in the [`Al2O3/`
 * Phonon q-grid input: [`Al2O3/Al2O3.ph_grid.in`](./Al2O3/Al2O3.ph_grid.in)
 * q2r input: [`Al2O3/Al2O3.q2r_grid.in`](./Al2O3/Al2O3.q2r_grid.in)
 * Dispersion `matdyn` input: [`Al2O3/Al2O3.matdyn.in`](./Al2O3/Al2O3.matdyn.in)
+* Materials Project style segmented `matdyn` inputs:
+  [`Al2O3/Al2O3.matdyn_mp_seg1.in`](./Al2O3/Al2O3.matdyn_mp_seg1.in),
+  [`Al2O3/Al2O3.matdyn_mp_seg2.in`](./Al2O3/Al2O3.matdyn_mp_seg2.in),
+  [`Al2O3/Al2O3.matdyn_mp_seg3.in`](./Al2O3/Al2O3.matdyn_mp_seg3.in),
+  [`Al2O3/Al2O3.matdyn_mp_seg4.in`](./Al2O3/Al2O3.matdyn_mp_seg4.in)
 * DOS `matdyn` input: [`Al2O3/Al2O3.phdos.in`](./Al2O3/Al2O3.phdos.in)
 * Gamma-point phonon input: [`Al2O3/Al2O3.phG.in`](./Al2O3/Al2O3.phG.in)
 * Dispersion plotting notebook: [`Al2O3/plot_freq.ipynb`](./Al2O3/plot_freq.ipynb)
 * Dispersion plotting script: [`Al2O3/plot_al2o3_freq.py`](./Al2O3/plot_al2o3_freq.py)
+* Materials Project style plotting script: [`Al2O3/plot_al2o3_mp_path.py`](./Al2O3/plot_al2o3_mp_path.py)
+* Side-by-side comparison plotting script: [`Al2O3/plot_al2o3_compare_dispersion.py`](./Al2O3/plot_al2o3_compare_dispersion.py)
 * DOS plotting script: [`Al2O3/plot_al2o3_phdos.py`](./Al2O3/plot_al2o3_phdos.py)
 * Slurm script for DOS: [`Al2O3/run_phdos.sbatch`](./Al2O3/run_phdos.sbatch)
+* Materials Project retrieval scripts:
+  [`Al2O3/retrieve_data_mp.py`](./Al2O3/retrieve_data_mp.py),
+  [`Al2O3/inspect_mp_phonon_fields.py`](./Al2O3/inspect_mp_phonon_fields.py),
+  [`Al2O3/probe_mp_phonon_api.py`](./Al2O3/probe_mp_phonon_api.py)
+* Materials Project comparison plot:
+  [`Al2O3/plot_al2o3_compare_mp_api.py`](./Al2O3/plot_al2o3_compare_mp_api.py)
+* Publication-style overlay plot:
+  [`Al2O3/plot_al2o3_overlay_mp_api.py`](./Al2O3/plot_al2o3_overlay_mp_api.py)
+* Publication-style DOS overlay plot:
+  [`Al2O3/plot_al2o3_overlay_dos_mp_api.py`](./Al2O3/plot_al2o3_overlay_dos_mp_api.py)
+* Publication-style band+DOS comparison plot:
+  [`Al2O3/plot_al2o3_overlay_band_dos_mp_api.py`](./Al2O3/plot_al2o3_overlay_band_dos_mp_api.py)
 
 ### Al2O3 Calculation Settings
 
@@ -110,6 +129,86 @@ If `matdyn.x` cannot find MKL or other runtime libraries in an interactive shell
 sbatch run_phdos.sbatch
 ```
 
+### Al2O3 Interactive Commands On The Cluster
+
+If `matdyn.x` is run interactively on the cluster, load the same runtime environment used by the working Slurm jobs before calling Quantum ESPRESSO:
+
+```bash
+cd /Users/dajuarez4/Documents/qe-zeroK-phonons/Al2O3
+
+source /opt/intel/oneapi/setvars.sh -ofi_internal=1 --force
+module purge
+module load gnu12
+module load openmpi4/4.1.5
+module load tbb
+module load compiler-rt
+module load mkl
+```
+
+Then run the standard dispersion:
+
+```bash
+mpirun -np 1 /shared/quantum-espresso/bin/matdyn.x -in Al2O3.matdyn.in > Al2O3.matdyn.out
+```
+
+Run the DOS interactively:
+
+```bash
+mpirun -np 1 /shared/quantum-espresso/bin/matdyn.x -in Al2O3.phdos.in > Al2O3.phdos.out
+python plot_al2o3_phdos.py
+```
+
+To compare more closely with the Materials Project `mp-1143` path, run the segmented Materials Project style inputs:
+
+```bash
+mpirun -np 1 /shared/quantum-espresso/bin/matdyn.x -in Al2O3.matdyn_mp_seg1.in > Al2O3.matdyn_mp_seg1.out
+mpirun -np 1 /shared/quantum-espresso/bin/matdyn.x -in Al2O3.matdyn_mp_seg2.in > Al2O3.matdyn_mp_seg2.out
+mpirun -np 1 /shared/quantum-espresso/bin/matdyn.x -in Al2O3.matdyn_mp_seg3.in > Al2O3.matdyn_mp_seg3.out
+mpirun -np 1 /shared/quantum-espresso/bin/matdyn.x -in Al2O3.matdyn_mp_seg4.in > Al2O3.matdyn_mp_seg4.out
+```
+
+These four files correspond to the disconnected path segments:
+
+```text
+Gamma → L → B1
+B → Z → Gamma → X
+Q → F → P1 → Z
+L → P
+```
+
+After the runs, the plot-ready files will be:
+
+```text
+Al2O3.mp_seg1.freq.gp
+Al2O3.mp_seg2.freq.gp
+Al2O3.mp_seg3.freq.gp
+Al2O3.mp_seg4.freq.gp
+```
+
+Plot the segmented path with:
+
+```bash
+python plot_al2o3_mp_path.py
+```
+
+This writes:
+
+```text
+Al2O3_mp_style_phonon_dispersion.png
+```
+
+Plot the original QE path and the MP-style path side by side with:
+
+```bash
+python plot_al2o3_compare_dispersion.py
+```
+
+This writes:
+
+```text
+Al2O3_compare_dispersion_paths.png
+```
+
 ### Al2O3 DOS Input
 
 The DOS calculation in [`Al2O3/Al2O3.phdos.in`](./Al2O3/Al2O3.phdos.in) uses:
@@ -141,6 +240,168 @@ The overall phonon structure is similar, but direct point-by-point comparison sh
 * the Materials Project phonons were generated with a different code/workflow
 * this local example uses a relatively small `2×2×2` q-grid
 
+### Note On Materials Project API Data
+
+The current `mp_api` phonon search route used here:
+
+```python
+mpr.materials.phonon.search(material_ids=["mp-1143"])
+```
+
+returns phonon metadata documents for `mp-1143`, but in your current environment it does not expose raw band-path arrays or phonon DOS arrays through the fields listed by:
+
+```bash
+python inspect_mp_phonon_fields.py
+```
+
+Use the retrieval helpers in this order:
+
+```bash
+export MP_API_KEY="your_key_here"
+python retrieve_data_mp.py
+python inspect_mp_phonon_fields.py
+python probe_mp_phonon_api.py
+```
+
+In your current setup, the direct helper route is working and writes:
+
+```text
+mp-1143-band.json
+mp-1143-dos.json
+```
+
+The band JSON contains the raw arrays needed for plotting, including:
+
+```text
+qpoints
+frequencies
+labels_dict
+eigendisplacements
+```
+
+You can compare the local QE dispersion on the Materials Project style path against the raw Materials Project band data with:
+
+```bash
+python plot_al2o3_compare_mp_api.py
+```
+
+This writes:
+
+```text
+Al2O3_compare_with_mp_api.png
+```
+
+For a single publication-style overlay with `This work` in black and `Petretto et al. (2018)` in blue:
+
+```bash
+python plot_al2o3_overlay_mp_api.py
+```
+
+This writes:
+
+```text
+Al2O3_qe_vs_mp_overlay.png
+Al2O3_qe_vs_mp_overlay.pdf
+```
+
+For the total phonon DOS comparison between `This work` and `Petretto et al. (2018)`:
+
+```bash
+python plot_al2o3_overlay_dos_mp_api.py
+```
+
+This writes:
+
+```text
+Al2O3_qe_vs_mp_dos_overlay.png
+Al2O3_qe_vs_mp_dos_overlay.pdf
+```
+
+For the standard phonon-layout comparison with dispersion on the left and DOS on the right:
+
+```bash
+python plot_al2o3_overlay_band_dos_mp_api.py
+```
+
+This writes:
+
+```text
+Al2O3_qe_vs_mp_band_dos.png
+Al2O3_qe_vs_mp_band_dos.pdf
+```
+
+In the current version, this figure also overlays the experimental `20 K` neutron points only on the first `Γ-L` branch, mapped from the tabulated `Γ-A` direction by symmetry.
+
+If `probe_mp_phonon_api.py` reports that no direct phonon bandstructure or DOS helper exists on a different installation of `MPRester`, then the practical comparison route in this repository remains:
+
+* compare your QE dispersion with the Materials Project figure visually
+* use the Materials Project style segmented path already prepared in `Al2O3/`
+* avoid committing `MP_API_KEY` or hardcoding it into tracked files
+
+### Experimental 20 K Neutron Data Overlay
+
+The repository also includes a parser for the 20 K sapphire neutron-scattering tables from:
+
+```text
+Lattice dynamics of sapphire (Al2O3)
+```
+
+Extract the experimental points into CSV with:
+
+```bash
+python extract_sapphire_experiment.py
+```
+
+This writes:
+
+```text
+sapphire_20K_experiment_points.csv
+```
+
+To compare your QE force constants directly against the experimental directions used in that paper, run `matdyn.x` on:
+
+```bash
+matdyn.x < Al2O3.matdyn_exp_gz.in > Al2O3.exp_gz.out
+matdyn.x < Al2O3.matdyn_exp_ga.in > Al2O3.exp_ga.out
+matdyn.x < Al2O3.matdyn_exp_gd.in > Al2O3.exp_gd.out
+```
+
+Then plot the QE curves with the experimental black dots overlaid:
+
+```bash
+python plot_al2o3_experiment_overlay.py
+```
+
+This writes:
+
+```text
+Al2O3_qe_vs_experiment_20K.png
+Al2O3_qe_vs_experiment_20K.pdf
+```
+
+For a paper-style single-panel plot closer to the later `LDA/GGA + experiment` figure layout, run:
+
+```bash
+matdyn.x < Al2O3.matdyn_exp_paper_path.in > Al2O3.exp_paper_path.out
+python plot_al2o3_experiment_paper_style.py
+```
+
+This writes:
+
+```text
+Al2O3_experiment_paper_style.png
+Al2O3_experiment_paper_style.pdf
+Al2O3_experiment_paper_style_points.csv
+```
+
+This plot maps the exact tabulated neutron points onto the `Γ-L-X-Γ-Z` style path using:
+
+* `Γ-L` from the tabulated `Γ-A` branch set by symmetry
+* `X-Γ` from the tabulated `Γ-D` branch set in reverse
+* `Γ-Z` directly from the tabulated `Γ-Z` branch set
+
+There is no separate `L-X` experimental table in the 1993 neutron paper, so that middle segment has no direct black-dot measurements from the tabulated dataset.
+
 ---
 
 ## Repository Structure
@@ -153,6 +414,10 @@ qe-zerok-phonons/
     ├── Al2O3.ph_grid.in
     ├── Al2O3.q2r_grid.in
     ├── Al2O3.matdyn.in
+    ├── Al2O3.matdyn_mp_seg1.in
+    ├── Al2O3.matdyn_mp_seg2.in
+    ├── Al2O3.matdyn_mp_seg3.in
+    ├── Al2O3.matdyn_mp_seg4.in
     ├── Al2O3.phdos.in
     ├── plot_freq.ipynb
     ├── plot_al2o3_freq.py

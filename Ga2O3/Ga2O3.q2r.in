@@ -1,0 +1,5 @@
+&input
+  fildyn = 'Ga2O3.dyn',
+  flfrc  = 'Ga2O3.fc',
+  zasr   = 'crystal',
+/

@@ -1,0 +1,51 @@
+&CONTROL
+  calculation = 'scf'
+  prefix      = 'beta-Ga2O3'
+  outdir      = './tmp'
+  pseudo_dir  = '../pseudo'
+  verbosity   = 'high'
+  tstress     = .true.
+  tprnfor     = .true.
+/
+
+&SYSTEM
+  ibrav       = 0
+  nat         = 10
+  ntyp        = 2
+  input_dft   = 'PBE'
+  ecutwfc     = 80
+  ecutrho     = 640
+  occupations = 'fixed'
+/
+
+&ELECTRONS
+  electron_maxstep = 200
+  conv_thr         = 1.0d-10
+  mixing_beta      = 0.2
+  diagonalization  = 'david'
+/
+
+
+ATOMIC_SPECIES
+Ga  69.723  Ga.pbe-dn-kjpaw_psl.1.0.0.UPF
+O   15.999  O.pbe-n-kjpaw_psl.1.0.0.UPF
+
+CELL_PARAMETERS angstrom
+      1.5181800000     6.1126500000     0.0000000000
+     -1.5181800000     6.1126500000     0.0000000000
+      0.0000000000     1.3805049958     5.6399527976
+
+ATOMIC_POSITIONS crystal
+Ga   0.909859000000   0.909859000000   0.795410000000
+Ga   0.090141000000   0.090141000000   0.204590000000
+Ga   0.341541000000   0.341541000000   0.314170000000
+Ga   0.658459000000   0.658459000000   0.685830000000
+O    0.833770000000   0.833770000000   0.110440000000
+O    0.166230000000   0.166230000000   0.889560000000
+O    0.826784000000   0.826784000000   0.563130000000
+O    0.173216000000   0.173216000000   0.436870000000
+O    0.504410000000   0.504410000000   0.256200000000
+O    0.495590000000   0.495590000000   0.743800000000
+
+K_POINTS automatic
+12 12 12 0 0 0

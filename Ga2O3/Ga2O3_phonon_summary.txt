@@ -1,0 +1,16 @@
+Ga2O3 phonon validation summary
+================================
+q points: 281
+branches: 30
+minimum frequency: -76.0629 cm^-1
+minimum at path distance: 2.097864
+minimum branch: 1
+maximum frequency: 620.1056 cm^-1
+negative sampled frequencies: 193
+q points with at least one negative mode: 137
+Gamma frequencies below -10 cm^-1: -39.4666
+
+Interpretation: the supplied force constants contain imaginary modes
+and do not reproduce the expected stable beta-Ga2O3 dispersion. This
+indicates a structure/symmetry/convergence mismatch in this calculation;
+it is not evidence that beta-Ga2O3 itself is unstable.

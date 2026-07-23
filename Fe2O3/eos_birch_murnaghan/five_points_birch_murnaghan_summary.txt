@@ -1,0 +1,28 @@
+Five completed AFM alpha-Fe2O3 EOS calculations
+
+Completed-point checks:
+V092: V=92.574946 A^3, steps=7, Efinal=-1566.51907837 Ry, force=0.000058 Ry/bohr, Mtot=-0.00, |M|=17.19
+V094: V=94.587457 A^3, steps=8, Efinal=-1566.54791966 Ry, force=0.000028 Ry/bohr, Mtot=0.00, |M|=17.25
+V096: V=96.599954 A^3, steps=7, Efinal=-1566.57087116 Ry, force=0.000043 Ry/bohr, Mtot=0.00, |M|=17.29
+V098: V=98.612450 A^3, steps=9, Efinal=-1566.58853080 Ry, force=0.000001 Ry/bohr, Mtot=-0.00, |M|=17.34
+V100: V=100.624947 A^3, steps=9, Efinal=-1566.60136918 Ry, force=0.000001 Ry/bohr, Mtot=0.00, |M|=17.37
+
+REQUESTED FIT: every reported relaxation energy (40 observations)
+V0       = 106.260398 A^3
+a_hex    = 5.127801 A
+c_hex    = 13.999086 A
+B0       = 188.384126 GPa
+B0'      = 4.172404
+RMSE     = 11.138017 meV/primitive cell
+Warning: intermediate ionic configurations are not equilibrium EOS points.
+Repeated volumes are also weighted unequally (7, 8, 7, 9, and 9 energies).
+
+STANDARD FIT: final relaxed energy at each volume (5 observations)
+V0       = 106.231480 A^3
+a_hex    = 5.127336 A
+c_hex    = 13.997816 A
+B0       = 189.178359 GPa
+B0'      = 4.140745
+RMSE     = 0.050075 meV/primitive cell
+Warning: all five volumes are on the compressed side; V0 is extrapolated.
+Finish V102-V108 before treating either fit as a physical result.

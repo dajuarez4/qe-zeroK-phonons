@@ -1,0 +1,11 @@
+&input
+  asr    = 'crystal',
+  dos    = .true.,
+  flfrc  = 'alpha_Fe2O3.fc',
+  fldos  = 'alpha_Fe2O3.phdos.dat',
+  nk1    = 16,
+  nk2    = 16,
+  nk3    = 16,
+  deltaE = 1.0,
+/
+

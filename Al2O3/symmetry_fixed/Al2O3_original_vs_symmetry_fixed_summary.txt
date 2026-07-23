@@ -1,0 +1,24 @@
+Al2O3 original vs symmetry-fixed phonon comparison
+===================================================
+Both calculations: 2x2x2 q grid, PBE, 80/640 Ry, 12x12x12 k grid
+Compared frequency samples: 8220
+Mean absolute difference: 0.388490 cm^-1
+RMS difference: 0.512246 cm^-1
+Maximum absolute difference: 2.287300 cm^-1
+Mean signed difference: -0.358110 cm^-1
+Completed new QE stages: 8/8
+New SCF symmetry operations: 12
+New SCF total force: 0.011483 Ry/bohr
+Original/new max matdyn non-Hermiticity: 0.017658 / 0.020914
+Original/new total DOS integrals: 30.000047 / 30.008200
+
+segment 1: MAE=0.354141, RMS=0.481419, max_abs=2.106800 cm^-1
+segment 2: MAE=0.366502, RMS=0.504693, max_abs=2.287300 cm^-1
+segment 3: MAE=0.423551, RMS=0.527540, max_abs=2.287300 cm^-1
+segment 4: MAE=0.417701, RMS=0.546386, max_abs=2.106800 cm^-1
+
+Interpretation: the dispersions agree to well below 1 cm^-1 on average.
+The symmetry-fixed run confirms the original physical result while
+restoring the expected 12 R-3c symmetry operations.
+The matdyn non-Hermiticity warning persists; a denser 4x4x4 q grid
+is the appropriate next convergence test if higher accuracy is needed.

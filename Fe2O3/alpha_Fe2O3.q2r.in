@@ -1,0 +1,6 @@
+&input
+  fildyn = 'alpha_Fe2O3.dyn',
+  flfrc  = 'alpha_Fe2O3.fc',
+  zasr   = 'crystal',
+/
+

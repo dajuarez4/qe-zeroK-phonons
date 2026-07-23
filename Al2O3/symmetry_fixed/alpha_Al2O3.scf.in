@@ -2,7 +2,7 @@
   calculation = 'scf'
   prefix      = 'alpha-Al2O3-sym'
   outdir      = './tmp'
-  pseudo_dir  = '../pseudo'
+  pseudo_dir  = '/scratch/dajuarez4/Al2O3/pseudo'
   verbosity   = 'high'
   tstress     = .true.
   tprnfor     = .true.

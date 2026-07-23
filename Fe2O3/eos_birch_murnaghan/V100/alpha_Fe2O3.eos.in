@@ -1,0 +1,64 @@
+&CONTROL
+  calculation   = 'relax'
+  prefix        = 'alpha-Fe2O3-eos'
+  outdir        = './tmp'
+  pseudo_dir    = '../../pseudo'
+  verbosity     = 'high'
+  tstress       = .true.
+  tprnfor       = .true.
+  etot_conv_thr = 1.0d-7
+  forc_conv_thr = 5.0d-5
+/
+
+&SYSTEM
+  ibrav             = 5
+  celldm(1)         = 10.2551679579
+  celldm(4)         = 0.5695057215
+  nat               = 10
+  ntyp              = 3
+  input_dft         = 'PBE'
+  ecutwfc           = 80
+  ecutrho           = 640
+  occupations       = 'fixed'
+  nspin             = 2
+  tot_magnetization = 0.0
+  starting_magnetization(2) =  0.80
+  starting_magnetization(3) = -0.80
+  lda_plus_u        = .true.
+  Hubbard_U(2)      = 4.0
+  Hubbard_U(3)      = 4.0
+  U_projection_type = 'ortho-atomic'
+/
+
+&ELECTRONS
+  electron_maxstep = 300
+  conv_thr         = 1.0d-10
+  mixing_beta      = 0.15
+  mixing_mode      = 'local-TF'
+  diagonalization  = 'david'
+/
+
+&IONS
+  ion_dynamics = 'bfgs'
+/
+
+ATOMIC_SPECIES
+O       15.999  O.pbe-n-kjpaw_psl.1.0.0.UPF
+Fe1     55.845  Fe.pbe-spn-kjpaw_psl.1.0.0.UPF
+Fe2     55.845  Fe.pbe-spn-kjpaw_psl.1.0.0.UPF
+
+ATOMIC_POSITIONS crystal
+O       0.943970000000  0.556030000000  0.250000000000
+O       0.443970000000  0.750000000000  0.056030000000
+O       0.556030000000  0.250000000000  0.943970000000
+O       0.250000000000  0.943970000000  0.556030000000
+O       0.750000000000  0.056030000000  0.443970000000
+O       0.056030000000  0.443970000000  0.750000000000
+Fe1     0.144720000000  0.144720000000  0.144720000000
+Fe1     0.355280000000  0.355280000000  0.355280000000
+Fe2     0.644720000000  0.644720000000  0.644720000000
+Fe2     0.855280000000  0.855280000000  0.855280000000
+
+K_POINTS automatic
+8 8 8 0 0 0
+

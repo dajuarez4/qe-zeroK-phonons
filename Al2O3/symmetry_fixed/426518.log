@@ -1,0 +1,30 @@
+/scratch/dajuarez4/symmetry_fixed
+cnode051.hpc.local
+Sun Jul 19 01:59:59 AM MDT 2026
+ 
+:: initializing oneAPI environment ...
+   slurm_script: BASH_VERSION = 5.1.8(1)-release
+   args: Using "$@" for setvars.sh arguments: -ofi_internal=1 --force
+:: advisor -- latest
+:: ccl -- latest
+:: compiler -- latest
+:: dal -- latest
+:: debugger -- latest
+:: dev-utilities -- latest
+:: dnnl -- latest
+:: dpcpp-ct -- latest
+:: dpl -- latest
+:: inspector -- latest
+:: ipp -- latest
+:: ippcp -- latest
+:: itac -- latest
+:: mkl -- latest
+:: mpi -- latest
+:: tbb -- latest
+:: vtune -- latest
+:: oneAPI environment initialized ::
+ 
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+Sun Jul 19 02:12:38 AM MDT 2026

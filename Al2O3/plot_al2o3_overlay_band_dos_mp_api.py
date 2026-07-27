@@ -63,7 +63,7 @@ def load_qe_segment(path: Path) -> tuple[np.ndarray, np.ndarray]:
 
     x = data[:, 0].astype(float)
     x -= x[0]
-    freqs = data[:, 1:].astype(float)
+    freqs = data[:, 1:].astype(float) / CM1_PER_THZ
     freqs[freqs < 0.0] = 0.0
     return x, freqs
 
@@ -103,7 +103,7 @@ def load_mp_segments() -> list[dict[str, np.ndarray | list[str]]]:
         data = json.load(f)
 
     qpoints = np.asarray(data["qpoints"], dtype=float)
-    freqs = np.asarray(data["frequencies"], dtype=float).T * CM1_PER_THZ
+    freqs = np.asarray(data["frequencies"], dtype=float).T
     freqs[freqs < 0.0] = 0.0
     labels_dict = data["labels_dict"]
 
@@ -168,8 +168,8 @@ def load_qe_dos() -> tuple[np.ndarray, np.ndarray]:
     if data.ndim != 2 or data.shape[1] < 2:
         raise ValueError(f"Unexpected DOS format in {QE_DOS_FILE}")
 
-    freq = data[:, 0].astype(float)
-    dos = data[:, 1].astype(float)
+    freq = data[:, 0].astype(float) / CM1_PER_THZ
+    dos = data[:, 1].astype(float) * CM1_PER_THZ
     mask = freq >= 0.0
     return freq[mask], dos[mask]
 
@@ -178,15 +178,15 @@ def load_mp_dos() -> tuple[np.ndarray, np.ndarray]:
     with MP_DOS_FILE.open() as f:
         data = json.load(f)
 
-    freq = np.asarray(data["frequencies"], dtype=float) * CM1_PER_THZ
-    dos = np.asarray(data["densities"], dtype=float) / CM1_PER_THZ
+    freq = np.asarray(data["frequencies"], dtype=float)
+    dos = np.asarray(data["densities"], dtype=float)
     mask = freq >= 0.0
     return freq[mask], dos[mask]
 
 
 def load_experiment_gamma_l() -> tuple[np.ndarray, np.ndarray]:
     xi_values: list[float] = []
-    freqs_cm1: list[float] = []
+    frequencies_thz: list[float] = []
 
     with EXPERIMENT_CSV.open() as handle:
         reader = csv.DictReader(handle)
@@ -195,9 +195,9 @@ def load_experiment_gamma_l() -> tuple[np.ndarray, np.ndarray]:
                 continue
 
             xi_values.append(float(row["xi"]))
-            freqs_cm1.append(float(row["frequency_thz"]) * CM1_PER_THZ)
+            frequencies_thz.append(float(row["frequency_thz"]))
 
-    return np.asarray(xi_values, dtype=float), np.asarray(freqs_cm1, dtype=float)
+    return np.asarray(xi_values, dtype=float), np.asarray(frequencies_thz, dtype=float)
 
 
 plt.rcParams.update(
@@ -205,10 +205,10 @@ plt.rcParams.update(
         "font.family": "serif",
         "font.serif": ["STIXGeneral", "Times New Roman", "DejaVu Serif"],
         "mathtext.fontset": "stix",
-        "font.size": 14,
-        "axes.labelsize": 19,
-        "xtick.labelsize": 15,
-        "ytick.labelsize": 15,
+        "font.size": 22,
+        "axes.labelsize": 30,
+        "xtick.labelsize": 25,
+        "ytick.labelsize": 24,
         "axes.linewidth": 1.25,
         "xtick.direction": "in",
         "ytick.direction": "in",
@@ -229,13 +229,13 @@ if len(mp_segments) != len(QE_SEGMENTS):
 
 band_frequency_max = max(float(np.max(np.asarray(seg["freqs"], dtype=float))) for seg in mp_segments)
 frequency_max = max(band_frequency_max, float(np.max(qe_dos_freq)), float(np.max(mp_dos_freq)))
-frequency_max = 50.0 * np.ceil(frequency_max / 50.0)
+frequency_max = 5.0 * np.ceil(frequency_max / 5.0)
 dos_max = 1.08 * max(float(np.max(qe_dos)), float(np.max(mp_dos)))
 
 fig, (ax_band, ax_dos) = plt.subplots(
     1,
     2,
-    figsize=(12.0, 6.9),
+    figsize=(16.0, 8.2),
     sharey=True,
     gridspec_kw={"width_ratios": [5.4, 1.45], "wspace": 0.05},
 )
@@ -341,32 +341,42 @@ legend_handles = [
     ),
 ]
 
-ax_band.set_ylabel(r"Frequency (cm$^{-1}$)")
-ax_band.set_xlabel("Wave Vector")
+ax_band.set_ylabel("Frequency (THz)")
 ax_band.set_xticks(tick_positions)
 ax_band.set_xticklabels(tick_labels)
 ax_band.set_xlim(tick_positions[0], tick_positions[-1])
 ax_band.set_ylim(0.0, frequency_max)
-ax_band.tick_params(top=True, right=False)
+ax_band.tick_params(axis="x", labelsize=27, pad=10, top=True)
+ax_band.tick_params(axis="y", labelsize=25, right=False)
 ax_band.spines["top"].set_visible(True)
 ax_band.spines["right"].set_visible(False)
 
-ax_dos.set_xlabel("Phonon DOS")
+ax_dos.set_xlabel("PDOS", labelpad=10)
 ax_dos.set_xlim(0.0, dos_max)
-ax_dos.tick_params(top=True, right=True, left=False, labelleft=False)
+ax_dos.set_xticks([])
+ax_dos.tick_params(
+    axis="x",
+    which="both",
+    top=False,
+    bottom=False,
+    labeltop=False,
+    labelbottom=False,
+)
+ax_dos.tick_params(axis="y", right=True, left=False, labelleft=False)
 ax_dos.spines["top"].set_visible(True)
 ax_dos.spines["left"].set_visible(False)
 ax_dos.spines["right"].set_visible(True)
-ax_dos.legend(
+ax_band.legend(
     handles=legend_handles,
     loc="upper right",
-    bbox_to_anchor=(1.05, 0.99),
+    bbox_to_anchor=(0.985, 0.985),
     frameon=False,
-    handlelength=2.5,
-    fontsize=12,
+    handlelength=2.7,
+    fontsize=22,
+    borderaxespad=0.0,
 )
 
-fig.subplots_adjust(left=0.082, right=0.988, bottom=0.145, top=0.985, wspace=0.05)
+fig.subplots_adjust(left=0.085, right=0.985, bottom=0.15, top=0.975, wspace=0.05)
 fig.savefig(OUTPUT_PNG, dpi=600, bbox_inches="tight")
 fig.savefig(OUTPUT_PDF, bbox_inches="tight")
 

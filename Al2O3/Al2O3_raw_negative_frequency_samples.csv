@@ -1,0 +1,10 @@
+segment,path_file,row_index_zero_based,path_coordinate,mode,frequency_cm-1
+1,Al2O3.mp_seg1.freq.gp,0,0.0,1,-9.6358
+1,Al2O3.mp_seg1.freq.gp,0,0.0,2,-9.6271
+1,Al2O3.mp_seg1.freq.gp,0,0.0,3,-1.3584
+1,Al2O3.mp_seg1.freq.gp,1,0.021716,1,-4.4766
+2,Al2O3.mp_seg2.freq.gp,59,1.14458,1,-5.4693
+2,Al2O3.mp_seg2.freq.gp,59,1.14458,2,-5.4623
+2,Al2O3.mp_seg2.freq.gp,60,1.164336,1,-9.6362
+2,Al2O3.mp_seg2.freq.gp,60,1.164336,2,-9.6358
+2,Al2O3.mp_seg2.freq.gp,60,1.164336,3,-1.3359

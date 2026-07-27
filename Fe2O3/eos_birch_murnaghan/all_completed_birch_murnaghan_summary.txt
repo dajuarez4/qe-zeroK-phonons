@@ -1,0 +1,34 @@
+9 completed AFM alpha-Fe2O3 EOS calculations
+
+Completed-point checks:
+V092: V=92.574946 A^3, steps=7, Efinal=-1566.51907837 Ry, force=0.000058 Ry/bohr, Mtot=-0.00, |M|=17.19
+V094: V=94.587457 A^3, steps=8, Efinal=-1566.54791966 Ry, force=0.000028 Ry/bohr, Mtot=0.00, |M|=17.25
+V096: V=96.599954 A^3, steps=7, Efinal=-1566.57087116 Ry, force=0.000043 Ry/bohr, Mtot=0.00, |M|=17.29
+V098: V=98.612450 A^3, steps=9, Efinal=-1566.58853080 Ry, force=0.000001 Ry/bohr, Mtot=-0.00, |M|=17.34
+V100: V=100.624947 A^3, steps=9, Efinal=-1566.60136918 Ry, force=0.000001 Ry/bohr, Mtot=0.00, |M|=17.37
+V102: V=102.637443 A^3, steps=9, Efinal=-1566.60985459 Ry, force=0.000002 Ry/bohr, Mtot=-0.00, |M|=17.41
+V104: V=104.649940 A^3, steps=9, Efinal=-1566.61442455 Ry, force=0.000007 Ry/bohr, Mtot=0.00, |M|=17.44
+V106: V=106.662451 A^3, steps=9, Efinal=-1566.61543694 Ry, force=0.000020 Ry/bohr, Mtot=0.00, |M|=17.46
+V108: V=108.674948 A^3, steps=9, Efinal=-1566.61324627 Ry, force=0.000019 Ry/bohr, Mtot=0.00, |M|=17.49
+
+Excluded duplicate-volume outputs: alpha_Fe2O3v100.eos.out
+
+REQUESTED FIT: every reported relaxation energy (76 observations)
+V0       = 106.246314 A^3
+a_hex    = 5.127575 A
+c_hex    = 13.998467 A
+B0       = 188.208329 GPa
+B0'      = 4.217825
+RMSE     = 10.651909 meV/primitive cell
+Warning: intermediate ionic configurations are not equilibrium EOS points.
+Repeated volumes are weighted according to their number of reported relaxation energies.
+
+STANDARD FIT: final relaxed energy at each volume (9 observations)
+V0       = 106.261887 A^3
+a_hex    = 5.127825 A
+c_hex    = 13.999151 A
+B0       = 187.574937 GPa
+B0'      = 4.233490
+RMSE     = 0.088004 meV/primitive cell
+Calculated energy minimum bracketed: True
+Fitted V0 inside sampled range: True

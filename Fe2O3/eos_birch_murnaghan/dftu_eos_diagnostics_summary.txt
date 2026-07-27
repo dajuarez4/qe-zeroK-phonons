@@ -1,0 +1,30 @@
+AFM alpha-Fe2O3 PBE+U EOS diagnostics
+=====================================
+
+Model: collinear ++-- AFM, PBE, U_eff(Fe 3d)=4.0 eV, fixed occupations.
+Unique completed volumes: 9
+Excluded duplicate outputs: alpha_Fe2O3v100.eos.out
+
+Per-volume final-state diagnostics:
+V092: P=32.955 GPa, stress spread=70.94 kbar, |M_Fe| sphere/Hubbard=3.741/4.038 muB, E_U=6.027 eV, <Fe-O>6=1.9696 A, SCF/BFGS=7/6
+V094: P=26.289 GPa, stress spread=62.18 kbar, |M_Fe| sphere/Hubbard=3.762/4.051 muB, E_U=5.943 eV, <Fe-O>6=1.9837 A, SCF/BFGS=8/7
+V096: P=20.266 GPa, stress spread=54.33 kbar, |M_Fe| sphere/Hubbard=3.780/4.063 muB, E_U=5.866 eV, <Fe-O>6=1.9975 A, SCF/BFGS=7/6
+V098: P=14.826 GPa, stress spread=47.31 kbar, |M_Fe| sphere/Hubbard=3.798/4.074 muB, E_U=5.796 eV, <Fe-O>6=2.0112 A, SCF/BFGS=9/8
+V100: P=9.909 GPa, stress spread=40.94 kbar, |M_Fe| sphere/Hubbard=3.814/4.083 muB, E_U=5.732 eV, <Fe-O>6=2.0246 A, SCF/BFGS=9/8
+V102: P=5.465 GPa, stress spread=35.20 kbar, |M_Fe| sphere/Hubbard=3.829/4.092 muB, E_U=5.673 eV, <Fe-O>6=2.0379 A, SCF/BFGS=9/8
+V104: P=1.451 GPa, stress spread=30.09 kbar, |M_Fe| sphere/Hubbard=3.843/4.099 muB, E_U=5.620 eV, <Fe-O>6=2.0509 A, SCF/BFGS=9/8
+V106: P=-2.174 GPa, stress spread=25.49 kbar, |M_Fe| sphere/Hubbard=3.856/4.106 muB, E_U=5.570 eV, <Fe-O>6=2.0638 A, SCF/BFGS=9/8
+V108: P=-5.446 GPa, stress spread=21.33 kbar, |M_Fe| sphere/Hubbard=3.868/4.112 muB, E_U=5.524 eV, <Fe-O>6=2.0764 A, SCF/BFGS=9/8
+
+Key observations:
+- The sampled point closest to zero calculated pressure is V104 (1.451 GPa).
+- Linear interpolation of the stress-derived pressure gives P=0 near 105.455 A^3; the energy-fit V0 is 106.262 A^3. Their difference is a useful Pulay-stress/EOS-consistency diagnostic.
+- The absolute Fe Hubbard moment changes monotonically from 4.038 to 4.112 muB as volume increases.
+- Maximum final stress-component spread is 70.94 kbar; this measures the non-hydrostatic stress retained by the fixed-shape EOS path.
+- QE printed up to 547 'eigenvalues not converged' warnings during a relaxation. The final SCFs converged, but a clean static SCF at the selected structure should be checked before phonons or bands.
+- A band gap is not available from these outputs. Only occupied bands were printed, so an NSCF/bands calculation with empty bands is required.
+- Total magnetization remains approximately zero; the opposite Fe local moments confirm the AFM state.
+
+Files:
+- dftu_eos_diagnostics.csv: machine-readable values for every volume
+- dftu_eos_diagnostics.png/.pdf: pressure, magnetism, bonding, and stress trends

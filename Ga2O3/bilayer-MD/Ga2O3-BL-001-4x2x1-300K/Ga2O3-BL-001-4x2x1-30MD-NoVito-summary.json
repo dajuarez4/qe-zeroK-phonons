@@ -1,0 +1,221 @@
+{
+  "source_input": "Ga2O3-BL-001-4x2x1.md.in",
+  "source_output": "Ga2O3-BL-001-4x2x1.md.out",
+  "description": "Complete QE MD frames",
+  "complete_md_frames": 30,
+  "excluded_incomplete_frames": 1,
+  "timestep_fs": 0.9676,
+  "rendered_structures": 30,
+  "displacements_relative_to_input_geometry": [
+    {
+      "md_frame": 1,
+      "time_fs": 0.9676,
+      "temperature_K": 302.5795104,
+      "rms_displacement_A": 0.005528637054946535,
+      "maximum_displacement_A": 0.011210830814672517
+    },
+    {
+      "md_frame": 2,
+      "time_fs": 1.9352,
+      "temperature_K": 312.97584799,
+      "rms_displacement_A": 0.011163216383076529,
+      "maximum_displacement_A": 0.022851010746349376
+    },
+    {
+      "md_frame": 3,
+      "time_fs": 2.9028,
+      "temperature_K": 322.65620459,
+      "rms_displacement_A": 0.016890891487354384,
+      "maximum_displacement_A": 0.034838704044821193
+    },
+    {
+      "md_frame": 4,
+      "time_fs": 3.8704,
+      "temperature_K": 328.0725423,
+      "rms_displacement_A": 0.02266802971932521,
+      "maximum_displacement_A": 0.0470249779505178
+    },
+    {
+      "md_frame": 5,
+      "time_fs": 4.838,
+      "temperature_K": 334.34555034,
+      "rms_displacement_A": 0.028496648986327183,
+      "maximum_displacement_A": 0.05935441865587593
+    },
+    {
+      "md_frame": 6,
+      "time_fs": 5.8056,
+      "temperature_K": 349.39344618,
+      "rms_displacement_A": 0.03444689464120686,
+      "maximum_displacement_A": 0.0719144254295125
+    },
+    {
+      "md_frame": 7,
+      "time_fs": 6.7732,
+      "temperature_K": 359.17555814,
+      "rms_displacement_A": 0.040467831420271015,
+      "maximum_displacement_A": 0.08453802460263497
+    },
+    {
+      "md_frame": 8,
+      "time_fs": 7.7408,
+      "temperature_K": 373.67852201,
+      "rms_displacement_A": 0.04659314375219505,
+      "maximum_displacement_A": 0.09723728994557071
+    },
+    {
+      "md_frame": 9,
+      "time_fs": 8.708400000000001,
+      "temperature_K": 390.37522332,
+      "rms_displacement_A": 0.052834677247986135,
+      "maximum_displacement_A": 0.10997857453288407
+    },
+    {
+      "md_frame": 10,
+      "time_fs": 9.676,
+      "temperature_K": 405.87442542,
+      "rms_displacement_A": 0.05917691489464115,
+      "maximum_displacement_A": 0.12267389176731984
+    },
+    {
+      "md_frame": 11,
+      "time_fs": 10.6436,
+      "temperature_K": 425.70817889,
+      "rms_displacement_A": 0.06564774247101442,
+      "maximum_displacement_A": 0.13532461983302338
+    },
+    {
+      "md_frame": 12,
+      "time_fs": 11.6112,
+      "temperature_K": 446.03950539,
+      "rms_displacement_A": 0.07224500185563595,
+      "maximum_displacement_A": 0.14787303469476623
+    },
+    {
+      "md_frame": 13,
+      "time_fs": 12.578800000000001,
+      "temperature_K": 467.60666871,
+      "rms_displacement_A": 0.07897217820422926,
+      "maximum_displacement_A": 0.1602747407707286
+    },
+    {
+      "md_frame": 14,
+      "time_fs": 13.5464,
+      "temperature_K": 491.47759141,
+      "rms_displacement_A": 0.0858403888257225,
+      "maximum_displacement_A": 0.17250132266622745
+    },
+    {
+      "md_frame": 15,
+      "time_fs": 14.514,
+      "temperature_K": 516.85915516,
+      "rms_displacement_A": 0.09285509944286506,
+      "maximum_displacement_A": 0.1847448153034958
+    },
+    {
+      "md_frame": 16,
+      "time_fs": 15.4816,
+      "temperature_K": 535.47763156,
+      "rms_displacement_A": 0.099965946679545,
+      "maximum_displacement_A": 0.1982724944241813
+    },
+    {
+      "md_frame": 17,
+      "time_fs": 16.4492,
+      "temperature_K": 561.03099516,
+      "rms_displacement_A": 0.10721544443148093,
+      "maximum_displacement_A": 0.21167420385254057
+    },
+    {
+      "md_frame": 18,
+      "time_fs": 17.416800000000002,
+      "temperature_K": 580.32469923,
+      "rms_displacement_A": 0.11456014703939822,
+      "maximum_displacement_A": 0.2248253546118471
+    },
+    {
+      "md_frame": 19,
+      "time_fs": 18.3844,
+      "temperature_K": 597.22618317,
+      "rms_displacement_A": 0.1219828151070549,
+      "maximum_displacement_A": 0.2376588684490393
+    },
+    {
+      "md_frame": 20,
+      "time_fs": 19.352,
+      "temperature_K": 625.13342866,
+      "rms_displacement_A": 0.12955085345502124,
+      "maximum_displacement_A": 0.2502567481271122
+    },
+    {
+      "md_frame": 21,
+      "time_fs": 20.3196,
+      "temperature_K": 646.73305013,
+      "rms_displacement_A": 0.13722546824034204,
+      "maximum_displacement_A": 0.2625216120697747
+    },
+    {
+      "md_frame": 22,
+      "time_fs": 21.2872,
+      "temperature_K": 664.59766453,
+      "rms_displacement_A": 0.14498459814643982,
+      "maximum_displacement_A": 0.27521557270834174
+    },
+    {
+      "md_frame": 23,
+      "time_fs": 22.2548,
+      "temperature_K": 680.05469171,
+      "rms_displacement_A": 0.15281477507470367,
+      "maximum_displacement_A": 0.291694766032447
+    },
+    {
+      "md_frame": 24,
+      "time_fs": 23.2224,
+      "temperature_K": 681.80624614,
+      "rms_displacement_A": 0.160636745570154,
+      "maximum_displacement_A": 0.308152502064044
+    },
+    {
+      "md_frame": 25,
+      "time_fs": 24.19,
+      "temperature_K": 687.80194486,
+      "rms_displacement_A": 0.1684750044509313,
+      "maximum_displacement_A": 0.3246493109491821
+    },
+    {
+      "md_frame": 26,
+      "time_fs": 25.157600000000002,
+      "temperature_K": 701.8513898,
+      "rms_displacement_A": 0.17637666257357287,
+      "maximum_displacement_A": 0.34129303457503385
+    },
+    {
+      "md_frame": 27,
+      "time_fs": 26.1252,
+      "temperature_K": 694.2852291,
+      "rms_displacement_A": 0.18421838147484904,
+      "maximum_displacement_A": 0.3578417966560576
+    },
+    {
+      "md_frame": 28,
+      "time_fs": 27.0928,
+      "temperature_K": 697.10567947,
+      "rms_displacement_A": 0.19205758372413426,
+      "maximum_displacement_A": 0.3744353287170778
+    },
+    {
+      "md_frame": 29,
+      "time_fs": 28.0604,
+      "temperature_K": 689.47126075,
+      "rms_displacement_A": 0.19983233125231506,
+      "maximum_displacement_A": 0.39096551114953565
+    },
+    {
+      "md_frame": 30,
+      "time_fs": 29.028,
+      "temperature_K": 679.50772195,
+      "rms_displacement_A": 0.20752444503748707,
+      "maximum_displacement_A": 0.40741915845561816
+    }
+  ]
+}

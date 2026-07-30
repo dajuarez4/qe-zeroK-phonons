@@ -1,0 +1,25 @@
+{
+  "source_input": "Ga2O3-BL-001-4x2x1.md.in",
+  "source_output": "Ga2O3-BL-001-4x2x1.md.out",
+  "description": "Reference QE input geometry followed by complete MD frames",
+  "complete_md_frames": 2,
+  "excluded_incomplete_frames": 1,
+  "timestep_fs": 0.9676,
+  "rendered_structures": 3,
+  "displacements_relative_to_input_geometry": [
+    {
+      "md_frame": 1,
+      "time_fs": 0.9676,
+      "temperature_K": 302.5795104,
+      "rms_displacement_A": 0.005528637054946535,
+      "maximum_displacement_A": 0.011210830814672517
+    },
+    {
+      "md_frame": 2,
+      "time_fs": 1.9352,
+      "temperature_K": 312.97584799,
+      "rms_displacement_A": 0.011163216383076529,
+      "maximum_displacement_A": 0.022851010746349376
+    }
+  ]
+}

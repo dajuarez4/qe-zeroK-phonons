@@ -1,0 +1,80 @@
+#---------------------------------------------
+#    2D Ga2O3 bilayer - (100), AA-parallel
+#    G. J. Gonzalez-Loera
+#    2026, July
+#
+#    Constructed from the relaxed Ga2O3(100)
+#    monolayer.
+#---------------------------------------------
+
+SystemName       Ga2O3 bilayer (100) AA
+SystemLabel      Ga2O3-GGA-BL-100
+
+NumberOfAtoms    10
+NumberOfSpecies  2
+%block ChemicalSpeciesLabel
+    1    8     O-gga
+    2    31    Ga-gga-3d
+%endblock ChemicalSpeciesLabel
+
+#--------------------------------------------
+#  Initial bilayer structure
+#--------------------------------------------
+LatticeConstant 1.0 Ang
+%block LatticeVectors
+      3.147996932       0.016936913       0.000000000
+     -0.055005939       5.524688550       0.000000000
+      0.000000000       0.000000000      30.000000000
+%endblock LatticeVectors
+
+AtomicCoordinatesFormat Fractional
+%block AtomicCoordinatesAndAtomicSpecies
+# Lower Ga2O3(100) layer
+  0.057614879  0.050128019  0.399258518   2
+  0.560165526  0.478776568  0.424581940   2
+  0.058892040  0.324183644  0.450000000   1
+  0.557871280  0.819383276  0.413529381   1
+  0.558114079  0.238008103  0.373333280   1
+# Upper Ga2O3(100) layer
+  0.057614879  0.050128019  0.575925239   2
+  0.560165526  0.478776568  0.601248661   2
+  0.058892040  0.324183644  0.626666720   1
+  0.557871280  0.819383276  0.590196102   1
+  0.558114079  0.238008103  0.550000000   1
+%endblock AtomicCoordinatesAndAtomicSpecies
+
+%block GeometryConstraints
+ cell-vector c
+%endblock GeometryConstraints
+
+#-----------------------------------------------------------
+#  DFT control
+#-----------------------------------------------------------
+PAO.BasisSize      DZP
+PAO.EnergyShift    0.075 eV
+XC.Functional      GGA
+XC.Authors         PBE
+MaxSCFIterations   150
+MeshCutoff         500 Ry
+DM.Tolerance       1.00E-4
+DM.MixingWeight    0.2
+DM.UseSaveDM       .False.
+SolutionMethod     diagon
+
+#-----------------------------------------------------------
+#  Brillouin-zone sampling
+#-----------------------------------------------------------
+%block kgrid_Monkhorst_Pack
+24      0       0       0.0
+0       14      0       0.0
+0       0       1       0.0
+%endblock kgrid_Monkhorst_Pack
+
+#-----------------------------------------------------------
+#  Structural relaxation
+#-----------------------------------------------------------
+MD.TypeOfRun        CG
+MD.NumCGsteps       200
+MD.VariableCell     .True.
+MD.MaxForceTol      0.01 eV/Ang
+MD.TargetPressure   0.0 GPa

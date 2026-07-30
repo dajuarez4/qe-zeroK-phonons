@@ -1,0 +1,65 @@
+&CONTROL
+  calculation  = 'md'
+  prefix       = 'Ga2O3-BL-001-300K'
+  outdir       = './tmp'
+  pseudo_dir   = '../../pseudo'
+  verbosity    = 'high'
+  restart_mode = 'from_scratch'
+  nstep        = 10000
+  dt           = 20.0
+  tstress      = .true.
+  tprnfor      = .true.
+  disk_io      = 'low'
+/
+
+&SYSTEM
+  ibrav           = 0
+  nat             = 10
+  ntyp            = 2
+  input_dft       = 'PBE'
+  ecutwfc         = 80
+  ecutrho         = 640
+  occupations     = 'fixed'
+  assume_isolated = '2D'
+  nosym           = .true.
+/
+
+&ELECTRONS
+  electron_maxstep = 200
+  conv_thr         = 1.0d-8
+  mixing_beta      = 0.2
+  diagonalization  = 'david'
+/
+
+&IONS
+  ion_dynamics      = 'verlet'
+  ion_temperature   = 'svr'
+  tempw             = 300.0
+  nraise            = 200
+  pot_extrapolation = 'second_order'
+  wfc_extrapolation = 'second_order'
+/
+
+ATOMIC_SPECIES
+Ga  69.723  Ga.pbe-dn-kjpaw_psl.1.0.0.UPF
+O   15.999  O.pbe-n-kjpaw_psl.1.0.0.UPF
+
+CELL_PARAMETERS angstrom
+  3.246626537  0.140350018   0.000000000
+  1.253133791  5.730779279   0.000000000
+  0.000000000  0.000000000  30.000000000
+
+ATOMIC_POSITIONS crystal
+Ga  0.828286209  0.719307091  0.426476240
+Ga  0.518929636  0.302601192  0.400415339
+O   0.387762194  0.563207436  0.450000000
+O   0.425735158  0.005207577  0.413246357
+O   0.938462357  0.455812262  0.376974172
+Ga  0.828286209  0.719307091  0.599502068
+Ga  0.518929636  0.302601192  0.573441167
+O   0.387762194  0.563207436  0.623025828
+O   0.425735158  0.005207577  0.586272185
+O   0.938462357  0.455812262  0.550000000
+
+K_POINTS automatic
+6 4 1 0 0 0

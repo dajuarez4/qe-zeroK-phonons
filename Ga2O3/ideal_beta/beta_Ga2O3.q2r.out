@@ -1,0 +1,97 @@
+
+     Program Q2R v.7.0 starts on 31Jul2026 at 21:15: 2 
+
+     This program is part of the open-source Quantum ESPRESSO suite
+     for quantum simulation of materials; please cite
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 21 395502 (2009);
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 29 465901 (2017);
+         "P. Giannozzi et al., J. Chem. Phys. 152 154105 (2020);
+          URL http://www.quantum-espresso.org", 
+     in publications or presentations arising from this work. More details at
+     http://www.quantum-espresso.org/quote
+
+     Parallel version (MPI), running on     1 processors
+
+     MPI processes distributed on     1 nodes
+     375298 MiB available memory on the printing compute node when the environment starts
+
+
+     reading grid info from file beta_Ga2O3.dyn0    
+  reading force constants from file beta_Ga2O3.dyn1
+ macroscopic fields = T
+   4.07687   0.00000  -0.00000
+   0.00000   3.96508   0.00110
+   0.00000   0.00110   4.08445
+  na=            1
+   2.90385  -0.00000   0.00000
+   0.00000   2.74962   0.27486
+   0.00000   0.15879   3.07512
+  na=            2
+   2.90385  -0.00000   0.00000
+   0.00000   2.74962   0.27486
+  -0.00000   0.15879   3.07512
+  na=            3
+   3.45188   0.00000  -0.00000
+   0.00000   3.24082  -0.33377
+   0.00000  -0.17873   3.13203
+  na=            4
+   3.45188  -0.00000   0.00000
+   0.00000   3.24082  -0.33377
+   0.00000  -0.17873   3.13203
+  na=            5
+  -2.10865   0.00000   0.00000
+   0.00000  -1.45660   0.05849
+   0.00000   0.02953  -2.50735
+  na=            6
+  -2.10865   0.00000   0.00000
+   0.00000  -1.45660   0.05849
+   0.00000   0.02953  -2.50735
+  na=            7
+  -1.96949   0.00000   0.00000
+   0.00000  -2.24545  -0.21066
+   0.00000  -0.23901  -2.31228
+  na=            8
+  -1.96949   0.00000   0.00000
+  -0.00000  -2.24545  -0.21066
+   0.00000  -0.23901  -2.31228
+  na=            9
+  -2.28749   0.00000   0.00000
+   0.00000  -2.29809   0.21114
+  -0.00000   0.22934  -1.39746
+  na=           10
+  -2.28749   0.00000  -0.00000
+   0.00000  -2.29809   0.21114
+  -0.00000   0.22934  -1.39746
+Norm of the difference between old and new effective charges:    0.01079245353164226193
+  nqs=            1
+ q=   0.00000000  0.00000000  0.00000000
+  reading force constants from file beta_Ga2O3.dyn2
+  nqs=            1
+ q=   0.00000000  0.00000000 -0.55837008
+  reading force constants from file beta_Ga2O3.dyn3
+  nqs=            2
+ q=   1.03715662 -0.25759539  0.06305225
+ q=   1.03715662  0.25759539 -0.06305225
+  reading force constants from file beta_Ga2O3.dyn4
+  nqs=            2
+ q=   1.03715662 -0.25759539 -0.49531782
+ q=   1.03715662  0.25759539  0.49531782
+  reading force constants from file beta_Ga2O3.dyn5
+  nqs=            1
+ q=   0.00000000 -0.51519077  0.12610450
+  reading force constants from file beta_Ga2O3.dyn6
+  nqs=            1
+ q=   0.00000000 -0.51519077 -0.43226557
+
+      q-space grid ok, #points =    8
+
+      fft-check warning: sum of imaginary terms = 3.203433E-08
+
+     Q2R          :      0.05s CPU      0.19s WALL
+
+
+   This run was terminated on:  21:15: 2  31Jul2026            
+
+=------------------------------------------------------------------------------=
+   JOB DONE.
+=------------------------------------------------------------------------------=

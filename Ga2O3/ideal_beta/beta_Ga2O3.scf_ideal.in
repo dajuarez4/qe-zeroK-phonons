@@ -2,7 +2,7 @@
   calculation = 'scf'
   prefix      = 'beta-Ga2O3'
   outdir      = './tmp'
-  pseudo_dir  = '../pseudo'
+  pseudo_dir  = '/scratch/dajuarez4/ga2o3_new/pseudo'
   verbosity   = 'high'
   tstress     = .true.
   tprnfor     = .true.

@@ -1,0 +1,41 @@
+/scratch/dajuarez4/ideal_beta
+cnode027.hpc.local
+Sun Jul 19 02:13:13 AM MDT 2026
+ 
+:: initializing oneAPI environment ...
+   slurm_script: BASH_VERSION = 5.1.8(1)-release
+   args: Using "$@" for setvars.sh arguments: -ofi_internal=1 --force
+:: advisor -- latest
+:: ccl -- latest
+:: compiler -- latest
+:: dal -- latest
+:: debugger -- latest
+:: dev-utilities -- latest
+:: dnnl -- latest
+:: dpcpp-ct -- latest
+:: dpl -- latest
+:: inspector -- latest
+:: ipp -- latest
+:: ippcp -- latest
+:: itac -- latest
+:: mkl -- latest
+:: mpi -- latest
+:: tbb -- latest
+:: vtune -- latest
+:: oneAPI environment initialized ::
+ 
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+Traceback (most recent call last):
+  File "/gpfs/scratch/dajuarez4/ideal_beta/plot_beta_ga2o3_phonons.py", line 5, in <module>
+    import matplotlib
+ModuleNotFoundError: No module named 'matplotlib'
+Fri Jul 31 09:18:08 PM MDT 2026

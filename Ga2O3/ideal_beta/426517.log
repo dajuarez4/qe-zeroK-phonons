@@ -1,0 +1,27 @@
+/scratch/dajuarez4/ideal_beta
+cnode027.hpc.local
+Sun Jul 19 01:25:35 AM MDT 2026
+ 
+:: initializing oneAPI environment ...
+   slurm_script: BASH_VERSION = 5.1.8(1)-release
+   args: Using "$@" for setvars.sh arguments: -ofi_internal=1 --force
+:: advisor -- latest
+:: ccl -- latest
+:: compiler -- latest
+:: dal -- latest
+:: debugger -- latest
+:: dev-utilities -- latest
+:: dnnl -- latest
+:: dpcpp-ct -- latest
+:: dpl -- latest
+:: inspector -- latest
+:: ipp -- latest
+:: ippcp -- latest
+:: itac -- latest
+:: mkl -- latest
+:: mpi -- latest
+:: tbb -- latest
+:: vtune -- latest
+:: oneAPI environment initialized ::
+ 
+Sun Jul 19 02:12:14 AM MDT 2026

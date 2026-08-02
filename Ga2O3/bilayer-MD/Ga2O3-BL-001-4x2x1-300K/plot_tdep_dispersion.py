@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import json
 import os
+import re
 from pathlib import Path
 
 os.environ.setdefault("MPLCONFIGDIR", "/tmp/matplotlib")
@@ -23,6 +24,20 @@ def main() -> None:
     data = np.loadtxt(outdir / "outfile.dispersion_relations")
     x_values = data[:, 0]
     frequencies = data[:, 1:]
+    meta = (outdir / "infile.meta").read_text().split()
+    _natoms, nframes = int(meta[0]), int(meta[1])
+    timestep_fs, mean_temperature = float(meta[2]), float(meta[3])
+    fit_log = (outdir / "extract_forceconstants.log").read_text(errors="replace")
+    rmse_match = re.search(r"RMSE total:\s+([-+0-9.Ee]+)", fit_log)
+    force_rmse = float(rmse_match.group(1)) if rmse_match else None
+    temperature_values = [
+        float(value)
+        for value in re.findall(
+            r"^\s*temperature\s*=\s*([-+0-9.Ee]+)\s+K",
+            (root / "Ga2O3-BL-001-4x2x1.md.out").read_text(errors="replace"),
+            re.MULTILINE,
+        )
+    ]
 
     # The TDEP path contains four segments with 80 points per segment.
     tick_indices = [0, 79, 159, 239, 319]
@@ -39,7 +54,7 @@ def main() -> None:
     ax.set_xticks(tick_positions)
     ax.set_xticklabels(tick_labels)
     ax.set_ylabel("Frequency (THz)")
-    ax.set_title("Ga₂O₃ (001) 4×2×1 TDEP diagnostic (30 MD frames)")
+    ax.set_title(f"Ga₂O₃ (001) 4×2×1 TDEP diagnostic ({nframes} MD frames)")
     ax.grid(axis="y", alpha=0.2)
     fig.savefig(
         outdir / "Ga2O3-BL-001-4x2x1-TDEP-diagnostic.png",
@@ -48,9 +63,13 @@ def main() -> None:
     plt.close(fig)
 
     summary = {
-        "n_frames": 30,
-        "trajectory_time_fs": 29.028,
-        "mean_temperature_K": 518.3075248823,
+        "n_frames": nframes,
+        "trajectory_time_fs": nframes * timestep_fs,
+        "mean_temperature_K": mean_temperature,
+        "latest_complete_temperature_K": (
+            temperature_values[nframes - 1] if len(temperature_values) >= nframes else None
+        ),
+        "force_fit_rmse_eV_per_A": force_rmse,
         "minimum_frequency_THz": float(np.min(frequencies)),
         "maximum_frequency_THz": float(np.max(frequencies)),
         "negative_frequency_values_below_minus_1e-6_THz": int(

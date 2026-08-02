@@ -1,10 +1,12 @@
 {
-  "n_frames": 30,
-  "trajectory_time_fs": 29.028,
-  "mean_temperature_K": 518.3075248823,
-  "minimum_frequency_THz": -4.16296646889,
-  "maximum_frequency_THz": 13.8712817014,
-  "negative_frequency_values_below_minus_1e-6_THz": 1217,
-  "negative_frequency_values_below_minus_0p1_THz": 1108,
+  "n_frames": 126,
+  "trajectory_time_fs": 121.91760000000001,
+  "mean_temperature_K": 532.5684503823,
+  "latest_complete_temperature_K": 584.62374984,
+  "force_fit_rmse_eV_per_A": 0.234,
+  "minimum_frequency_THz": -1.55748577115,
+  "maximum_frequency_THz": 13.1802088528,
+  "negative_frequency_values_below_minus_1e-6_THz": 1716,
+  "negative_frequency_values_below_minus_0p1_THz": 1589,
   "total_frequency_values": 9600
 }

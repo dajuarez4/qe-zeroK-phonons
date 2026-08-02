@@ -172,7 +172,7 @@ def main() -> None:
         0.04,
         0.66,
         f"TDEP: {tdep_min:.2f} to {tdep_max:.2f} THz  ·  "
-        f"force RMSE 0.667 eV/Å",
+        f"force RMSE {tdep['force_fit_rmse_eV_per_A']:.3f} eV/Å",
         fontsize=10.5,
         color=BLUE,
         weight="bold",
@@ -190,7 +190,8 @@ def main() -> None:
         0.04,
         0.35,
         "Not a converged 300 K phonon result.\n"
-        "The trajectory is only 29 fs and heats toward 680–700 K.\n"
+        f"The trajectory is only {time_fs[-1]:.0f} fs and averages "
+        f"{temperatures.mean():.0f} K.\n"
         "Relax → equilibrate at 300 K → collect a multi-ps production run.",
         fontsize=11,
         color=GRAY,

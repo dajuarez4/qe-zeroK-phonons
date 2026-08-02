@@ -1,0 +1,601 @@
+phonopy:
+  version: "2.28.0"
+  calculator: qe
+  frequency_unit_conversion_factor: 15.633302
+  symmetry_tolerance: 1.00000e-05
+  configuration:
+    cell_filename: "unitcell.in"
+    displacement_distance: "0.02"
+    create_displacements: ".true."
+    pm: ".true."
+    magmom: "0 0 0 0 0 0 4 4 -4 -4"
+    dim: "2 2 2"
+    calculator: "qe"
+
+physical_unit:
+  atomic_mass: "AMU"
+  length: "au"
+
+magnetic_space_group:
+  uni_number: 1336
+  msg_type: 3
+
+supercell_matrix:
+- [   2,   0,   0 ]
+- [   0,   2,   0 ]
+- [   0,   0,   2 ]
+
+primitive_cell:
+  lattice:
+  - [     4.789367869849611,    -2.765142828906316,     8.716766828486142 ] # a
+  - [     0.000000000000000,     5.530285657812632,     8.716766828486142 ] # b
+  - [    -4.789367869849611,    -2.765142828906316,     8.716766828486142 ] # c
+  points:
+  - symbol: O # 1
+    coordinates: [  0.947231243200000,  0.552768756800000,  0.250000000000000 ]
+    mass: 15.999000
+    magnetic_moment: 0.00000000
+  - symbol: O # 2
+    coordinates: [  0.447231243800000,  0.750000000000000,  0.052768756200000 ]
+    mass: 15.999000
+    magnetic_moment: 0.00000000
+  - symbol: O # 3
+    coordinates: [  0.552768756800000,  0.250000000000000,  0.947231243200000 ]
+    mass: 15.999000
+    magnetic_moment: 0.00000000
+  - symbol: O # 4
+    coordinates: [  0.250000000000000,  0.947231243200000,  0.552768756800000 ]
+    mass: 15.999000
+    magnetic_moment: 0.00000000
+  - symbol: O # 5
+    coordinates: [  0.750000000000000,  0.052768756200000,  0.447231243800000 ]
+    mass: 15.999000
+    magnetic_moment: 0.00000000
+  - symbol: O # 6
+    coordinates: [  0.052768756200000,  0.447231243800000,  0.750000000000000 ]
+    mass: 15.999000
+    magnetic_moment: 0.00000000
+  - symbol: Fe # 7
+    extended_symbol: Fe1
+    coordinates: [  0.146348043800000,  0.146348043800000,  0.146348043800000 ]
+    mass: 55.845000
+    magnetic_moment: 4.00000000
+  - symbol: Fe # 8
+    extended_symbol: Fe1
+    coordinates: [  0.353651956200000,  0.353651956200000,  0.353651956200000 ]
+    mass: 55.845000
+    magnetic_moment: 4.00000000
+  - symbol: Fe # 9
+    extended_symbol: Fe2
+    coordinates: [  0.646348059700000,  0.646348059700000,  0.646348059700000 ]
+    mass: 55.845000
+    magnetic_moment: -4.00000000
+  - symbol: Fe # 10
+    extended_symbol: Fe2
+    coordinates: [  0.853651940300000,  0.853651940300000,  0.853651940300000 ]
+    mass: 55.845000
+    magnetic_moment: -4.00000000
+  reciprocal_lattice: # without 2pi
+  - [     0.104397910869958,    -0.060274161943594,     0.038240478366819 ] # a*
+  - [     0.000000000000000,     0.120548323887188,     0.038240478366819 ] # b*
+  - [    -0.104397910869958,    -0.060274161943594,     0.038240478366819 ] # c*
+
+unit_cell:
+  lattice:
+  - [     4.789367869849611,    -2.765142828906316,     8.716766828486142 ] # a
+  - [     0.000000000000000,     5.530285657812632,     8.716766828486142 ] # b
+  - [    -4.789367869849611,    -2.765142828906316,     8.716766828486142 ] # c
+  points:
+  - symbol: O # 1
+    coordinates: [  0.947231243200000,  0.552768756800000,  0.250000000000000 ]
+    mass: 15.999000
+    reduced_to: 1
+    magnetic_moment: 0.00000000
+  - symbol: O # 2
+    coordinates: [  0.447231243800000,  0.750000000000000,  0.052768756200000 ]
+    mass: 15.999000
+    reduced_to: 2
+    magnetic_moment: 0.00000000
+  - symbol: O # 3
+    coordinates: [  0.552768756800000,  0.250000000000000,  0.947231243200000 ]
+    mass: 15.999000
+    reduced_to: 3
+    magnetic_moment: 0.00000000
+  - symbol: O # 4
+    coordinates: [  0.250000000000000,  0.947231243200000,  0.552768756800000 ]
+    mass: 15.999000
+    reduced_to: 4
+    magnetic_moment: 0.00000000
+  - symbol: O # 5
+    coordinates: [  0.750000000000000,  0.052768756200000,  0.447231243800000 ]
+    mass: 15.999000
+    reduced_to: 5
+    magnetic_moment: 0.00000000
+  - symbol: O # 6
+    coordinates: [  0.052768756200000,  0.447231243800000,  0.750000000000000 ]
+    mass: 15.999000
+    reduced_to: 6
+    magnetic_moment: 0.00000000
+  - symbol: Fe # 7
+    extended_symbol: Fe1
+    coordinates: [  0.146348043800000,  0.146348043800000,  0.146348043800000 ]
+    mass: 55.845000
+    reduced_to: 7
+    magnetic_moment: 4.00000000
+  - symbol: Fe # 8
+    extended_symbol: Fe1
+    coordinates: [  0.353651956200000,  0.353651956200000,  0.353651956200000 ]
+    mass: 55.845000
+    reduced_to: 8
+    magnetic_moment: 4.00000000
+  - symbol: Fe # 9
+    extended_symbol: Fe2
+    coordinates: [  0.646348059700000,  0.646348059700000,  0.646348059700000 ]
+    mass: 55.845000
+    reduced_to: 9
+    magnetic_moment: -4.00000000
+  - symbol: Fe # 10
+    extended_symbol: Fe2
+    coordinates: [  0.853651940300000,  0.853651940300000,  0.853651940300000 ]
+    mass: 55.845000
+    reduced_to: 10
+    magnetic_moment: -4.00000000
+
+supercell:
+  lattice:
+  - [     9.578735739699223,    -5.530285657812632,    17.433533656972283 ] # a
+  - [     0.000000000000000,    11.060571315625264,    17.433533656972283 ] # b
+  - [    -9.578735739699223,    -5.530285657812632,    17.433533656972283 ] # c
+  points:
+  - symbol: O # 1
+    coordinates: [  0.473615621600000,  0.276384378400000,  0.125000000000000 ]
+    mass: 15.999000
+    reduced_to: 1
+    magnetic_moment: 0.00000000
+  - symbol: O # 2
+    coordinates: [  0.973615621600000,  0.276384378400000,  0.125000000000000 ]
+    mass: 15.999000
+    reduced_to: 1
+    magnetic_moment: 0.00000000
+  - symbol: O # 3
+    coordinates: [  0.473615621600000,  0.776384378400000,  0.125000000000000 ]
+    mass: 15.999000
+    reduced_to: 1
+    magnetic_moment: 0.00000000
+  - symbol: O # 4
+    coordinates: [  0.973615621600000,  0.776384378400000,  0.125000000000000 ]
+    mass: 15.999000
+    reduced_to: 1
+    magnetic_moment: 0.00000000
+  - symbol: O # 5
+    coordinates: [  0.473615621600000,  0.276384378400000,  0.625000000000000 ]
+    mass: 15.999000
+    reduced_to: 1
+    magnetic_moment: 0.00000000
+  - symbol: O # 6
+    coordinates: [  0.973615621600000,  0.276384378400000,  0.625000000000000 ]
+    mass: 15.999000
+    reduced_to: 1
+    magnetic_moment: 0.00000000
+  - symbol: O # 7
+    coordinates: [  0.473615621600000,  0.776384378400000,  0.625000000000000 ]
+    mass: 15.999000
+    reduced_to: 1
+    magnetic_moment: 0.00000000
+  - symbol: O # 8
+    coordinates: [  0.973615621600000,  0.776384378400000,  0.625000000000000 ]
+    mass: 15.999000
+    reduced_to: 1
+    magnetic_moment: 0.00000000
+  - symbol: O # 9
+    coordinates: [  0.223615621900000,  0.375000000000000,  0.026384378100000 ]
+    mass: 15.999000
+    reduced_to: 9
+    magnetic_moment: 0.00000000
+  - symbol: O # 10
+    coordinates: [  0.723615621900000,  0.375000000000000,  0.026384378100000 ]
+    mass: 15.999000
+    reduced_to: 9
+    magnetic_moment: 0.00000000
+  - symbol: O # 11
+    coordinates: [  0.223615621900000,  0.875000000000000,  0.026384378100000 ]
+    mass: 15.999000
+    reduced_to: 9
+    magnetic_moment: 0.00000000
+  - symbol: O # 12
+    coordinates: [  0.723615621900000,  0.875000000000000,  0.026384378100000 ]
+    mass: 15.999000
+    reduced_to: 9
+    magnetic_moment: 0.00000000
+  - symbol: O # 13
+    coordinates: [  0.223615621900000,  0.375000000000000,  0.526384378100000 ]
+    mass: 15.999000
+    reduced_to: 9
+    magnetic_moment: 0.00000000
+  - symbol: O # 14
+    coordinates: [  0.723615621900000,  0.375000000000000,  0.526384378100000 ]
+    mass: 15.999000
+    reduced_to: 9
+    magnetic_moment: 0.00000000
+  - symbol: O # 15
+    coordinates: [  0.223615621900000,  0.875000000000000,  0.526384378100000 ]
+    mass: 15.999000
+    reduced_to: 9
+    magnetic_moment: 0.00000000
+  - symbol: O # 16
+    coordinates: [  0.723615621900000,  0.875000000000000,  0.526384378100000 ]
+    mass: 15.999000
+    reduced_to: 9
+    magnetic_moment: 0.00000000
+  - symbol: O # 17
+    coordinates: [  0.276384378400000,  0.125000000000000,  0.473615621600000 ]
+    mass: 15.999000
+    reduced_to: 17
+    magnetic_moment: 0.00000000
+  - symbol: O # 18
+    coordinates: [  0.776384378400000,  0.125000000000000,  0.473615621600000 ]
+    mass: 15.999000
+    reduced_to: 17
+    magnetic_moment: 0.00000000
+  - symbol: O # 19
+    coordinates: [  0.276384378400000,  0.625000000000000,  0.473615621600000 ]
+    mass: 15.999000
+    reduced_to: 17
+    magnetic_moment: 0.00000000
+  - symbol: O # 20
+    coordinates: [  0.776384378400000,  0.625000000000000,  0.473615621600000 ]
+    mass: 15.999000
+    reduced_to: 17
+    magnetic_moment: 0.00000000
+  - symbol: O # 21
+    coordinates: [  0.276384378400000,  0.125000000000000,  0.973615621600000 ]
+    mass: 15.999000
+    reduced_to: 17
+    magnetic_moment: 0.00000000
+  - symbol: O # 22
+    coordinates: [  0.776384378400000,  0.125000000000000,  0.973615621600000 ]
+    mass: 15.999000
+    reduced_to: 17
+    magnetic_moment: 0.00000000
+  - symbol: O # 23
+    coordinates: [  0.276384378400000,  0.625000000000000,  0.973615621600000 ]
+    mass: 15.999000
+    reduced_to: 17
+    magnetic_moment: 0.00000000
+  - symbol: O # 24
+    coordinates: [  0.776384378400000,  0.625000000000000,  0.973615621600000 ]
+    mass: 15.999000
+    reduced_to: 17
+    magnetic_moment: 0.00000000
+  - symbol: O # 25
+    coordinates: [  0.125000000000000,  0.473615621600000,  0.276384378400000 ]
+    mass: 15.999000
+    reduced_to: 25
+    magnetic_moment: 0.00000000
+  - symbol: O # 26
+    coordinates: [  0.625000000000000,  0.473615621600000,  0.276384378400000 ]
+    mass: 15.999000
+    reduced_to: 25
+    magnetic_moment: 0.00000000
+  - symbol: O # 27
+    coordinates: [  0.125000000000000,  0.973615621600000,  0.276384378400000 ]
+    mass: 15.999000
+    reduced_to: 25
+    magnetic_moment: 0.00000000
+  - symbol: O # 28
+    coordinates: [  0.625000000000000,  0.973615621600000,  0.276384378400000 ]
+    mass: 15.999000
+    reduced_to: 25
+    magnetic_moment: 0.00000000
+  - symbol: O # 29
+    coordinates: [  0.125000000000000,  0.473615621600000,  0.776384378400000 ]
+    mass: 15.999000
+    reduced_to: 25
+    magnetic_moment: 0.00000000
+  - symbol: O # 30
+    coordinates: [  0.625000000000000,  0.473615621600000,  0.776384378400000 ]
+    mass: 15.999000
+    reduced_to: 25
+    magnetic_moment: 0.00000000
+  - symbol: O # 31
+    coordinates: [  0.125000000000000,  0.973615621600000,  0.776384378400000 ]
+    mass: 15.999000
+    reduced_to: 25
+    magnetic_moment: 0.00000000
+  - symbol: O # 32
+    coordinates: [  0.625000000000000,  0.973615621600000,  0.776384378400000 ]
+    mass: 15.999000
+    reduced_to: 25
+    magnetic_moment: 0.00000000
+  - symbol: O # 33
+    coordinates: [  0.375000000000000,  0.026384378100000,  0.223615621900000 ]
+    mass: 15.999000
+    reduced_to: 33
+    magnetic_moment: 0.00000000
+  - symbol: O # 34
+    coordinates: [  0.875000000000000,  0.026384378100000,  0.223615621900000 ]
+    mass: 15.999000
+    reduced_to: 33
+    magnetic_moment: 0.00000000
+  - symbol: O # 35
+    coordinates: [  0.375000000000000,  0.526384378100000,  0.223615621900000 ]
+    mass: 15.999000
+    reduced_to: 33
+    magnetic_moment: 0.00000000
+  - symbol: O # 36
+    coordinates: [  0.875000000000000,  0.526384378100000,  0.223615621900000 ]
+    mass: 15.999000
+    reduced_to: 33
+    magnetic_moment: 0.00000000
+  - symbol: O # 37
+    coordinates: [  0.375000000000000,  0.026384378100000,  0.723615621900000 ]
+    mass: 15.999000
+    reduced_to: 33
+    magnetic_moment: 0.00000000
+  - symbol: O # 38
+    coordinates: [  0.875000000000000,  0.026384378100000,  0.723615621900000 ]
+    mass: 15.999000
+    reduced_to: 33
+    magnetic_moment: 0.00000000
+  - symbol: O # 39
+    coordinates: [  0.375000000000000,  0.526384378100000,  0.723615621900000 ]
+    mass: 15.999000
+    reduced_to: 33
+    magnetic_moment: 0.00000000
+  - symbol: O # 40
+    coordinates: [  0.875000000000000,  0.526384378100000,  0.723615621900000 ]
+    mass: 15.999000
+    reduced_to: 33
+    magnetic_moment: 0.00000000
+  - symbol: O # 41
+    coordinates: [  0.026384378100000,  0.223615621900000,  0.375000000000000 ]
+    mass: 15.999000
+    reduced_to: 41
+    magnetic_moment: 0.00000000
+  - symbol: O # 42
+    coordinates: [  0.526384378100000,  0.223615621900000,  0.375000000000000 ]
+    mass: 15.999000
+    reduced_to: 41
+    magnetic_moment: 0.00000000
+  - symbol: O # 43
+    coordinates: [  0.026384378100000,  0.723615621900000,  0.375000000000000 ]
+    mass: 15.999000
+    reduced_to: 41
+    magnetic_moment: 0.00000000
+  - symbol: O # 44
+    coordinates: [  0.526384378100000,  0.723615621900000,  0.375000000000000 ]
+    mass: 15.999000
+    reduced_to: 41
+    magnetic_moment: 0.00000000
+  - symbol: O # 45
+    coordinates: [  0.026384378100000,  0.223615621900000,  0.875000000000000 ]
+    mass: 15.999000
+    reduced_to: 41
+    magnetic_moment: 0.00000000
+  - symbol: O # 46
+    coordinates: [  0.526384378100000,  0.223615621900000,  0.875000000000000 ]
+    mass: 15.999000
+    reduced_to: 41
+    magnetic_moment: 0.00000000
+  - symbol: O # 47
+    coordinates: [  0.026384378100000,  0.723615621900000,  0.875000000000000 ]
+    mass: 15.999000
+    reduced_to: 41
+    magnetic_moment: 0.00000000
+  - symbol: O # 48
+    coordinates: [  0.526384378100000,  0.723615621900000,  0.875000000000000 ]
+    mass: 15.999000
+    reduced_to: 41
+    magnetic_moment: 0.00000000
+  - symbol: Fe # 49
+    extended_symbol: Fe1
+    coordinates: [  0.073174021900000,  0.073174021900000,  0.073174021900000 ]
+    mass: 55.845000
+    reduced_to: 49
+    magnetic_moment: 4.00000000
+  - symbol: Fe # 50
+    extended_symbol: Fe1
+    coordinates: [  0.573174021900000,  0.073174021900000,  0.073174021900000 ]
+    mass: 55.845000
+    reduced_to: 49
+    magnetic_moment: 4.00000000
+  - symbol: Fe # 51
+    extended_symbol: Fe1
+    coordinates: [  0.073174021900000,  0.573174021900000,  0.073174021900000 ]
+    mass: 55.845000
+    reduced_to: 49
+    magnetic_moment: 4.00000000
+  - symbol: Fe # 52
+    extended_symbol: Fe1
+    coordinates: [  0.573174021900000,  0.573174021900000,  0.073174021900000 ]
+    mass: 55.845000
+    reduced_to: 49
+    magnetic_moment: 4.00000000
+  - symbol: Fe # 53
+    extended_symbol: Fe1
+    coordinates: [  0.073174021900000,  0.073174021900000,  0.573174021900000 ]
+    mass: 55.845000
+    reduced_to: 49
+    magnetic_moment: 4.00000000
+  - symbol: Fe # 54
+    extended_symbol: Fe1
+    coordinates: [  0.573174021900000,  0.073174021900000,  0.573174021900000 ]
+    mass: 55.845000
+    reduced_to: 49
+    magnetic_moment: 4.00000000
+  - symbol: Fe # 55
+    extended_symbol: Fe1
+    coordinates: [  0.073174021900000,  0.573174021900000,  0.573174021900000 ]
+    mass: 55.845000
+    reduced_to: 49
+    magnetic_moment: 4.00000000
+  - symbol: Fe # 56
+    extended_symbol: Fe1
+    coordinates: [  0.573174021900000,  0.573174021900000,  0.573174021900000 ]
+    mass: 55.845000
+    reduced_to: 49
+    magnetic_moment: 4.00000000
+  - symbol: Fe # 57
+    extended_symbol: Fe1
+    coordinates: [  0.176825978100000,  0.176825978100000,  0.176825978100000 ]
+    mass: 55.845000
+    reduced_to: 57
+    magnetic_moment: 4.00000000
+  - symbol: Fe # 58
+    extended_symbol: Fe1
+    coordinates: [  0.676825978100000,  0.176825978100000,  0.176825978100000 ]
+    mass: 55.845000
+    reduced_to: 57
+    magnetic_moment: 4.00000000
+  - symbol: Fe # 59
+    extended_symbol: Fe1
+    coordinates: [  0.176825978100000,  0.676825978100000,  0.176825978100000 ]
+    mass: 55.845000
+    reduced_to: 57
+    magnetic_moment: 4.00000000
+  - symbol: Fe # 60
+    extended_symbol: Fe1
+    coordinates: [  0.676825978100000,  0.676825978100000,  0.176825978100000 ]
+    mass: 55.845000
+    reduced_to: 57
+    magnetic_moment: 4.00000000
+  - symbol: Fe # 61
+    extended_symbol: Fe1
+    coordinates: [  0.176825978100000,  0.176825978100000,  0.676825978100000 ]
+    mass: 55.845000
+    reduced_to: 57
+    magnetic_moment: 4.00000000
+  - symbol: Fe # 62
+    extended_symbol: Fe1
+    coordinates: [  0.676825978100000,  0.176825978100000,  0.676825978100000 ]
+    mass: 55.845000
+    reduced_to: 57
+    magnetic_moment: 4.00000000
+  - symbol: Fe # 63
+    extended_symbol: Fe1
+    coordinates: [  0.176825978100000,  0.676825978100000,  0.676825978100000 ]
+    mass: 55.845000
+    reduced_to: 57
+    magnetic_moment: 4.00000000
+  - symbol: Fe # 64
+    extended_symbol: Fe1
+    coordinates: [  0.676825978100000,  0.676825978100000,  0.676825978100000 ]
+    mass: 55.845000
+    reduced_to: 57
+    magnetic_moment: 4.00000000
+  - symbol: Fe # 65
+    extended_symbol: Fe2
+    coordinates: [  0.323174029850000,  0.323174029850000,  0.323174029850000 ]
+    mass: 55.845000
+    reduced_to: 65
+    magnetic_moment: -4.00000000
+  - symbol: Fe # 66
+    extended_symbol: Fe2
+    coordinates: [  0.823174029850000,  0.323174029850000,  0.323174029850000 ]
+    mass: 55.845000
+    reduced_to: 65
+    magnetic_moment: -4.00000000
+  - symbol: Fe # 67
+    extended_symbol: Fe2
+    coordinates: [  0.323174029850000,  0.823174029850000,  0.323174029850000 ]
+    mass: 55.845000
+    reduced_to: 65
+    magnetic_moment: -4.00000000
+  - symbol: Fe # 68
+    extended_symbol: Fe2
+    coordinates: [  0.823174029850000,  0.823174029850000,  0.323174029850000 ]
+    mass: 55.845000
+    reduced_to: 65
+    magnetic_moment: -4.00000000
+  - symbol: Fe # 69
+    extended_symbol: Fe2
+    coordinates: [  0.323174029850000,  0.323174029850000,  0.823174029850000 ]
+    mass: 55.845000
+    reduced_to: 65
+    magnetic_moment: -4.00000000
+  - symbol: Fe # 70
+    extended_symbol: Fe2
+    coordinates: [  0.823174029850000,  0.323174029850000,  0.823174029850000 ]
+    mass: 55.845000
+    reduced_to: 65
+    magnetic_moment: -4.00000000
+  - symbol: Fe # 71
+    extended_symbol: Fe2
+    coordinates: [  0.323174029850000,  0.823174029850000,  0.823174029850000 ]
+    mass: 55.845000
+    reduced_to: 65
+    magnetic_moment: -4.00000000
+  - symbol: Fe # 72
+    extended_symbol: Fe2
+    coordinates: [  0.823174029850000,  0.823174029850000,  0.823174029850000 ]
+    mass: 55.845000
+    reduced_to: 65
+    magnetic_moment: -4.00000000
+  - symbol: Fe # 73
+    extended_symbol: Fe2
+    coordinates: [  0.426825970150000,  0.426825970150000,  0.426825970150000 ]
+    mass: 55.845000
+    reduced_to: 73
+    magnetic_moment: -4.00000000
+  - symbol: Fe # 74
+    extended_symbol: Fe2
+    coordinates: [  0.926825970150000,  0.426825970150000,  0.426825970150000 ]
+    mass: 55.845000
+    reduced_to: 73
+    magnetic_moment: -4.00000000
+  - symbol: Fe # 75
+    extended_symbol: Fe2
+    coordinates: [  0.426825970150000,  0.926825970150000,  0.426825970150000 ]
+    mass: 55.845000
+    reduced_to: 73
+    magnetic_moment: -4.00000000
+  - symbol: Fe # 76
+    extended_symbol: Fe2
+    coordinates: [  0.926825970150000,  0.926825970150000,  0.426825970150000 ]
+    mass: 55.845000
+    reduced_to: 73
+    magnetic_moment: -4.00000000
+  - symbol: Fe # 77
+    extended_symbol: Fe2
+    coordinates: [  0.426825970150000,  0.426825970150000,  0.926825970150000 ]
+    mass: 55.845000
+    reduced_to: 73
+    magnetic_moment: -4.00000000
+  - symbol: Fe # 78
+    extended_symbol: Fe2
+    coordinates: [  0.926825970150000,  0.426825970150000,  0.926825970150000 ]
+    mass: 55.845000
+    reduced_to: 73
+    magnetic_moment: -4.00000000
+  - symbol: Fe # 79
+    extended_symbol: Fe2
+    coordinates: [  0.426825970150000,  0.926825970150000,  0.926825970150000 ]
+    mass: 55.845000
+    reduced_to: 73
+    magnetic_moment: -4.00000000
+  - symbol: Fe # 80
+    extended_symbol: Fe2
+    coordinates: [  0.926825970150000,  0.926825970150000,  0.926825970150000 ]
+    mass: 55.845000
+    reduced_to: 73
+    magnetic_moment: -4.00000000
+
+displacements:
+- atom:    1
+  displacement:
+    [   0.0092789469068412, -0.0053572024944620,  0.0168879106384820 ]
+- atom:    1
+  displacement:
+    [  -0.0092789469068412,  0.0053572024944620, -0.0168879106384820 ]
+- atom:    1
+  displacement:
+    [  -0.0092789469068412, -0.0053572024944620,  0.0168879106384820 ]
+- atom:    1
+  displacement:
+    [   0.0092789469068412,  0.0053572024944620, -0.0168879106384820 ]
+- atom:   49
+  displacement:
+    [   0.0092789469068412, -0.0053572024944620,  0.0168879106384820 ]
+- atom:   49
+  displacement:
+    [  -0.0092789469068412,  0.0053572024944620, -0.0168879106384820 ]

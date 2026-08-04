@@ -9,22 +9,22 @@ separate Ga/O masses. The external HELD repository is unchanged.
 
 - Unit-cell atoms: 10
 - Simulation-supercell atoms: 80
-- Complete configurations: 126
-- Simulated time represented: 121.918 fs
-- Mean sampled temperature: 532.568 K
-- Latest complete-frame temperature: 584.624 K
+- Complete configurations: 136
+- Simulated time represented: 131.594 fs
+- Mean sampled temperature: 532.732 K
+- Latest complete-frame temperature: 460.184 K
 - HELD coefficients: 144
 - Force equations per frame: 240
 - Per-frame rank: 144 (full rank)
 - Global design rank: 144
-- Global condition number: 47.95
-- Aggregation: mean of 126 per-frame fits
-- Force-component RMSE: approximately 3.572 eV/Angstrom
-- Force-vector RMSE: approximately 6.186 eV/Angstrom
-- Frequency range: approximately -14.616 to 23.701 THz
+- Global condition number: 47.54
+- Aggregation: mean of 136 per-frame fits
+- Force-component RMSE: approximately 3.430 eV/Angstrom
+- Force-vector RMSE: approximately 5.941 eV/Angstrom
+- Frequency range: approximately -13.984 to 23.381 THz
 
 The larger supercell gives a full-rank fit. However, this trajectory
-remains far above 300 K and spans only 122 fs. It is not
+remains far above 300 K and spans only 132 fs. It is not
 an equilibrated 300 K ensemble, and the high force error and negative
 branches make this an experimental diagnostic rather than a validated
 HELD spectrum.

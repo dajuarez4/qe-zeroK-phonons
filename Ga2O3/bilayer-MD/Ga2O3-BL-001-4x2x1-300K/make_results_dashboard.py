@@ -172,7 +172,8 @@ def main() -> None:
         0.04,
         0.66,
         f"TDEP: {tdep_min:.2f} to {tdep_max:.2f} THz  ·  "
-        f"force RMSE {tdep['force_fit_rmse_eV_per_A']:.3f} eV/Å",
+        f"residual RMS {tdep['harmonic_force_fit_residual_rms_eV_per_A']:.3f} eV/Å  ·  "
+        f"σA {tdep['anharmonicity_sigma_A']:.3f}",
         fontsize=10.5,
         color=BLUE,
         weight="bold",

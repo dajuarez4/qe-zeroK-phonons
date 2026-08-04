@@ -29,7 +29,19 @@ def main() -> None:
     timestep_fs, mean_temperature = float(meta[2]), float(meta[3])
     fit_log = (outdir / "extract_forceconstants.log").read_text(errors="replace")
     rmse_match = re.search(r"RMSE total:\s+([-+0-9.Ee]+)", fit_log)
-    force_rmse = float(rmse_match.group(1)) if rmse_match else None
+    first_order_rmse = float(rmse_match.group(1)) if rmse_match else None
+    anharmonicity_match = re.search(
+        r"^\s*second order:\s+([-+0-9.Ee]+)\s+([-+0-9.Ee]+)\s+"
+        r"([-+0-9.Ee]+)\s+([-+0-9.Ee]+)\s+([-+0-9.Ee]+)\s+"
+        r"<-- anharmonicity measure",
+        fit_log,
+        re.MULTILINE,
+    )
+    anharmonicity_values = (
+        [float(value) for value in anharmonicity_match.groups()]
+        if anharmonicity_match
+        else [None] * 5
+    )
     temperature_values = [
         float(value)
         for value in re.findall(
@@ -69,7 +81,12 @@ def main() -> None:
         "latest_complete_temperature_K": (
             temperature_values[nframes - 1] if len(temperature_values) >= nframes else None
         ),
-        "force_fit_rmse_eV_per_A": force_rmse,
+        "first_order_reference_force_rmse_eV_per_A": first_order_rmse,
+        "harmonic_predicted_force_rms_eV_per_A": anharmonicity_values[0],
+        "harmonic_force_fit_residual_rms_eV_per_A": anharmonicity_values[1],
+        "harmonic_force_fit_residual_std_eV_per_A": anharmonicity_values[2],
+        "harmonic_force_fit_residual_R2": anharmonicity_values[3],
+        "anharmonicity_sigma_A": anharmonicity_values[4],
         "minimum_frequency_THz": float(np.min(frequencies)),
         "maximum_frequency_THz": float(np.max(frequencies)),
         "negative_frequency_values_below_minus_1e-6_THz": int(

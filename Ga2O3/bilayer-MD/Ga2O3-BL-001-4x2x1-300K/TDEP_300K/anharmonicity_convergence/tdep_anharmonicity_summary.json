@@ -1,0 +1,86 @@
+{
+  "definition": "sigma_A = std(F_DFT - F_harmonic) / std(F_DFT)",
+  "final": {
+    "frames": 136,
+    "time_fs": 131.5936,
+    "mean_temperature_K": 532.7317506541,
+    "harmonic_force_rms_eV_per_A": 0.680847,
+    "residual_force_rms_eV_per_A": 0.908925,
+    "residual_force_std_eV_per_A": 0.524768,
+    "residual_R2": 0.359427,
+    "sigma_A": 0.800358
+  },
+  "checkpoints": [
+    {
+      "frames": 20,
+      "time_fs": 19.352,
+      "mean_temperature_K": 436.3005434015,
+      "harmonic_force_rms_eV_per_A": 0.48657,
+      "residual_force_rms_eV_per_A": 0.962758,
+      "residual_force_std_eV_per_A": 0.555849,
+      "residual_R2": 0.203454,
+      "sigma_A": 0.892494
+    },
+    {
+      "frames": 40,
+      "time_fs": 38.704,
+      "mean_temperature_K": 540.0674293072,
+      "harmonic_force_rms_eV_per_A": 0.631822,
+      "residual_force_rms_eV_per_A": 0.876312,
+      "residual_force_std_eV_per_A": 0.505939,
+      "residual_R2": 0.342037,
+      "sigma_A": 0.811149
+    },
+    {
+      "frames": 60,
+      "time_fs": 58.056,
+      "mean_temperature_K": 549.790968033,
+      "harmonic_force_rms_eV_per_A": 0.679453,
+      "residual_force_rms_eV_per_A": 0.861709,
+      "residual_force_std_eV_per_A": 0.497508,
+      "residual_R2": 0.383372,
+      "sigma_A": 0.785256
+    },
+    {
+      "frames": 80,
+      "time_fs": 77.408,
+      "mean_temperature_K": 563.9806724058,
+      "harmonic_force_rms_eV_per_A": 0.618984,
+      "residual_force_rms_eV_per_A": 0.878688,
+      "residual_force_std_eV_per_A": 0.507311,
+      "residual_R2": 0.331657,
+      "sigma_A": 0.817523
+    },
+    {
+      "frames": 100,
+      "time_fs": 96.76,
+      "mean_temperature_K": 545.6520104305,
+      "harmonic_force_rms_eV_per_A": 0.668723,
+      "residual_force_rms_eV_per_A": 0.888728,
+      "residual_force_std_eV_per_A": 0.513107,
+      "residual_R2": 0.361504,
+      "sigma_A": 0.79906
+    },
+    {
+      "frames": 120,
+      "time_fs": 116.112,
+      "mean_temperature_K": 530.0506573389,
+      "harmonic_force_rms_eV_per_A": 0.704195,
+      "residual_force_rms_eV_per_A": 0.903349,
+      "residual_force_std_eV_per_A": 0.521549,
+      "residual_R2": 0.377986,
+      "sigma_A": 0.788679
+    },
+    {
+      "frames": 136,
+      "time_fs": 131.5936,
+      "mean_temperature_K": 532.7317506541,
+      "harmonic_force_rms_eV_per_A": 0.680847,
+      "residual_force_rms_eV_per_A": 0.908925,
+      "residual_force_std_eV_per_A": 0.524768,
+      "residual_R2": 0.359427,
+      "sigma_A": 0.800358
+    }
+  ],
+  "interpretation": "Diagnostic only: the reference is unrelaxed and the trajectory is not equilibrated at 300 K."
+}

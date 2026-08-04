@@ -32,7 +32,7 @@ hundreds of configurations.
 
 ## Finite-temperature phonon diagnostics
 
-The currently available output has 126 complete MD frames. The
+The currently available output has 136 complete MD frames. The
 following local workflows process every complete position/force pair
 and exclude the unfinished final frame:
 
@@ -41,8 +41,8 @@ and exclude the unfinished final frame:
 /opt/anaconda3/bin/python run_held_phonons.py
 ```
 
-Results are in `TDEP_300K/` and `HELD_300K/`. The sampled 121.918 fs
-trajectory remains far above the target (mean 532.568 K), so these are
+Results are in `TDEP_300K/` and `HELD_300K/`. The sampled 131.594 fs
+trajectory remains far above the target (mean 532.732 K), so these are
 not converged 300 K spectra. Read the README
 in each result folder before interpretation.
 

@@ -1,0 +1,35 @@
+Ideal beta-Ga2O3 phonon comparison
+=====================================
+
+This work: Quantum ESPRESSO DFPT, PBE, experimental ideal C2/m cell,
+2x2x2 q-grid, Fourier interpolation, 10-atom primitive cell.
+
+Reference: Togo PhononDB/NIMS dataset keyed to Materials Project mp-886,
+VASP finite displacements, relaxed C2/m structure, 1x3x2 supercell matrix,
+including Born effective charges and dielectric tensor. This is an
+MP-structure-derived PhononDB dataset, not the official MP/ABINIT dataset.
+
+Structure
+---------
+QE primitive volume: 104.678685 A^3
+Reference primitive volume: 105.739513 A^3
+Relative QE-reference volume difference: -1.003 %
+
+Dispersion on Gamma-Y-F-L-I | I1-Z-F1 | Y-X1 | X-Gamma-N | M-Gamma
+----------------------------------------------------------------------------
+Compared values: 9150 frequencies (305 q points x 30 branches)
+Pointwise sorted-branch MAE: 0.452273 THz (15.086 cm^-1)
+Pointwise sorted-branch RMSE: 0.560821 THz (18.707 cm^-1)
+Mean signed QE-reference difference: +0.384888 THz
+Best through-origin QE/reference optical frequency scale: 1.037844
+
+QE path minimum: -0.092750 THz (-3.094 cm^-1)
+Reference path minimum: -0.000207 THz (-0.007 cm^-1)
+QE path maximum: 23.673828 THz (789.674 cm^-1)
+Reference path maximum: 23.099101 THz (770.503 cm^-1)
+
+The small QE negative values occur only in acoustic modes at Gamma and have
+a maximum magnitude near 3.1 cm^-1. Branch-index errors are descriptive:
+sorted branches can exchange identity at crossings. The QE result is an
+initial 2x2x2-grid calculation; use the prepared 4x4x4 grid for a final
+convergence-quality publication comparison.

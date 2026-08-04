@@ -1,0 +1,36 @@
+Existing-results analysis for AFM alpha-Fe2O3
+================================================
+
+No new DFT calculations were used.
+
+EOS and magnetostructural data
+------------------------------
+Pressure range: -5.446 to 32.955 GPa
+Volume range: 92.574946 to 108.674948 A^3
+Birch-Murnaghan V0: 106.261887 A^3
+Birch-Murnaghan B0: 187.574937 GPa
+Birch-Murnaghan B0': 4.233490
+
+Linear descriptive slopes over the sampled pressure interval:
+Mean Fe-O distance: -0.002769 A/GPa
+Fe Hubbard-site moment: -0.001930 muB/GPa
+Fe sphere moment: -0.003305 muB/GPa
+Hubbard energy: +0.013066 eV/GPa
+
+These slopes summarize the sampled range and are not an EOS model.
+
+V100 lattice dynamics
+----------------------
+Integrated projected DOS (non-negative frequency grid):
+O contribution: 18.05710 states/cell
+Fe contribution: 12.13175 states/cell
+Total: 30.18885 states/cell (expected approximately 30)
+
+Gamma acoustic residual: -0.00002024 THz
+Lowest optical Gamma frequency: 4.89029617 THz
+Highest Gamma frequency: 19.19984063 THz
+
+The three tiny negative Gamma frequencies are numerical acoustic residuals.
+Species weights are squared, normalized mass-weighted dynamical-matrix
+eigenvector components. Crystallographic irreducible-representation and
+Raman/IR activity labels are not assigned here.

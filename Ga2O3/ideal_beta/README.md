@@ -70,3 +70,28 @@ optical modes, replace the phonon input in the Slurm script with
 `beta_Ga2O3.relax.in` is also provided as an optional fixed-cell ionic
 relaxation. Do not use its result for phonons without first copying its
 final fractional coordinates into a new SCF input and rerunning `pw.x`.
+
+## mp-886 phonon comparison
+
+`mp-886-phonondb.zip` is the public NIMS/PhononDB reference dataset for the
+Materials Project `mp-886` beta-Ga2O3 structure. Its precise provenance and
+license are recorded in `mp-886-reference-source.txt`.
+
+Run the comparison using the Anaconda environment containing Phonopy:
+
+```bash
+MPLCONFIGDIR=/tmp/ga2o3-mpl \
+  /opt/anaconda3/bin/python plot_beta_ga2o3_qe_vs_mp_band_dos.py
+```
+
+The script evaluates the downloaded force constants on the same disconnected
+Setyawan-Curtarolo path as the QE calculation and writes:
+
+- `beta_Ga2O3_qe_vs_mp_band_dos.pdf` and `.png`
+- `beta_Ga2O3_qe_vs_mp_summary.txt`
+- `beta_Ga2O3_qe_vs_mp_Gamma.csv`
+- `beta_Ga2O3_qe_vs_mp_branch_errors.csv`
+- processed reference band and DOS JSON files
+
+The present QE data use the initial 2x2x2 q-grid. Repeat the comparison after
+the prepared 4x4x4 production run before treating branch errors as converged.

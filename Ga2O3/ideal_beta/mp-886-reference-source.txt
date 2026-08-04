@@ -1,0 +1,18 @@
+Reference dataset provenance
+============================
+
+Material: beta-Ga2O3, C2/m (No. 12)
+Materials Project identifier: mp-886
+Dataset author: Atsushi Togo
+Repository: NIMS Materials Data Repository, PhononDB collection
+Dataset page: https://mdr.nims.go.jp/datasets/eff3dce9-6a58-4752-b2ca-4366ab2f9e0b?locale=en
+Materials Project entry: https://materialsproject.org/materials/mp-886
+License: Creative Commons Attribution 4.0 International
+Downloaded archive: mp-886-phonondb.zip
+Raw parameter file: mp-886-phonondb/phonopy_params.yaml.xz
+
+The PhononDB calculation uses the mp-886 Materials Project structure as its
+starting structure, followed by its own VASP/Phonopy workflow. It is not the
+official Materials Project ABINIT/PBEsol phonon dataset described by
+Petretto et al. (2018). The official MP API requires an API key, and no API
+key was configured in this environment when this comparison was created.

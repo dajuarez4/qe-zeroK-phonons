@@ -17,8 +17,8 @@ from ase.data import atomic_masses, atomic_numbers
 ROOT = Path(__file__).resolve().parent
 ADAPTER_DIR = (ROOT / "../Ga2O3-BL-001-300K").resolve()
 PARSER_DIR = (ROOT / "../Ga2O3-BL-001-4x2x1-300K").resolve()
-sys.path.insert(0, str(ADAPTER_DIR))
 sys.path.insert(0, str(PARSER_DIR))
+sys.path.insert(0, str(ADAPTER_DIR))
 
 from run_held_phonons import MultiSpeciesHeldModel, reciprocal_path, write_coefficients  # noqa: E402
 from qe_supercell_to_tdep import parse_qe_input, parse_qe_output  # noqa: E402

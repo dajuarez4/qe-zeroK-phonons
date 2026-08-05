@@ -7,11 +7,11 @@
  --> rc4 cutoff:      -1.00000
  
  DETERMINING SYMMETRY OF INTERACTION TENSORS
- ... constructed distance tables (0.00742s)
+ ... constructed distance tables (0.00599s)
  ... built singlets
  ... built pairs
  ... built prototype tuplets (0.00016s)
- ... expanded symmetry operations (0.00381s)
+ ... expanded symmetry operations (0.00334s)
   ... reducing pairs                        0.00000000     %
   ... reducing pairs                        2.43902445     %
   ... reducing pairs                        4.87804890     %
@@ -232,97 +232,181 @@
  READING SIMULATION FROM FILE
  ... made space and decided on heuristics
  ... reading simulation                     0.00000000     %
- ... reading simulation                     3.84615374     %
- ... reading simulation                     7.69230747     %
- ... reading simulation                     11.5384617     %
- ... reading simulation                     15.3846149     %
- ... reading simulation                     19.2307701     %
- ... reading simulation                     23.0769234     %
- ... reading simulation                     26.9230766     %
- ... reading simulation                     34.6153831     %
- ... reading simulation                     38.4615402     %
- ... reading simulation                     42.3076935     %
- ... reading simulation                     46.1538467     %
- ... reading simulation                     50.0000000     %
- ... reading simulation                     53.8461533     %
- ... reading simulation                     57.6923065     %
- ... reading simulation                     61.5384598     %
- ... reading simulation                     69.2307663     %
- ... reading simulation                     73.0769196     %
- ... reading simulation                     76.9230804     %
- ... reading simulation                     80.7692337     %
- ... reading simulation                     84.6153870     %
- ... reading simulation                     88.4615402     %
- ... reading simulation                     92.3076935     %
- ... reading simulation                     96.1538467     %
+ ... reading simulation                     1.12359548     %
+ ... reading simulation                     2.24719095     %
+ ... reading simulation                     3.37078643     %
+ ... reading simulation                     4.49438190     %
+ ... reading simulation                     5.61797762     %
+ ... reading simulation                     6.74157286     %
+ ... reading simulation                     7.86516857     %
+ ... reading simulation                     8.98876381     %
+ ... reading simulation                     10.1123600     %
+ ... reading simulation                     11.2359552     %
+ ... reading simulation                     12.3595505     %
+ ... reading simulation                     13.4831457     %
+ ... reading simulation                     14.6067419     %
+ ... reading simulation                     15.7303371     %
+ ... reading simulation                     16.8539333     %
+ ... reading simulation                     17.9775276     %
+ ... reading simulation                     19.1011238     %
+ ... reading simulation                     20.2247200     %
+ ... reading simulation                     21.3483143     %
+ ... reading simulation                     22.4719105     %
+ ... reading simulation                     23.5955048     %
+ ... reading simulation                     24.7191010     %
+ ... reading simulation                     25.8426971     %
+ ... reading simulation                     26.9662914     %
+ ... reading simulation                     28.0898876     %
+ ... reading simulation                     29.2134838     %
+ ... reading simulation                     30.3370781     %
+ ... reading simulation                     31.4606743     %
+ ... reading simulation                     33.7078667     %
+ ... reading simulation                     34.8314590     %
+ ... reading simulation                     35.9550552     %
+ ... reading simulation                     37.0786514     %
+ ... reading simulation                     38.2022476     %
+ ... reading simulation                     39.3258438     %
+ ... reading simulation                     40.4494400     %
+ ... reading simulation                     41.5730324     %
+ ... reading simulation                     42.6966286     %
+ ... reading simulation                     43.8202248     %
+ ... reading simulation                     44.9438210     %
+ ... reading simulation                     46.0674171     %
+ ... reading simulation                     47.1910095     %
+ ... reading simulation                     48.3146057     %
+ ... reading simulation                     49.4382019     %
+ ... reading simulation                     50.5617981     %
+ ... reading simulation                     51.6853943     %
+ ... reading simulation                     52.8089905     %
+ ... reading simulation                     53.9325829     %
+ ... reading simulation                     55.0561790     %
+ ... reading simulation                     56.1797752     %
+ ... reading simulation                     57.3033714     %
+ ... reading simulation                     58.4269676     %
+ ... reading simulation                     59.5505600     %
+ ... reading simulation                     60.6741562     %
+ ... reading simulation                     61.7977524     %
+ ... reading simulation                     62.9213486     %
+ ... reading simulation                     64.0449448     %
+ ... reading simulation                     65.1685410     %
+ ... reading simulation                     67.4157333     %
+ ... reading simulation                     68.5393295     %
+ ... reading simulation                     69.6629181     %
+ ... reading simulation                     70.7865143     %
+ ... reading simulation                     71.9101105     %
+ ... reading simulation                     73.0337067     %
+ ... reading simulation                     74.1573029     %
+ ... reading simulation                     75.2808990     %
+ ... reading simulation                     76.4044952     %
+ ... reading simulation                     77.5280914     %
+ ... reading simulation                     78.6516876     %
+ ... reading simulation                     79.7752838     %
+ ... reading simulation                     80.8988800     %
+ ... reading simulation                     82.0224686     %
+ ... reading simulation                     83.1460648     %
+ ... reading simulation                     84.2696609     %
+ ... reading simulation                     85.3932571     %
+ ... reading simulation                     86.5168533     %
+ ... reading simulation                     87.6404495     %
+ ... reading simulation                     88.7640457     %
+ ... reading simulation                     89.8876419     %
+ ... reading simulation                     91.0112381     %
+ ... reading simulation                     92.1348343     %
+ ... reading simulation                     93.2584305     %
+ ... reading simulation                     94.3820190     %
+ ... reading simulation                     95.5056152     %
+ ... reading simulation                     96.6292114     %
+ ... reading simulation                     97.7528076     %
+ ... reading simulation                     98.8764038     %
  ... reading simulation                     100.000000     %
  ... got displacements
  ... short summary of simulation:
                        number of atoms: 80
-              number of configurations: 9
+              number of configurations: 30
                          timestep (fs): 0.96760
-               average temperature (K): 265.87185
-                 thermostat set to (K): 265.87185
+               average temperature (K): 191.14653
+                 thermostat set to (K): 191.14653
                 average pressure (GPa): 0.00000
    average stresstensor xx xy xz (GPa):       0.0000       0.0000       0.0000 
    average stresstensor yx yy yz (GPa):       0.0000       0.0000       0.0000 
    average stresstensor zx zy zz (GPa):       0.0000       0.0000       0.0000 
- ... finished reading simulation (0.00460s)
+ ... finished reading simulation (0.00731s)
  
  REPORT GRADE OF OVERDETERMINATION
-     total number of equations:         2160
-      number of FC up 1. order:           27   --> overdetermination ratio:         80.0
-      number of FC up 2. order:          171   --> overdetermination ratio:         12.6
+     total number of equations:         7200
+      number of FC up 1. order:           27   --> overdetermination ratio:        266.7
+      number of FC up 2. order:          171   --> overdetermination ratio:         42.1
  
  SOLVING FOR INTERACTION TENSORS
  ... distributed data
  ... no polar interactions to worry about
  
  GENERATING CONSTRAINTS
- ... 114 secondorder constraints (0.02555s)
- ... created 114 constraints (0.02556s)
+ ... 114 secondorder constraints (0.02496s)
+ ... created 114 constraints (0.02497s)
  ... creating fc coefficients               0.00000000     %
- ... creating fc coefficients               12.5000000     %
- ... creating fc coefficients               25.0000000     %
- ... creating fc coefficients               37.5000000     %
- ... creating fc coefficients               50.0000000     %
- ... creating fc coefficients               62.5000000     %
- ... creating fc coefficients               75.0000000     %
- ... creating fc coefficients               87.5000000     %
+ ... creating fc coefficients               3.44827580     %
+ ... creating fc coefficients               6.89655161     %
+ ... creating fc coefficients               10.3448277     %
+ ... creating fc coefficients               13.7931032     %
+ ... creating fc coefficients               17.2413788     %
+ ... creating fc coefficients               20.6896553     %
+ ... creating fc coefficients               24.1379318     %
+ ... creating fc coefficients               27.5862064     %
+ ... creating fc coefficients               31.0344830     %
+ ... creating fc coefficients               34.4827576     %
+ ... creating fc coefficients               37.9310341     %
+ ... creating fc coefficients               41.3793106     %
+ ... creating fc coefficients               44.8275871     %
+ ... creating fc coefficients               48.2758636     %
+ ... creating fc coefficients               51.7241364     %
+ ... creating fc coefficients               55.1724129     %
+ ... creating fc coefficients               58.6206894     %
+ ... creating fc coefficients               62.0689659     %
+ ... creating fc coefficients               65.5172424     %
+ ... creating fc coefficients               68.9655151     %
+ ... creating fc coefficients               72.4137955     %
+ ... creating fc coefficients               75.8620682     %
+ ... creating fc coefficients               79.3103485     %
+ ... creating fc coefficients               82.7586212     %
+ ... creating fc coefficients               86.2068939     %
+ ... creating fc coefficients               89.6551743     %
+ ... creating fc coefficients               93.1034470     %
+ ... creating fc coefficients               96.5517273     %
  ... creating fc coefficients               100.000000     %
  ... least squares solver
- ... solved second order (0.08855s)
- ... solved first order (0.09058s)
+ ... solved second order (0.09590s)
+ ... solved first order (0.09850s)
  ... finished solving for forceconstants
  ... diagnostics from three-fold cross-validation:
                                    R^2     stddev energy (meV/atom)
-                         input:                 4.0744552
-                  second order:  0.93329        0.4586917
+                         input:                 6.6914825
+                  second order:  0.86087        1.8587138
  residual forces per atom (eV/A):
-           1   1.1789599645058612E-002  -2.6415415564166177E-002   2.9260099141415717E-002
-           2  -3.7980557595752841E-002  -2.6933941815075160E-002   2.6233705286267416E-002
-           3  -4.5446908257054238E-003   4.5610514163568192E-002  -3.8644463658264142E-002
-           4   2.6024618398703254E-002   5.4657769588820097E-003  -5.0933050816231673E-002
-           5   4.9220530759149943E-002   7.1921689958440671E-002  -1.9731840559603139E-002
-           6  -1.5766102770389068E-003  -1.8683323869840646E-002  -1.4328823897334282E-002
-           7  -2.1662307481675910E-002   4.2791676638960609E-003  -2.6860603495749650E-002
-           8  -1.9750341332548646E-002  -6.5117523427782008E-003   3.1508089966651685E-002
-           9   2.3059704157220442E-002  -2.4358961197562659E-002   3.5460076662231367E-002
-          10  -2.4579945447410521E-002  -2.4373753955364102E-002   2.8036811370616706E-002
+           1   6.0960608358969388E-003   7.4619099972866075E-003   5.0352299261128289E-002
+           2  -3.4753287195149439E-002 -0.11369259779222145        5.7015828420779541E-002
+           3   2.7911981078132986E-003   3.5518520321444771E-002  -7.0695710159243502E-002
+           4   7.4996007894466338E-002   7.3166261527470147E-002  -8.9105216637348897E-002
+           5   6.0950291645123146E-002  0.10499996191791158       -2.5727749335670087E-002
+           6  -8.9670452021454183E-003   5.6268237462620038E-002  -3.2244574997881949E-002
+           7  -2.3670948507239862E-002  -5.0700100576476129E-002  -5.5017619352786901E-002
+           8  -1.8627188733798195E-002  -3.8055613269246592E-002   6.3385637572798165E-002
+           9   5.4552549301060387E-003  -4.4272269033865656E-002   7.5031512068988893E-002
+          10  -6.4270343775072861E-002  -3.0694310554923308E-002   2.7005593159236462E-002
 ------------------------------------------------------------------------------------------
-       RMSE:   2.5884076114382738E-002   3.2098838398653268E-002   3.1597979745660525E-002
- RMSE total:   0.519E-01 (eV/AA)
+       RMSE:   3.9673938203215631E-002   6.3803263992375403E-002   5.8162805001109645E-002
+ RMSE total:   0.950E-01 (eV/AA)
 
  .. write to outfile.forceconstant_firstorder
 
  
  ELASTIC CONSTANTS (short range) (GPa):
-          47.73120           8.19007           3.40676         -14.09542           3.17823          -2.89630
-           8.19007          69.60779           3.43871          -8.00297           2.61364          -3.79836
-           3.40676           3.43871           6.32839           2.44589          -0.13763          -1.90259
-         -14.09542          -8.00297           2.44589          10.67579          -0.06017           0.12595
-           3.17823           2.61364          -0.13763          -0.06017          11.67584          -4.56981
-          -2.89630          -3.79836          -1.90259           0.12595          -4.56981          19.18269
+          44.69181           6.87732           2.45800         -13.96454           3.54252          -3.46451
+           6.87732          69.67187           2.87047          -7.87491           1.78028          -3.51903
+           2.45800           2.87047           6.36431           2.54193           0.13553          -1.22865
+         -13.96454          -7.87491           2.54193          10.68546          -0.37318           0.38662
+           3.54252           1.78028           0.13553          -0.37318          11.61953          -3.46922
+          -3.46451          -3.51903          -1.22865           0.38662          -3.46922          18.89069
  ELASTIC CONSTANTS (long range) (GPa):
            0.00000           0.00000           0.00000           0.00000           0.00000           0.00000
            0.00000           0.00000           0.00000           0.00000           0.00000           0.00000
@@ -331,26 +415,26 @@
            0.00000           0.00000           0.00000           0.00000           0.00000           0.00000
            0.00000           0.00000           0.00000           0.00000           0.00000           0.00000
  ELASTIC CONSTANTS (total) (GPa):
-          47.73120           8.19007           3.40676         -14.09542           3.17823          -2.89630
-           8.19007          69.60779           3.43871          -8.00297           2.61364          -3.79836
-           3.40676           3.43871           6.32839           2.44589          -0.13763          -1.90259
-         -14.09542          -8.00297           2.44589          10.67579          -0.06017           0.12595
-           3.17823           2.61364          -0.13763          -0.06017          11.67584          -4.56981
-          -2.89630          -3.79836          -1.90259           0.12595          -4.56981          19.18269
+          44.69181           6.87732           2.45800         -13.96454           3.54252          -3.46451
+           6.87732          69.67187           2.87047          -7.87491           1.78028          -3.51903
+           2.45800           2.87047           6.36431           2.54193           0.13553          -1.22865
+         -13.96454          -7.87491           2.54193          10.68546          -0.37318           0.38662
+           3.54252           1.78028           0.13553          -0.37318          11.61953          -3.46922
+          -3.46451          -3.51903          -1.22865           0.38662          -3.46922          18.89069
  
  ENERGIES (meV/atom):
                      rms          std          std(res)
-          input:     6.690550     4.276246     -
-   second order:     6.392554     3.793095     0.483522
+          input:    13.742715     6.727551     -
+   second order:    13.013023     5.073116     1.855906
  
  FORCES (eV/A):
                      rms          rms(res)     std(res)     R^2(res)     normalized std(res)
-          input:     0.626157     0.626157     0.361512     -            -
-   second order:     0.604773     0.162244     0.093672     0.932861     0.259111             <-- anharmonicity measure
+          input:     0.837355     0.837355     0.483447     -            -
+   second order:     0.777398     0.311151     0.179643     0.861922     0.371589             <-- anharmonicity measure
  
  BASELINE ENERGY (eV/atom):
-             U0:              -1853.105532
+             U0:              -1853.102936
  
  Since we have the first order, predict new reference positions.
  
- Done in 0.25984s
+ Done in 0.32886s

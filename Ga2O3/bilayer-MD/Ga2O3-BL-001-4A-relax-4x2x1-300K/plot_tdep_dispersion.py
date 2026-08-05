@@ -48,7 +48,9 @@ def main():
     ax.set_xlim(x_values[0], x_values[-1])
     ax.set_xticks(tick_positions, [r"$\Gamma$", "X", "S", "Y", r"$\Gamma$"])
     ax.set_ylabel("Frequency (THz)")
-    ax.set_title("Ga₂O₃ 4 Å bilayer · TDEP diagnostic (9 MD frames)")
+    ax.set_title(
+        f"Ga₂O₃ 4 Å bilayer · TDEP diagnostic ({reference['n_frames']} MD frames)"
+    )
     ax.grid(axis="y", alpha=0.2)
     fig.savefig(OUTDIR / "Ga2O3-BL-001-4A-TDEP-diagnostic.png", dpi=180)
     plt.close(fig)

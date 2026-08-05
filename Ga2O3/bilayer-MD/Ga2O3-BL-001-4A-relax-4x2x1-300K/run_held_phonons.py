@@ -144,7 +144,9 @@ def main():
     ax.set_xlim(x_values[0], x_values[-1])
     ax.set_xticks(tick_positions, tick_labels)
     ax.set_ylabel("Frequency (THz)")
-    ax.set_title("Ga₂O₃ 4 Å bilayer · experimental HELD (9 MD frames)")
+    ax.set_title(
+        f"Ga₂O₃ 4 Å bilayer · experimental HELD ({len(positions)} MD frames)"
+    )
     ax.grid(axis="y", alpha=0.2)
     fig.savefig(outdir / "Ga2O3-BL-001-4A-HELD-experimental.png", dpi=180)
     plt.close(fig)

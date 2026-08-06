@@ -12,13 +12,21 @@ fi
 
 for output in "${outputs[@]}"; do
   if ! grep -q 'JOB DONE' "$output"; then
-    echo "Incomplete calculation: $output"
-    exit 1
+    # A transferred stdout may lack only QE's final timing/footer section.
+    # Accept it when the SCF converged and the complete force block is present.
+    if grep -q 'convergence has been achieved' "$output" &&
+       grep -q 'Forces acting on atoms' "$output" &&
+       grep -q 'Total force =' "$output"; then
+      echo "Warning: accepting complete forces from truncated output: $output"
+    else
+      echo "Incomplete calculation: $output"
+      exit 1
+    fi
   fi
 done
 
 phonopy --qe -f "${outputs[@]}"
-phonopy-load phonopy_disp.yaml --fc-symmetry --writefc
+phonopy-load phonopy_disp.yaml --writefc
 
-echo "Created FORCE_SETS and force_constants.hdf5/ FORCE_CONSTANTS."
+echo "Created FORCE_SETS and FORCE_CONSTANTS."
 echo "Next: phonopy-load phonopy_disp.yaml --config band.conf --save"

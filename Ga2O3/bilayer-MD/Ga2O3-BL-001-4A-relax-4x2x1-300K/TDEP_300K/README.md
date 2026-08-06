@@ -5,25 +5,26 @@ position--force pair in the interrupted Quantum ESPRESSO trajectory.
 
 ## Result
 
-- Complete configurations: 48
+- Complete configurations: 18
 - Unfinished coordinate blocks excluded: 1
-- Represented trajectory time: 46.4448 fs
-- Mean sampled temperature: 185.364 K
-- Latest complete-frame temperature: 154.623 K
+- Represented trajectory time: 17.4168 fs
+- Mean sampled temperature: 221.381 K
+- Latest complete-frame temperature: 174.833 K
 - QE termination: incomplete (`JOB DONE.` is absent)
 - Reference mapping: exact 4 x 2 x 1 replication to numerical precision
 - Second-order cutoff: 2.5 Angstrom
-- Force equations: 11,520
+- Force equations: 4,320
 - First- plus second-order parameters: 171
-- Overdetermination ratio: 67.4
-- Harmonic force-fit residual RMS: 0.340 eV/Angstrom
-- Force residual R-squared: 0.829
-- TDEP anharmonicity measure: 0.413
-- Frequency range: -3.023 to 24.771 THz
+- Overdetermination ratio: 25.3
+- Harmonic force-fit residual RMS: 0.270 eV/Angstrom
+- Force residual R-squared: 0.870
+- TDEP anharmonicity measure: 0.361
+- Frequency range: -3.493 to 26.820 THz
 
 This is a pipeline diagnostic, not a converged finite-temperature phonon
-spectrum. The 48 adjacent complete MD frames cover only 46.4 fs and the
-temperature falls from about 302 K to roughly 155 K. The negative branches therefore cannot be
+spectrum. This separate `nraise=20` run has 18 adjacent complete MD frames
+covering only 17.4 fs, and its temperature falls from about 302 K to roughly
+175 K. The negative branches therefore cannot be
 used alone to establish a physical instability. A production result requires
 an equilibrated trajectory with hundreds or preferably thousands of
 decorrelated configurations.

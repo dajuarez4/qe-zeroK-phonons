@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --job-name=Fe2O3-V102-FD
-#SBATCH --account=jakar_general
-#SBATCH --qos=jakar_medium_general
+#SBATCH --account=jakar_partner_physj
+#SBATCH --qos=jakar_medium_physj
 #SBATCH --partition=medium
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=38

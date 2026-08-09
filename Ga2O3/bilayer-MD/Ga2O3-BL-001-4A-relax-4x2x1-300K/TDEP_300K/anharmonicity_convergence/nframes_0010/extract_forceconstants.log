@@ -1,0 +1,360 @@
+ READ STRUCTURE AND SETUP CUTOFFS
+ ... reading unitcell
+ ... min cutoff:       1.89001
+ ... max cutoff:       5.67126
+ --> rc2 cutoff:       2.50000
+ --> rc3 cutoff:      -1.00000
+ --> rc4 cutoff:      -1.00000
+ 
+ DETERMINING SYMMETRY OF INTERACTION TENSORS
+ ... constructed distance tables (0.00731s)
+ ... built singlets
+ ... built pairs
+ ... built prototype tuplets (0.00016s)
+ ... expanded symmetry operations (0.00098s)
+  ... reducing pairs                        0.00000000     %
+  ... reducing pairs                        2.43902445     %
+  ... reducing pairs                        4.87804890     %
+  ... reducing pairs                        7.31707335     %
+  ... reducing pairs                        9.75609779     %
+  ... reducing pairs                        12.1951218     %
+  ... reducing pairs                        14.6341467     %
+  ... reducing pairs                        17.0731716     %
+  ... reducing pairs                        19.5121956     %
+  ... reducing pairs                        21.9512196     %
+  ... reducing pairs                        24.3902435     %
+  ... reducing pairs                        26.8292675     %
+  ... reducing pairs                        29.2682934     %
+  ... reducing pairs                        31.7073174     %
+  ... reducing pairs                        34.1463432     %
+  ... reducing pairs                        36.5853653     %
+  ... reducing pairs                        39.0243912     %
+  ... reducing pairs                        41.4634132     %
+  ... reducing pairs                        43.9024391     %
+  ... reducing pairs                        46.3414650     %
+  ... reducing pairs                        48.7804871     %
+  ... reducing pairs                        51.2195129     %
+  ... reducing pairs                        53.6585350     %
+  ... reducing pairs                        56.0975609     %
+  ... reducing pairs                        58.5365868     %
+  ... reducing pairs                        60.9756088     %
+  ... reducing pairs                        63.4146347     %
+  ... reducing pairs                        65.8536606     %
+  ... reducing pairs                        68.2926865     %
+  ... reducing pairs                        70.7317047     %
+  ... reducing pairs                        73.1707306     %
+  ... reducing pairs                        75.6097565     %
+  ... reducing pairs                        78.0487823     %
+  ... reducing pairs                        80.4878082     %
+  ... reducing pairs                        82.9268265     %
+  ... reducing pairs                        85.3658524     %
+  ... reducing pairs                        87.8048782     %
+  ... reducing pairs                        90.2439041     %
+  ... reducing pairs                        92.6829300     %
+  ... reducing pairs                        95.1219482     %
+  ... reducing pairs                        97.5609741     %
+  ... reducing pairs                        100.000000     %
+  ... mapping pairs                        0.530503988     %
+  ... mapping pairs                         1.32625997     %
+  ... mapping pairs                         2.12201595     %
+  ... mapping pairs                         2.91777182     %
+  ... mapping pairs                         3.71352792     %
+  ... mapping pairs                         4.50928402     %
+  ... mapping pairs                         5.30503988     %
+  ... mapping pairs                         6.10079575     %
+  ... mapping pairs                         6.89655161     %
+  ... mapping pairs                         7.69230747     %
+  ... mapping pairs                         8.48806381     %
+  ... mapping pairs                         9.28381920     %
+  ... mapping pairs                         10.0795755     %
+  ... mapping pairs                         10.8753319     %
+  ... mapping pairs                         11.6710873     %
+  ... mapping pairs                         12.4668436     %
+  ... mapping pairs                         13.2625999     %
+  ... mapping pairs                         14.0583553     %
+  ... mapping pairs                         14.8541117     %
+  ... mapping pairs                         15.6498671     %
+  ... mapping pairs                         16.4456234     %
+  ... mapping pairs                         17.2413788     %
+  ... mapping pairs                         18.0371361     %
+  ... mapping pairs                         18.8328915     %
+  ... mapping pairs                         19.6286469     %
+  ... mapping pairs                         20.4244022     %
+  ... mapping pairs                         21.2201595     %
+  ... mapping pairs                         22.0159149     %
+  ... mapping pairs                         22.8116703     %
+  ... mapping pairs                         23.6074276     %
+  ... mapping pairs                         24.4031830     %
+  ... mapping pairs                         25.1989384     %
+  ... mapping pairs                         25.9946957     %
+  ... mapping pairs                         26.7904510     %
+  ... mapping pairs                         27.5862064     %
+  ... mapping pairs                         28.3819637     %
+  ... mapping pairs                         29.1777191     %
+  ... mapping pairs                         29.9734745     %
+  ... mapping pairs                         30.7692299     %
+  ... mapping pairs                         31.5649872     %
+  ... mapping pairs                         32.3607445     %
+  ... mapping pairs                         33.1564980     %
+  ... mapping pairs                         33.9522552     %
+  ... mapping pairs                         34.7480087     %
+  ... mapping pairs                         35.5437660     %
+  ... mapping pairs                         36.3395233     %
+  ... mapping pairs                         37.1352768     %
+  ... mapping pairs                         37.9310341     %
+  ... mapping pairs                         38.7267914     %
+  ... mapping pairs                         39.5225449     %
+  ... mapping pairs                         40.3183022     %
+  ... mapping pairs                         41.1140594     %
+  ... mapping pairs                         41.9098129     %
+  ... mapping pairs                         42.7055702     %
+  ... mapping pairs                         43.5013275     %
+  ... mapping pairs                         44.2970810     %
+  ... mapping pairs                         45.0928383     %
+  ... mapping pairs                         45.8885956     %
+  ... mapping pairs                         46.6843491     %
+  ... mapping pairs                         47.4801064     %
+  ... mapping pairs                         48.2758636     %
+  ... mapping pairs                         49.0716171     %
+  ... mapping pairs                         49.8673744     %
+  ... mapping pairs                         50.6631317     %
+  ... mapping pairs                         51.4588852     %
+  ... mapping pairs                         52.2546425     %
+  ... mapping pairs                         53.0503998     %
+  ... mapping pairs                         53.8461533     %
+  ... mapping pairs                         54.6419106     %
+  ... mapping pairs                         55.4376640     %
+  ... mapping pairs                         56.2334213     %
+  ... mapping pairs                         57.0291786     %
+  ... mapping pairs                         57.8249321     %
+  ... mapping pairs                         58.6206894     %
+  ... mapping pairs                         59.4164467     %
+  ... mapping pairs                         60.2122002     %
+  ... mapping pairs                         61.0079575     %
+  ... mapping pairs                         61.8037148     %
+  ... mapping pairs                         62.5994682     %
+  ... mapping pairs                         63.3952255     %
+  ... mapping pairs                         64.1909790     %
+  ... mapping pairs                         64.9867401     %
+  ... mapping pairs                         65.7824936     %
+  ... mapping pairs                         66.5782471     %
+  ... mapping pairs                         67.3740082     %
+  ... mapping pairs                         68.1697617     %
+  ... mapping pairs                         68.9655151     %
+  ... mapping pairs                         69.7612762     %
+  ... mapping pairs                         70.5570297     %
+  ... mapping pairs                         71.3527832     %
+  ... mapping pairs                         72.1485443     %
+  ... mapping pairs                         72.9442978     %
+  ... mapping pairs                         73.7400513     %
+  ... mapping pairs                         74.5358124     %
+  ... mapping pairs                         75.3315659     %
+  ... mapping pairs                         76.1273193     %
+  ... mapping pairs                         76.9230804     %
+  ... mapping pairs                         77.7188339     %
+  ... mapping pairs                         78.5145874     %
+  ... mapping pairs                         79.3103485     %
+  ... mapping pairs                         80.1061020     %
+  ... mapping pairs                         80.9018555     %
+  ... mapping pairs                         81.6976089     %
+  ... mapping pairs                         82.4933701     %
+  ... mapping pairs                         83.2891235     %
+  ... mapping pairs                         84.0848770     %
+  ... mapping pairs                         84.8806381     %
+  ... mapping pairs                         85.6763916     %
+  ... mapping pairs                         86.4721451     %
+  ... mapping pairs                         87.2679062     %
+  ... mapping pairs                         88.0636597     %
+  ... mapping pairs                         88.8594131     %
+  ... mapping pairs                         89.6551743     %
+  ... mapping pairs                         90.4509277     %
+  ... mapping pairs                         91.2466812     %
+  ... mapping pairs                         92.0424423     %
+  ... mapping pairs                         92.8381958     %
+  ... mapping pairs                         93.6339493     %
+  ... mapping pairs                         94.4297104     %
+  ... mapping pairs                         95.2254639     %
+  ... mapping pairs                         96.0212173     %
+  ... mapping pairs                         96.8169785     %
+  ... mapping pairs                         97.6127319     %
+  ... mapping pairs                         98.4084854     %
+  ... mapping pairs                         99.2042465     %
+  ... mapping pairs                         100.000000     %
+ N singlet shells:          10
+          shell:  1   1
+          shell:  2   1
+          shell:  3   1
+          shell:  4   1
+          shell:  5   1
+          shell:  6   1
+          shell:  7   1
+          shell:  8   1
+          shell:  9   1
+          shell: 10   1
+ N pair shells:          26
+    shell:           1           1   0.0000000000000000     
+    shell:           2           1   0.0000000000000000     
+    shell:           3           1   0.0000000000000000     
+    shell:           4           1   0.0000000000000000     
+    shell:           5           1   0.0000000000000000     
+    shell:           6           1   0.0000000000000000     
+    shell:           7           1   0.0000000000000000     
+    shell:           8           1   0.0000000000000000     
+    shell:           9           1   0.0000000000000000     
+    shell:          10           1   0.0000000000000000     
+    shell:          11           2   1.7829812585773983     
+    shell:          12           2   1.7831167243943975     
+    shell:          13           2   1.7841124465722502     
+    shell:          14           2   1.7841864718284122     
+    shell:          15           2   1.8874815091194663     
+    shell:          16           2   1.8875899814509598     
+    shell:          17           2   1.8879983998356951     
+    shell:          18           2   1.8881247520902178     
+    shell:          19           2   1.9133960350968136     
+    shell:          20           2   1.9141357773413439     
+     ... and 6 more shells
+ ... determined singlet nullspace
+ ... determined pair nullspace
+ ... determined dielectric tensor nullspace
+ ... determined Born charge nullspace
+ Interactions:
+        firstorder forceconstant:          10          27
+       secondorder forceconstant:          26         144
+        thirdorder forceconstant:           0           0
+       fourthorder forceconstant:           0           0
+             dielectric constant:           0           0
+              dielectric singlet:          10         162
+                 dielectric pair:           0           0
+   born effective charge singlet:          10           0
+      born effective charge pair:           0           0
+   born effective charge triplet:           0           0
+ 
+ READING SIMULATION FROM FILE
+ ... made space and decided on heuristics
+ ... reading simulation                     0.00000000     %
+ ... reading simulation                     3.44827580     %
+ ... reading simulation                     6.89655161     %
+ ... reading simulation                     10.3448277     %
+ ... reading simulation                     13.7931032     %
+ ... reading simulation                     17.2413788     %
+ ... reading simulation                     20.6896553     %
+ ... reading simulation                     24.1379318     %
+ ... reading simulation                     27.5862064     %
+ ... reading simulation                     34.4827576     %
+ ... reading simulation                     37.9310341     %
+ ... reading simulation                     41.3793106     %
+ ... reading simulation                     44.8275871     %
+ ... reading simulation                     48.2758636     %
+ ... reading simulation                     51.7241364     %
+ ... reading simulation                     55.1724129     %
+ ... reading simulation                     58.6206894     %
+ ... reading simulation                     62.0689659     %
+ ... reading simulation                     68.9655151     %
+ ... reading simulation                     72.4137955     %
+ ... reading simulation                     75.8620682     %
+ ... reading simulation                     79.3103485     %
+ ... reading simulation                     82.7586212     %
+ ... reading simulation                     86.2068939     %
+ ... reading simulation                     89.6551743     %
+ ... reading simulation                     93.1034470     %
+ ... reading simulation                     96.5517273     %
+ ... reading simulation                     100.000000     %
+ ... got displacements
+ ... short summary of simulation:
+                       number of atoms: 80
+              number of configurations: 10
+                         timestep (fs): 0.96760
+               average temperature (K): 258.33303
+                 thermostat set to (K): 258.33303
+                average pressure (GPa): 0.00000
+   average stresstensor xx xy xz (GPa):       0.0000       0.0000       0.0000 
+   average stresstensor yx yy yz (GPa):       0.0000       0.0000       0.0000 
+   average stresstensor zx zy zz (GPa):       0.0000       0.0000       0.0000 
+ ... finished reading simulation (0.00478s)
+ 
+ REPORT GRADE OF OVERDETERMINATION
+     total number of equations:         2400
+      number of FC up 1. order:           27   --> overdetermination ratio:         88.9
+      number of FC up 2. order:          171   --> overdetermination ratio:         14.0
+ 
+ SOLVING FOR INTERACTION TENSORS
+ ... distributed data
+ ... no polar interactions to worry about
+ 
+ GENERATING CONSTRAINTS
+ ... 114 secondorder constraints (0.01704s)
+ ... created 114 constraints (0.01705s)
+ ... creating fc coefficients               0.00000000     %
+ ... creating fc coefficients               11.1111107     %
+ ... creating fc coefficients               22.2222214     %
+ ... creating fc coefficients               33.3333321     %
+ ... creating fc coefficients               44.4444427     %
+ ... creating fc coefficients               55.5555573     %
+ ... creating fc coefficients               66.6666641     %
+ ... creating fc coefficients               77.7777786     %
+ ... creating fc coefficients               88.8888855     %
+ ... creating fc coefficients               100.000000     %
+ ... least squares solver
+ ... solved second order (0.10084s)
+ ... solved first order (0.10203s)
+ ... finished solving for forceconstants
+ ... diagnostics from three-fold cross-validation:
+                                   R^2     stddev energy (meV/atom)
+                         input:                 4.5377749
+                  second order:  0.91019        0.7891212
+ residual forces per atom (eV/A):
+           1   6.8254786352638678E-003   3.8943794927642689E-002  -1.5556872307364187E-002
+           2   3.5670339188634422E-003   2.9544328628225786E-002   1.6317619959296831E-003
+           3   2.9725352681186711E-002  -2.2536494013831048E-002   4.9744401120770748E-002
+           4   4.4127456644625293E-002   3.7079805018599122E-003  -7.6389870019844212E-003
+           5   2.3648780809105562E-002  -1.9246993270201036E-002   9.7970616072683564E-003
+           6  -5.9386804025482586E-003  -2.3910123528524195E-002  -3.2681853083976449E-003
+           7  -2.8357169871028255E-002  -2.1268121887865813E-002   2.3447390058372571E-003
+           8  -5.3080343422859083E-002   3.0319782714398127E-003  -7.1170054499237217E-002
+           9  -2.2846641435829962E-003   2.9823599952921810E-002  -1.0363770008047822E-002
+          10  -1.8233244849026293E-002  -1.8089949581667916E-002   4.4479905395225248E-002
+------------------------------------------------------------------------------------------
+       RMSE:   2.7283686552884025E-002   2.3519118281270159E-002   3.1687136366361744E-002
+ RMSE total:   0.480E-01 (eV/AA)
+
+ .. write to outfile.forceconstant_firstorder
+
+ 
+ ELASTIC CONSTANTS (short range) (GPa):
+          52.31713          10.50221           4.56652         -14.37157           1.71535          -0.91534
+          10.50221          76.67733           6.90554          -6.86411          -1.04942          -3.99619
+           4.56652           6.90554           7.82429           4.10563           0.27693           0.90819
+         -14.37157          -6.86411           4.10563          12.74277          -0.71392           0.48778
+           1.71535          -1.04942           0.27693          -0.71392          11.86865          -6.13373
+          -0.91534          -3.99619           0.90819           0.48778          -6.13373          19.81132
+ ELASTIC CONSTANTS (long range) (GPa):
+           0.00000           0.00000           0.00000           0.00000           0.00000           0.00000
+           0.00000           0.00000           0.00000           0.00000           0.00000           0.00000
+           0.00000           0.00000           0.00000           0.00000           0.00000           0.00000
+           0.00000           0.00000           0.00000           0.00000           0.00000           0.00000
+           0.00000           0.00000           0.00000           0.00000           0.00000           0.00000
+           0.00000           0.00000           0.00000           0.00000           0.00000           0.00000
+ ELASTIC CONSTANTS (total) (GPa):
+          52.31713          10.50221           4.56652         -14.37157           1.71535          -0.91534
+          10.50221          76.67733           6.90554          -6.86411          -1.04942          -3.99619
+           4.56652           6.90554           7.82429           4.10563           0.27693           0.90819
+         -14.37157          -6.86411           4.10563          12.74277          -0.71392           0.48778
+           1.71535          -1.04942           0.27693          -0.71392          11.86865          -6.13373
+          -0.91534          -3.99619           0.90819           0.48778          -6.13373          19.81132
+ 
+ ENERGIES (meV/atom):
+                     rms          std          std(res)
+          input:     7.060156     4.703486     -
+   second order:     6.541853     3.882374     0.821550
+ 
+ FORCES (eV/A):
+                     rms          rms(res)     std(res)     R^2(res)     normalized std(res)
+          input:     0.594832     0.594832     0.343426     -            -
+   second order:     0.567328     0.178785     0.103221     0.909662     0.300563             <-- anharmonicity measure
+ 
+ BASELINE ENERGY (eV/atom):
+             U0:              -1853.105085
+ 
+ Since we have the first order, predict new reference positions.
+ 
+ Done in 0.28325s

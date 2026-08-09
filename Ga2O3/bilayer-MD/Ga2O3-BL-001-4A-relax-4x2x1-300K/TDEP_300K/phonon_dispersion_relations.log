@@ -58,7 +58,7 @@
  ... calculating frequencies                95.6112823     %
  ... calculating frequencies                97.4921646     %
  ... calculating frequencies                99.3730392     %
- Calculated dispersion on path in 0.12886s
+ Calculated dispersion on path in 0.13864s
  
   Settings: 
        mode Gruneisen parameters:  F
@@ -79,7 +79,7 @@
    starting point: cartesian-0.002015  0.046610  0.000000 fractional 0.000000  0.500000  0.000000 
      ending point: cartesian 0.000000  0.000000  0.000000 fractional 0.000000  0.000000  0.000000 
   
- ...            got the phonon bandstructure in  0.129274845s
+ ...            got the phonon bandstructure in  0.140011072s
  
  Determining activity
  ... Raman active
@@ -91,4 +91,4 @@
  ... found           30  IR active modes
  ... activity written to outfile.mode_activity.csv
   
- All done in 0.75264s
+ All done in 0.87999s

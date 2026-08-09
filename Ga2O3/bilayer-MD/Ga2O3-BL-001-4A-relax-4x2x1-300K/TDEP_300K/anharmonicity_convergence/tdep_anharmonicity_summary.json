@@ -1,0 +1,106 @@
+{
+  "definition": "sigma_A = std(F_DFT - F_harmonic) / std(F_DFT)",
+  "final": {
+    "frames": 81,
+    "time_fs": 78.3756,
+    "mean_temperature_K": 207.3003801627,
+    "harmonic_force_rms_eV_per_A": 0.697522,
+    "residual_force_rms_eV_per_A": 0.518803,
+    "residual_force_std_eV_per_A": 0.299531,
+    "residual_R2": 0.643829,
+    "sigma_A": 0.596801
+  },
+  "checkpoints": [
+    {
+      "frames": 10,
+      "time_fs": 9.676,
+      "mean_temperature_K": 258.333034922,
+      "harmonic_force_rms_eV_per_A": 0.567328,
+      "residual_force_rms_eV_per_A": 0.178785,
+      "residual_force_std_eV_per_A": 0.103221,
+      "residual_R2": 0.909662,
+      "sigma_A": 0.300563
+    },
+    {
+      "frames": 20,
+      "time_fs": 19.352,
+      "mean_temperature_K": 216.8468349295,
+      "harmonic_force_rms_eV_per_A": 0.704019,
+      "residual_force_rms_eV_per_A": 0.285638,
+      "residual_force_std_eV_per_A": 0.164913,
+      "residual_R2": 0.858654,
+      "sigma_A": 0.37596
+    },
+    {
+      "frames": 30,
+      "time_fs": 29.028,
+      "mean_temperature_K": 207.1255018363,
+      "harmonic_force_rms_eV_per_A": 0.719496,
+      "residual_force_rms_eV_per_A": 0.341865,
+      "residual_force_std_eV_per_A": 0.197376,
+      "residual_R2": 0.815819,
+      "sigma_A": 0.429164
+    },
+    {
+      "frames": 40,
+      "time_fs": 38.704,
+      "mean_temperature_K": 209.5876300013,
+      "harmonic_force_rms_eV_per_A": 0.702606,
+      "residual_force_rms_eV_per_A": 0.386947,
+      "residual_force_std_eV_per_A": 0.223404,
+      "residual_R2": 0.76728,
+      "sigma_A": 0.48241
+    },
+    {
+      "frames": 50,
+      "time_fs": 48.38,
+      "mean_temperature_K": 207.3538168962,
+      "harmonic_force_rms_eV_per_A": 0.689643,
+      "residual_force_rms_eV_per_A": 0.432747,
+      "residual_force_std_eV_per_A": 0.249847,
+      "residual_R2": 0.717489,
+      "sigma_A": 0.531517
+    },
+    {
+      "frames": 60,
+      "time_fs": 58.056,
+      "mean_temperature_K": 203.9245484897,
+      "harmonic_force_rms_eV_per_A": 0.688967,
+      "residual_force_rms_eV_per_A": 0.471458,
+      "residual_force_std_eV_per_A": 0.272197,
+      "residual_R2": 0.681077,
+      "sigma_A": 0.564732
+    },
+    {
+      "frames": 70,
+      "time_fs": 67.732,
+      "mean_temperature_K": 200.0125514613,
+      "harmonic_force_rms_eV_per_A": 0.699056,
+      "residual_force_rms_eV_per_A": 0.502223,
+      "residual_force_std_eV_per_A": 0.289959,
+      "residual_R2": 0.659569,
+      "sigma_A": 0.583465
+    },
+    {
+      "frames": 80,
+      "time_fs": 77.408,
+      "mean_temperature_K": 206.1396182817,
+      "harmonic_force_rms_eV_per_A": 0.69888,
+      "residual_force_rms_eV_per_A": 0.517863,
+      "residual_force_std_eV_per_A": 0.298988,
+      "residual_R2": 0.64555,
+      "sigma_A": 0.595357
+    },
+    {
+      "frames": 81,
+      "time_fs": 78.3756,
+      "mean_temperature_K": 207.3003801627,
+      "harmonic_force_rms_eV_per_A": 0.697522,
+      "residual_force_rms_eV_per_A": 0.518803,
+      "residual_force_std_eV_per_A": 0.299531,
+      "residual_R2": 0.643829,
+      "sigma_A": 0.596801
+    }
+  ],
+  "interpretation": "Diagnostic only: the cumulative sample includes the initial cooling transient and is not an equilibrated 300 K ensemble."
+}

@@ -7,11 +7,11 @@
  --> rc4 cutoff:      -1.00000
  
  DETERMINING SYMMETRY OF INTERACTION TENSORS
- ... constructed distance tables (0.00731s)
+ ... constructed distance tables (0.00640s)
  ... built singlets
  ... built pairs
  ... built prototype tuplets (0.00016s)
- ... expanded symmetry operations (0.00098s)
+ ... expanded symmetry operations (0.00078s)
   ... reducing pairs                        0.00000000     %
   ... reducing pairs                        2.43902445     %
   ... reducing pairs                        4.87804890     %
@@ -270,7 +270,7 @@
    average stresstensor xx xy xz (GPa):       0.0000       0.0000       0.0000 
    average stresstensor yx yy yz (GPa):       0.0000       0.0000       0.0000 
    average stresstensor zx zy zz (GPa):       0.0000       0.0000       0.0000 
- ... finished reading simulation (0.00478s)
+ ... finished reading simulation (0.00351s)
  
  REPORT GRADE OF OVERDETERMINATION
      total number of equations:         2400
@@ -282,8 +282,8 @@
  ... no polar interactions to worry about
  
  GENERATING CONSTRAINTS
- ... 114 secondorder constraints (0.01704s)
- ... created 114 constraints (0.01705s)
+ ... 114 secondorder constraints (0.01561s)
+ ... created 114 constraints (0.01562s)
  ... creating fc coefficients               0.00000000     %
  ... creating fc coefficients               11.1111107     %
  ... creating fc coefficients               22.2222214     %
@@ -295,8 +295,8 @@
  ... creating fc coefficients               88.8888855     %
  ... creating fc coefficients               100.000000     %
  ... least squares solver
- ... solved second order (0.10084s)
- ... solved first order (0.10203s)
+ ... solved second order (0.09088s)
+ ... solved first order (0.09179s)
  ... finished solving for forceconstants
  ... diagnostics from three-fold cross-validation:
                                    R^2     stddev energy (meV/atom)
@@ -357,4 +357,4 @@
  
  Since we have the first order, predict new reference positions.
  
- Done in 0.28325s
+ Done in 0.30291s

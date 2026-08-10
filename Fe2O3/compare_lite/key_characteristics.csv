@@ -1,7 +1,9 @@
-characteristic,literature,V100,V102,units,notes
-maximum_phonon_energy,81.0,82.8272,80.6321,meV,Literature value is approximate
-dos_gap_lower,,48.340,47.545,meV,Computed interval with effectively zero total DOS
-dos_gap_upper,,50.824,48.512,meV,Published work reports a gap just below 50 meV
-Fe_fraction_below_30meV,,85.30,86.25,percent,Literature reports Fe-dominated modes below 30 meV
-O_fraction_above_50meV,,91.94,92.84,percent,Literature reports O-dominated modes above 50 meV
-entropy_300K,87.32,88.010,90.406,J/mol/K,Literature is experimental S at 298.15 K; computed values are at 300 K per Fe2O3
+characteristic,literature,V100,V102,V104,units,notes
+maximum_phonon_energy,81.0,82.8272,80.6321,78.4989,meV,Literature value is approximate
+dos_gap_lower,,48.340,47.545,,meV,Computed interval with effectively zero total DOS
+dos_gap_upper,,50.824,48.512,,meV,Published work reports a gap just below 50 meV
+dos_minimum_energy,,,,46.287,meV,V104 has a finite-DOS minimum instead of a complete gap
+dos_minimum_fraction,,,,2.02,percent_of_max_DOS,V104 minimum DOS relative to its maximum DOS
+Fe_fraction_below_30meV,,85.30,86.25,86.89,percent,Literature reports Fe-dominated modes below 30 meV
+O_fraction_above_50meV,,91.94,92.84,93.47,percent,Literature reports O-dominated modes above 50 meV
+entropy_300K,87.32,88.010,90.406,92.985,J/mol/K,Literature is experimental S at 298.15 K; computed values are at 300 K per Fe2O3

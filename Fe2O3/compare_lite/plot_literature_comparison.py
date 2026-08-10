@@ -13,6 +13,7 @@ COLORS = {
     "Literature DFT": "#2ca02c",
     "V100": "#d62728",
     "V102": "#1f77b4",
+    "V104": "#ff7f0e",
 }
 
 
@@ -38,6 +39,7 @@ series = (
     ("Literature DFT", "literature_dft_cm1", "s", "--"),
     ("V100", "V100_cm1", "^", "-"),
     ("V102", "V102_cm1", "D", "-"),
+    ("V104", "V104_cm1", "v", "-"),
 )
 for name, field, marker, linestyle in series:
     ax.plot(
@@ -65,9 +67,9 @@ fig, axes = plt.subplots(2, 2, figsize=(9.0, 7.0))
 
 # Overall phonon bandwidth.
 ax = axes[0, 0]
-names = ["Literature\nDFT+U+J", "V100", "V102"]
-values = [81.0, 82.8272, 80.6321]
-colors = ["#9467bd", COLORS["V100"], COLORS["V102"]]
+names = ["Literature\nDFT+U+J", "V100", "V102", "V104"]
+values = [81.0, 82.8272, 80.6321, 78.4989]
+colors = ["#9467bd", COLORS["V100"], COLORS["V102"], COLORS["V104"]]
 bars = ax.bar(names, values, color=colors, width=0.65)
 ax.bar_label(bars, fmt="%.1f", padding=3)
 ax.set_ylim(0, 90)
@@ -81,9 +83,11 @@ ax.hlines(1, 48.340, 50.824, color=COLORS["V100"], linewidth=9, label="V100")
 ax.hlines(0, 47.545, 48.512, color=COLORS["V102"], linewidth=9, label="V102")
 ax.scatter([48.340, 50.824], [1, 1], color=COLORS["V100"], s=20)
 ax.scatter([47.545, 48.512], [0, 0], color=COLORS["V102"], s=20)
-ax.set_xlim(45.5, 52.5)
-ax.set_ylim(-0.7, 1.7)
-ax.set_yticks([0, 1], ["V102", "V100"])
+ax.scatter(46.287, -1, color=COLORS["V104"], marker="D", s=55, label="V104: finite DOS minimum")
+ax.annotate("2.0% of max DOS", (46.287, -1), xytext=(46.65, -1.12), fontsize=8)
+ax.set_xlim(44.8, 52.5)
+ax.set_ylim(-1.7, 1.7)
+ax.set_yticks([-1, 0, 1], ["V104", "V102", "V100"])
 ax.set_xlabel("Phonon energy (meV)")
 ax.set_title("Low-DOS gap near 50 meV")
 ax.legend(frameon=False, fontsize=8, loc="upper right")
@@ -93,12 +97,15 @@ ax = axes[1, 0]
 regions = ["Below 30 meV", "Above 50 meV"]
 v100_dominant = [85.30, 91.94]
 v102_dominant = [86.25, 92.84]
+v104_dominant = [86.89, 93.47]
 xx = np.arange(2)
-width = 0.34
-b1 = ax.bar(xx - width / 2, v100_dominant, width, color=COLORS["V100"], label="V100")
-b2 = ax.bar(xx + width / 2, v102_dominant, width, color=COLORS["V102"], label="V102")
+width = 0.25
+b1 = ax.bar(xx - width, v100_dominant, width, color=COLORS["V100"], label="V100")
+b2 = ax.bar(xx, v102_dominant, width, color=COLORS["V102"], label="V102")
+b3 = ax.bar(xx + width, v104_dominant, width, color=COLORS["V104"], label="V104")
 ax.bar_label(b1, fmt="%.1f%%", padding=2, fontsize=8)
 ax.bar_label(b2, fmt="%.1f%%", padding=2, fontsize=8)
+ax.bar_label(b3, fmt="%.1f%%", padding=2, fontsize=8)
 ax.set_xticks(xx, regions)
 ax.set_ylabel("Dominant-species contribution (%)")
 ax.set_ylim(0, 105)
@@ -109,10 +116,10 @@ ax.legend(frameon=False)
 
 # Harmonic entropy compared with calorimetry.
 ax = axes[1, 1]
-names = ["Experiment\n298.15 K", "V100\n300 K", "V102\n300 K"]
-values = [87.32, 88.010, 90.406]
-errors = [2.0, 0.0, 0.0]
-bars = ax.bar(names, values, yerr=errors, capsize=4, color=["#555555", COLORS["V100"], COLORS["V102"]])
+names = ["Experiment\n298.15 K", "V100\n300 K", "V102\n300 K", "V104\n300 K"]
+values = [87.32, 88.010, 90.406, 92.985]
+errors = [2.0, 0.0, 0.0, 0.0]
+bars = ax.bar(names, values, yerr=errors, capsize=4, color=["#555555", COLORS["V100"], COLORS["V102"], COLORS["V104"]])
 ax.bar_label(bars, fmt="%.1f", padding=4)
 ax.set_ylim(75, 96)
 ax.set_ylabel(r"Entropy (J mol$^{-1}$ K$^{-1}$)")

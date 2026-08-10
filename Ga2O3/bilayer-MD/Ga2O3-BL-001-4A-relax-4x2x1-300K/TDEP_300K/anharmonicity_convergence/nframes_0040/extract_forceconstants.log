@@ -7,11 +7,11 @@
  --> rc4 cutoff:      -1.00000
  
  DETERMINING SYMMETRY OF INTERACTION TENSORS
- ... constructed distance tables (0.00560s)
+ ... constructed distance tables (0.00553s)
  ... built singlets
  ... built pairs
- ... built prototype tuplets (0.00005s)
- ... expanded symmetry operations (0.00080s)
+ ... built prototype tuplets (0.00004s)
+ ... expanded symmetry operations (0.00073s)
   ... reducing pairs                        0.00000000     %
   ... reducing pairs                        2.43902445     %
   ... reducing pairs                        4.87804890     %
@@ -360,7 +360,7 @@
    average stresstensor xx xy xz (GPa):       0.0000       0.0000       0.0000 
    average stresstensor yx yy yz (GPa):       0.0000       0.0000       0.0000 
    average stresstensor zx zy zz (GPa):       0.0000       0.0000       0.0000 
- ... finished reading simulation (0.01747s)
+ ... finished reading simulation (0.00805s)
  
  REPORT GRADE OF OVERDETERMINATION
      total number of equations:         9600
@@ -372,8 +372,8 @@
  ... no polar interactions to worry about
  
  GENERATING CONSTRAINTS
- ... 114 secondorder constraints (0.01749s)
- ... created 114 constraints (0.01750s)
+ ... 114 secondorder constraints (0.01499s)
+ ... created 114 constraints (0.01499s)
  ... creating fc coefficients               0.00000000     %
  ... creating fc coefficients               2.56410265     %
  ... creating fc coefficients               5.12820530     %
@@ -415,8 +415,8 @@
  ... creating fc coefficients               97.4358978     %
  ... creating fc coefficients               100.000000     %
  ... least squares solver
- ... solved second order (0.09908s)
- ... solved first order (0.10205s)
+ ... solved second order (0.09848s)
+ ... solved first order (0.10121s)
  ... finished solving for forceconstants
  ... diagnostics from three-fold cross-validation:
                                    R^2     stddev energy (meV/atom)
@@ -477,4 +477,4 @@
  
  Since we have the first order, predict new reference positions.
  
- Done in 0.27803s
+ Done in 0.34537s

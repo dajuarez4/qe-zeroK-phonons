@@ -1,4 +1,4 @@
-# Literature comparison for Fe2O3 V100 and V102 phonons
+# Literature comparison for Fe2O3 V100, V102, and V104 phonons
 
 This folder compares the present harmonic PBE+U finite-displacement results
 with representative experimental and first-principles results for bulk
@@ -8,7 +8,7 @@ alpha-Fe2O3 (hematite).
 
 - `raman_mode_comparison.*`: seven Raman-active Gamma-point modes
   (`2 A1g + 5 Eg`) from experiment, a published bulk DFT calculation, V100,
-  and V102.
+  V102, and V104.
 - `key_characteristics_comparison.*`: maximum phonon energy, the DOS gap near
   50 meV, Fe/O character in low/high-energy modes, and room-temperature
   entropy.
@@ -61,6 +61,8 @@ MPLCONFIGDIR=/tmp/qe-zeroK-mpl python Fe2O3/compare_lite/plot_literature_compari
   by a few cm-1.
 - The literature DOS-gap location is stated approximately in the paper, so it
   is shown as a shaded 48-50 meV guide rather than as an exact interval.
+- V104 no longer has a strictly zero-DOS interval near 50 meV. Its finite-DOS
+  minimum is plotted at 46.287 meV and is about 2.02% of its maximum DOS.
 - The calculated entropies are harmonic constant-volume values at 300 K. The
   calorimetric value is an experimental standard molar entropy at 298.15 K.
 - The present calculations do not include non-analytical corrections. This

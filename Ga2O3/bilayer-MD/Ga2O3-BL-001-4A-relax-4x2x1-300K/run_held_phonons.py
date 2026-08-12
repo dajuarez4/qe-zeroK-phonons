@@ -56,7 +56,7 @@ def main():
         ideal_supercell_frac=super_reference,
         primitive_numbers=numbers,
         primitive_masses=masses,
-        cutoff_ang=2.5,
+        cutoff_ang=5.5,
     )
     designs = [
         model.build_design_matrix(model.frame_displacements_cart(frame))
@@ -108,7 +108,7 @@ def main():
         "trajectory_time_fs": len(positions) * timestep,
         "mean_temperature_K": float(np.mean(temperatures)),
         "latest_complete_temperature_K": float(temperatures[-1]),
-        "cutoff_angstrom": 2.5,
+        "cutoff_angstrom": 5.5,
         "aggregate": "per_frame_mean",
         "n_symmetry_operations": int(len(model._primitive_symmetry()[0])),
         "n_offsite_pairs": int(len(model.offsite_keys)),

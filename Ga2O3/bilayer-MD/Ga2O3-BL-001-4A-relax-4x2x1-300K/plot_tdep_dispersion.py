@@ -58,7 +58,7 @@ def main():
     summary = {
         **reference,
         "fit_temperature_K": 300.0,
-        "cutoff_angstrom": 2.5,
+        "cutoff_angstrom": 5.5,
         "first_order_reference_force_rmse_eV_per_A": (
             float(first_order.group(1)) if first_order else None
         ),

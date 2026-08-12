@@ -9,7 +9,7 @@ PYTHON_BIN="${PYTHON_BIN:-/opt/anaconda3/bin/python}"
 cd TDEP_300K
 
 "$TDEP_BIN_DIR/extract_forceconstants/extract_forceconstants" \
-  --secondorder_cutoff 2.5 \
+  --secondorder_cutoff 5.5 \
   --temperature 300 \
   --firstorder \
   --norotational \

@@ -83,7 +83,7 @@ def build_model_and_data():
         ideal_supercell_frac=np.asarray(super_reference),
         primitive_numbers=numbers,
         primitive_masses=masses,
-        cutoff_ang=2.5,
+        cutoff_ang=5.5,
     )
     return {
         "model": model,
@@ -221,7 +221,7 @@ def render(args, data, cache):
                 color="white", fontsize=18, weight="bold", va="center",
             )
             header.text(
-                0.965, 0.55, "80 atoms · 2.5 Å cutoff", color="#cdd9e8",
+                0.965, 0.55, "80 atoms · 5.5 Å cutoff", color="#cdd9e8",
                 fontsize=10, ha="right", va="center",
             )
 

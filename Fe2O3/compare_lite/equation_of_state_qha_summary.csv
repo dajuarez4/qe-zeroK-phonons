@@ -1,0 +1,10 @@
+quantity,value,units,note
+static_V0,106.26189488366909,A3/10-atom cell,"BM3, 9 static volumes"
+static_B0,187.57402744868898,GPa,isothermal 0 K BM3
+static_B0_prime,4.2335682955264655,dimensionless,BM3
+QHA_V0_with_ZPE,107.10094383247413,A3/10-atom cell,extrapolative
+zero_point_volume_expansion,0.7896047305796738,percent,extrapolative
+QHA_V300,107.56692723729554,A3/10-atom cell,extrapolative
+QHA_B300,175.75707958455934,GPa,extrapolative
+QHA_alpha_linear_300,9.177663591112642,1e-6 K-1,extrapolative
+QHA_Cp300,102.11324328723573,J mol-1 K-1,per Fe2O3; extrapolative

@@ -1,0 +1,2 @@
+quantity,mean,median,p05,p95,minimum,maximum,note
+all_valid_modes,1.3564727606448865,1.3277148756312143,0.5174462921361543,2.1692277564563827,-0.320466166909916,2.540671291027773,Branch-index matching; crossings can create outliers

@@ -1,0 +1,4 @@
+characteristic,this_work,literature,units,comparison_basis,source
+entropy_near_300K,90.40635065,87.32,J mol-1 K-1,V102 harmonic S(300 K) vs calorimetric S(298.15 K),"Snow et al. 2010, doi:10.1016/j.jct.2010.04.010"
+Cp_300K,102.11324328723573,104.155,J mol-1 K-1,extrapolative QHA vs NIST-JANAF Shomate at 300 K,"NIST-JANAF (Chase 1998), NIST WebBook SRD 69"
+bulk_modulus,187.57402744868898,206.6,GPa,0 K static isothermal BM3 vs ambient ultrasonic elastic aggregate,"Liebermann et al., summarized in Zhou et al. 2025"

@@ -7,11 +7,11 @@
     1
   ],
   "reference_replication_max_error_fractional": 1.1102230246251565e-16,
-  "n_frames": 266,
+  "n_frames": 376,
   "excluded_incomplete_position_blocks": 1,
   "timestep_fs": 0.9676,
-  "trajectory_time_fs": 257.3816,
-  "mean_temperature_K": 258.70536313387225,
-  "latest_complete_temperature_K": 368.58970745,
+  "trajectory_time_fs": 363.8176,
+  "mean_temperature_K": 276.91963085018625,
+  "latest_complete_temperature_K": 333.09896439,
   "qe_job_completed": false
 }

@@ -1,0 +1,12 @@
+{
+  "source_total_frames": 343,
+  "frame_start_inclusive": 60,
+  "frame_end_inclusive": 343,
+  "n_selected_frames": 284,
+  "timestep_fs": 0.9676,
+  "selected_time_span_fs": 274.7984,
+  "mean_temperature_K": 286.25362125545774,
+  "temperature_std_K": 38.5356011800563,
+  "first_temperature_K": 181.59751985,
+  "last_temperature_K": 320.67900458
+}

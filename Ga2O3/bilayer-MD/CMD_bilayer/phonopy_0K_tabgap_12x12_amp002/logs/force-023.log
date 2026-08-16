@@ -1,0 +1,82 @@
+LAMMPS (22 Jul 2025 - Update 1)
+OMP_NUM_THREADS environment is not set. Defaulting to 1 thread.
+  using 1 OpenMP thread(s) per MPI task
+OMP_NUM_THREADS environment is not set. Defaulting to 1 thread.
+  using 1 OpenMP thread(s) per MPI task
+Reading data file ...
+  triclinic box = (0 0 0) to (41.437497 64.985994 30) with tilt (20.71917 0 0)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  1440 atoms
+  read_data CPU = 0.002 seconds
+tabGAP settings: neighbor list sorting 1 cached 3b spline 1
+Reading eam/fs potential file ../potential/tabGAP_20220921/Ga-O.eam.fs with DATE: 2022-09-23
+tabGAP coeff: type 1 is element Ga
+tabGAP coeff: type 2 is element O
+tabGAP read_file: reading potential file...
+Reading tabgap potential file ../potential/tabGAP_20220921/Ga-O.tabgap with DATE: 2022-09-23
+tabGAP read_file: e0 for element O type 2 is -0.0581568
+tabGAP read_file: e0 for element Ga type 1 is -0.040349
+tabGAP read_file: expecting to read in 0 2b potentials and 6 3b potentials
+tabGAP read_file: reading 3b potential 0: O O O
+tabGAP read_file: reading 3b potential 1: O O Ga
+tabGAP read_file: reading 3b potential 2: O Ga Ga
+tabGAP read_file: reading 3b potential 3: Ga O O
+tabGAP read_file: reading 3b potential 4: Ga O Ga
+tabGAP read_file: reading 3b potential 5: Ga Ga Ga
+tabGAP read_file: done
+tabGAP coeff: done reading coefficients
+WARNING: No fixes with time integration, atoms won't move
+For more information see https://docs.lammps.org/err0028 (src/verlet.cpp:60)
+Neighbor list info ...
+  update: every = 1 steps, delay = 0 steps, check = yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 7
+  ghost atom cutoff = 7
+  binsize = 3.5, bins = 18 19 9
+  2 neighbor lists, perpetual/occasional/extra = 2 0 0
+  (1) pair eam/fs, perpetual, half/full from (2)
+      attributes: half, newton on, cut 7
+      pair build: halffull/newton/tri
+      stencil: none
+      bin: none
+  (2) pair tabgap, perpetual
+      attributes: full, newton on
+      pair build: full/bin/atomonly
+      stencil: full/bin/3d
+      bin: standard
+Setting up Verlet run ...
+  Unit style    : metal
+  Current step  : 0
+  Time step     : 0.001
+Per MPI rank memory allocation (min/avg/max) = 4.008 | 4.008 | 4.008 Mbytes
+   Step         PotEng         Press           Fmax     
+         0  -7997.4886      90.499698      0.12230248   
+Loop time of 4.62e-07 on 1 procs for 0 steps with 1440 atoms
+
+216.5% CPU use with 1 MPI tasks x 1 OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 0          | 0          | 0          |   0.0 |  0.00
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 0          | 0          | 0          |   0.0 |  0.00
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 4.62e-07   |            |       |100.00
+
+Nlocal:           1440 ave        1440 max        1440 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:            892 ave         892 max         892 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:          33984 ave       33984 max       33984 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:        67968 ave       67968 max       67968 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 67968
+Ave neighs/atom = 47.2
+Neighbor list builds = 0
+Dangerous builds = 0
+Total wall time: 0:00:00

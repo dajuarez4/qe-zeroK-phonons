@@ -1,0 +1,20 @@
+LAMMPS (22 Jul 2025 - Update 1)
+OMP_NUM_THREADS environment is not set. Defaulting to 1 thread.
+  using 1 OpenMP thread(s) per MPI task
+clear
+OMP_NUM_THREADS environment is not set. Defaulting to 1 thread.
+  using 1 OpenMP thread(s) per MPI task
+units           metal
+boundary        p p p
+atom_style      atomic
+read_data       Ga2O3-BL-40x40.data
+Reading data file ...
+  triclinic box = (0 0 0) to (138.12499 216.61998 30) with tilt (69.063901 0 0)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  16000 atoms
+  read_data CPU = 0.032 seconds
+write_dump      all custom Ga2O3-BL-40x40.dump id type x y z modify sort id
+WARNING: Calling write_dump before a full system init (src/write_dump.cpp:89)
+
+Total wall time: 0:00:00

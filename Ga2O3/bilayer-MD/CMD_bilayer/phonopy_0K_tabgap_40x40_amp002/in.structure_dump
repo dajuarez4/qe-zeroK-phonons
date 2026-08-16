@@ -1,0 +1,7 @@
+clear
+units           metal
+boundary        p p p
+atom_style      atomic
+read_data       Ga2O3-BL-40x40.data
+write_dump      all custom Ga2O3-BL-40x40.dump id type x y z modify sort id
+

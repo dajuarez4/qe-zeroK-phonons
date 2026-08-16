@@ -1,0 +1,46 @@
+Primitive cell:
+    Formula: Ga4O6
+    Cell:
+        [  3.45312   0.00000   0.00000]
+        [  1.72660   5.41550   0.00000]
+        [  0.00000   0.00000  30.00000]
+    Basis:
+        Ga  [  0.55729   0.79183   0.40409]
+        Ga  [  0.24906   0.40830   0.37508]
+        Ga  [  0.54444   0.79927   0.62494]
+        ...
+
+Crystal symmetry:
+    Spacegroup:          P-1 (2)
+    Unique site:         5
+    Symmetry operations: 2
+    symprec:             1.00e-05
+
+Cutoffs:
+    Maximum cutoff: 6.95
+    Found 10 center atoms with 108 images totaling 118 atoms
+
+Clusters:
+    Clusters: {2: 433}
+    Total number of clusters: 433
+
+Orbits:
+    Orbits: {2: 124}
+    Total number of orbits: 124
+
+Eigentensors:
+    Eigentensors: {2: 1074}
+    Total number of parameters: 1074
+
+Constraints:
+    Acoustic: True
+    Number of degrees of freedom: {2: 1032}
+    Total number of degrees of freedom: 1032
+/home/dajuarez4/bilayer_ga2o3/phonopy_0K_tabgap_amp002/enforce_rotational_sum_rules.py:20: DeprecationWarning: get_band_structure_dict() is deprecated. Use the band_structure property to access the BandStructure result object; its qpoints, distances, frequencies, eigenvectors, and group_velocities attributes replace the dict keys.
+  d=ph.get_band_structure_dict()
+Force constant reconstruction error order 2:    0.3610%
+Rotational sum-rules before, ||Ax|| =   54.233400387323528
+Rotational sum-rules after,  ||Ax|| =    0.003547687290348
+raw       : min=-0.075503624 THz, negative=82
+projected : min=-0.236129971 THz, negative=154
+rotational: min=-0.294269183 THz, negative=119

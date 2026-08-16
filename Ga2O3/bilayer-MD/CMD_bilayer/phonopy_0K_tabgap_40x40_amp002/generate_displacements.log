@@ -1,0 +1,50 @@
+WARNING:
+  primitive_matrix defaulted to 'auto' and was resolved to a non-identity
+  matrix:
+    [ 1.00000, -1.00000,  0.00000]
+    [ 0.00000,  1.00000,  0.00000]
+    [ 0.00000,  0.00000,  1.00000]
+  This differs from phonopy v3, whose default was the identity matrix. Pass
+  primitive_matrix='P' (or --pa P on the command line) to restore the v3
+  behaviour.
+
+        _
+  _ __ | |__   ___  _ __   ___   _ __  _   _
+ | '_ \| '_ \ / _ \| '_ \ / _ \ | '_ \| | | |
+ | |_) | | | | (_) | | | | (_) || |_) | |_| |
+ | .__/|_| |_|\___/|_| |_|\___(_) .__/ \__, |
+ |_|                            |_|    |___/
+                                       4.4.0
+
+-------------------------[time 2026-08-16 17:15:00]-------------------------
+Rust backend (phonors) using rayon (12 threads).
+Python version 3.10.12
+Spglib version 2.7.0
+
+Crystal structure was read from "POSCAR".
+Unit of length: angstrom
+Displacements creation mode
+  Systematic displacements
+  Plus Minus displacement: full plus minus directions
+Displacement distance: 0.02
+Settings:
+  Supercell: [40 40  1]
+  Primitive matrix:
+    [ 1. -1.  0.]
+    [0. 1. 0.]
+    [0. 0. 1.]
+Spacegroup: P-1 (2)
+Number of symmetry operations in supercell: 3200
+Use -v option to watch primitive cell, unit cell, and supercell structures.
+
+Generated number of supercells: 30
+"phonopy_disp.yaml" and supercells have been created.
+
+Summary of calculation was written in "phonopy_disp.yaml".
+-------------------------[time 2026-08-16 17:15:27]-------------------------
+                 _
+   ___ _ __   __| |
+  / _ \ '_ \ / _` |
+ |  __/ | | | (_| |
+  \___|_| |_|\__,_|
+

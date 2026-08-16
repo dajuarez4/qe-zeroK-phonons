@@ -70,12 +70,18 @@ def main():
         step_coefficients.append(values)
         step_ranks.append(int(rank))
     step_coefficients = np.asarray(step_coefficients)
-    coefficients = step_coefficients.mean(axis=0)
     global_design = np.vstack(designs)
     global_forces = forces.reshape(-1)
-    _global_coefficients, _residuals, global_rank, singular_values = np.linalg.lstsq(
+    global_coefficients, _residuals, global_rank, singular_values = np.linalg.lstsq(
         global_design, global_forces, rcond=None
     )
+    per_frame_full_rank = min(step_ranks) == step_coefficients.shape[1]
+    coefficients = (
+        step_coefficients.mean(axis=0)
+        if per_frame_full_rank
+        else global_coefficients
+    )
+    aggregate = "per_frame_mean" if per_frame_full_rank else "global_least_squares"
     residual = global_design @ coefficients - global_forces
     q_path, x_values, tick_labels, tick_positions = reciprocal_path(unit_cell)
     frequencies = model.dispersion_thz_from_reduced_path(coefficients, q_path)
@@ -109,7 +115,7 @@ def main():
         "mean_temperature_K": float(np.mean(temperatures)),
         "latest_complete_temperature_K": float(temperatures[-1]),
         "cutoff_angstrom": 5.5,
-        "aggregate": "per_frame_mean",
+        "aggregate": aggregate,
         "n_symmetry_operations": int(len(model._primitive_symmetry()[0])),
         "n_offsite_pairs": int(len(model.offsite_keys)),
         "n_coefficients": int(len(coefficients)),

@@ -1,0 +1,4 @@
+16000 # N atoms
+5 # N configurations
+2500.0 # sampling interval, fs
+10.0 # temperature, K

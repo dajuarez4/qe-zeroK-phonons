@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import json
 import math
+import os
 import re
 import sys
 from pathlib import Path
@@ -167,4 +168,4 @@ def prepare(outdir: Path):
 
 
 if __name__ == "__main__":
-    prepare(ROOT / "TDEP_300K")
+    prepare(ROOT / os.environ.get("TDEP_OUTDIR", "TDEP_300K"))

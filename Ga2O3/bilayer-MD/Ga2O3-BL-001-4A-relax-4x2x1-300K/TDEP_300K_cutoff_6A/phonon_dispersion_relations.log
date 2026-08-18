@@ -1,0 +1,94 @@
+ 
+ Calculating phonon dispersions on a q-point path
+ ... getting q-path from file
+ ... interpolating points for path
+ ... getting small group for each q-point
+ ... building axis for plots
+ ... setting ticks
+ ... calculating frequencies                1.56739807     %
+ ... calculating frequencies                3.44827580     %
+ ... calculating frequencies                5.32915354     %
+ ... calculating frequencies                7.21003151     %
+ ... calculating frequencies                9.09090900     %
+ ... calculating frequencies                10.9717865     %
+ ... calculating frequencies                12.8526649     %
+ ... calculating frequencies                14.7335424     %
+ ... calculating frequencies                16.6144199     %
+ ... calculating frequencies                18.4952984     %
+ ... calculating frequencies                20.3761749     %
+ ... calculating frequencies                22.2570534     %
+ ... calculating frequencies                24.1379318     %
+ ... calculating frequencies                26.0188084     %
+ ... calculating frequencies                27.8996868     %
+ ... calculating frequencies                29.7805634     %
+ ... calculating frequencies                31.6614418     %
+ ... calculating frequencies                33.5423203     %
+ ... calculating frequencies                35.4231987     %
+ ... calculating frequencies                37.3040733     %
+ ... calculating frequencies                39.1849518     %
+ ... calculating frequencies                41.0658302     %
+ ... calculating frequencies                42.9467087     %
+ ... calculating frequencies                44.8275871     %
+ ... calculating frequencies                46.7084656     %
+ ... calculating frequencies                48.5893402     %
+ ... calculating frequencies                50.4702187     %
+ ... calculating frequencies                52.3510971     %
+ ... calculating frequencies                54.2319756     %
+ ... calculating frequencies                56.1128540     %
+ ... calculating frequencies                57.9937286     %
+ ... calculating frequencies                59.8746071     %
+ ... calculating frequencies                61.7554855     %
+ ... calculating frequencies                63.6363640     %
+ ... calculating frequencies                65.5172424     %
+ ... calculating frequencies                67.3981171     %
+ ... calculating frequencies                69.2789993     %
+ ... calculating frequencies                71.1598740     %
+ ... calculating frequencies                73.0407486     %
+ ... calculating frequencies                74.9216309     %
+ ... calculating frequencies                76.8025055     %
+ ... calculating frequencies                78.6833878     %
+ ... calculating frequencies                80.5642624     %
+ ... calculating frequencies                82.4451447     %
+ ... calculating frequencies                84.3260193     %
+ ... calculating frequencies                86.2068939     %
+ ... calculating frequencies                88.0877762     %
+ ... calculating frequencies                89.9686508     %
+ ... calculating frequencies                91.8495331     %
+ ... calculating frequencies                93.7304077     %
+ ... calculating frequencies                95.6112823     %
+ ... calculating frequencies                97.4921646     %
+ ... calculating frequencies                99.3730392     %
+ Calculated dispersion on path in 0.07477s
+ 
+  Settings: 
+       mode Gruneisen parameters:  F
+                 number of bands: 30
+                 number of paths: 4
+   number of points on each path: 80
+ 
+         path 1: from GM to X
+   starting point: cartesian 0.000000  0.000000  0.000000 fractional 0.000000  0.000000  0.000000 
+     ending point: cartesian 0.082274 -0.017991  0.000000 fractional 0.500000  0.000000  0.000000 
+         path 2: from X to S
+   starting point: cartesian 0.082274 -0.017991  0.000000 fractional 0.500000  0.000000  0.000000 
+     ending point: cartesian 0.080259  0.028620  0.000000 fractional 0.500000  0.500000  0.000000 
+         path 3: from S to Y
+   starting point: cartesian 0.080259  0.028620  0.000000 fractional 0.500000  0.500000  0.000000 
+     ending point: cartesian-0.002015  0.046610  0.000000 fractional 0.000000  0.500000  0.000000 
+         path 4: from Y to GM
+   starting point: cartesian-0.002015  0.046610  0.000000 fractional 0.000000  0.500000  0.000000 
+     ending point: cartesian 0.000000  0.000000  0.000000 fractional 0.000000  0.000000  0.000000 
+  
+ ...            got the phonon bandstructure in  0.075375080s
+ 
+ Determining activity
+ ... Raman active
+ ... IR active
+ ... transformed Raman coefficient
+ ... transformed IR coefficient
+ ... found            2  active q-points
+ ... found           30  Raman active modes
+ ... found           30  IR active modes
+ ... activity written to outfile.mode_activity.csv
+  
+ All done in 0.50881s

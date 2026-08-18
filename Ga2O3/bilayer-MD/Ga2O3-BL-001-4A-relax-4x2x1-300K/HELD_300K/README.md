@@ -1,31 +1,32 @@
 # Experimental HELD diagnostic for the 4 Angstrom bilayer
 
 This directory contains an experimental multi-species Ga/O HELD fit using the
-389 valid position--force pairs in the separate `nraise=20` trajectory. The adapter
+413 valid position--force pairs in the separate `nraise=20` trajectory. The adapter
 uses species-aware symmetry and separate Ga/O masses; the installed HELD CLI
 itself officially targets monoatomic BCC/FCC/HCP systems.
 
 ## Result
 
-- Complete configurations: 389
+- Complete configurations: 413
 - Unfinished coordinate blocks excluded: 1
-- Represented trajectory time: 376.3964 fs
-- Mean sampled temperature: 278.638 K
+- Represented trajectory time: 399.6188 fs
+- Mean sampled temperature: 282.418 K
+- Latest complete-frame temperature: 341.657 K
 - Cutoff: 5.5 Angstrom
 - Coefficients: 1,008
 - Equations per frame: 240
 - Per-frame rank: 240 (underdetermined relative to 1,008 coefficients)
-- Global equations: 93,360
+- Global equations: 99,120
 - Global design rank: 1,008 (full rank)
-- Global condition number: 135.74
+- Global condition number: 134.24
 - Aggregation: global least squares
-- Force-component RMSE: 0.1860 eV/Angstrom
-- Force-vector RMSE: 0.3222 eV/Angstrom
-- Frequency range: -2.086 to 25.989 THz
+- Force-component RMSE: 0.1902 eV/Angstrom
+- Force-vector RMSE: 0.3294 eV/Angstrom
+- Frequency range: -2.265 to 25.894 THz
 
 This is not a validated HELD prediction or a converged finite-temperature
-spectrum. The full 376.4 fs sample includes the strong initial cooling
-transient but now averages 279 K, with recent intervals around or above 300 K.
+spectrum. The full 399.6 fs sample includes the strong initial cooling
+transient but now averages 282 K, while the newest complete frames remain above 300 K.
 Imaginary branches must be treated as a
 short-trajectory diagnostic rather than proof of physical instability.
 

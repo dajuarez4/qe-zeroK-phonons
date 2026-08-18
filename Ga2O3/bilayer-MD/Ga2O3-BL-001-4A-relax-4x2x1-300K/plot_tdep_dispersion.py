@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Plot the nine-frame 4 Angstrom TDEP diagnostic."""
+"""Plot a 4 Angstrom bilayer TDEP diagnostic."""
 
 from __future__ import annotations
 
@@ -19,7 +19,8 @@ import numpy as np
 
 
 ROOT = Path(__file__).resolve().parent
-OUTDIR = ROOT / "TDEP_300K"
+OUTDIR = ROOT / os.environ.get("TDEP_OUTDIR", "TDEP_300K")
+CUTOFF_ANGSTROM = float(os.environ.get("TDEP_CUTOFF", "5.5"))
 
 
 def main():
@@ -49,7 +50,8 @@ def main():
     ax.set_xticks(tick_positions, [r"$\Gamma$", "X", "S", "Y", r"$\Gamma$"])
     ax.set_ylabel("Frequency (THz)")
     ax.set_title(
-        f"Ga₂O₃ 4 Å bilayer · TDEP diagnostic ({reference['n_frames']} MD frames)"
+        f"Ga₂O₃ 4 Å bilayer · TDEP {CUTOFF_ANGSTROM:g} Å cutoff "
+        f"({reference['n_frames']} MD frames)"
     )
     ax.grid(axis="y", alpha=0.2)
     fig.savefig(OUTDIR / "Ga2O3-BL-001-4A-TDEP-diagnostic.png", dpi=180)
@@ -58,7 +60,7 @@ def main():
     summary = {
         **reference,
         "fit_temperature_K": 300.0,
-        "cutoff_angstrom": 5.5,
+        "cutoff_angstrom": CUTOFF_ANGSTROM,
         "first_order_reference_force_rmse_eV_per_A": (
             float(first_order.group(1)) if first_order else None
         ),

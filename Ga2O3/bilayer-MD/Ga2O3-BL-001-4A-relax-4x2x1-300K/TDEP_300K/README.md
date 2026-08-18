@@ -5,26 +5,26 @@ position--force pair in the interrupted Quantum ESPRESSO trajectory.
 
 ## Result
 
-- Complete configurations: 413
+- Complete configurations: 491
 - Unfinished coordinate blocks excluded: 1
-- Represented trajectory time: 399.6188 fs
-- Mean sampled temperature: 282.418 K
-- Latest complete-frame temperature: 341.657 K
+- Represented trajectory time: 475.0916 fs
+- Mean sampled temperature: 283.222 K
+- Latest complete-frame temperature: 323.140 K
 - QE termination: incomplete (`JOB DONE.` is absent)
 - Reference mapping: exact 4 x 2 x 1 replication to numerical precision
 - Second-order cutoff: 5.5 Angstrom
-- Force equations: 99,120
+- Force equations: 117,840
 - First- plus second-order parameters: 1,125
-- Overdetermination ratio: 88.1
-- Harmonic force-fit residual RMS: 0.330 eV/Angstrom
-- Force residual R-squared: 0.902
-- TDEP anharmonicity measure: 0.313
-- Frequency range: -1.439 to 25.897 THz
+- Overdetermination ratio: 104.7
+- Harmonic force-fit residual RMS: 0.352 eV/Angstrom
+- Force residual R-squared: 0.888
+- TDEP anharmonicity measure: 0.335
+- Frequency range: -0.873 to 24.973 THz
 
 This is a pipeline diagnostic, not a converged finite-temperature phonon
-spectrum. This separate `nraise=20` run has 413 adjacent complete MD frames
-covering 399.6 fs. The full trajectory retains the initial cooling transient
-but now averages 282 K, while the newest complete frames remain above 300 K.
+spectrum. This separate `nraise=20` run has 491 adjacent complete MD frames
+covering 475.1 fs. The full trajectory retains the initial cooling transient
+but now averages 283 K, while the newest complete frame remains above 300 K.
 The negative branches therefore cannot be
 used alone to establish a physical instability. A production result requires
 an equilibrated trajectory with hundreds or preferably thousands of
@@ -40,12 +40,12 @@ and `extract_forceconstants.log`.
 ## Cumulative anharmonicity
 
 `anharmonicity_convergence/Ga2O3-BL-001-4A-TDEP-anharmonicity-convergence.png`
-is the previously generated 266-frame cumulative snapshot at the 5.5 Angstrom
-cutoff. The normalized residual
+contains the updated 491-frame cumulative series at the 5.5 Angstrom cutoff.
+The normalized residual
 `sigma_A = std(F_DFT - F_harmonic) / std(F_DFT)` rises from 0.006 at 10
-frames to 0.254 at 266 frames. The residual-force standard deviation reaches
-0.149 eV/Angstrom. This snapshot predates the current 413-frame fit, so it does
-not establish convergence of the present trajectory. Numerical values are in
+frames to 0.335 at 491 frames. The residual-force standard deviation reaches
+0.203 eV/Angstrom. The continuing drift means the anharmonicity diagnostic is
+not yet converged. Numerical values are in
 `anharmonicity_convergence/tdep_anharmonicity_convergence.csv` and
 `anharmonicity_convergence/tdep_anharmonicity_summary.json`.
 

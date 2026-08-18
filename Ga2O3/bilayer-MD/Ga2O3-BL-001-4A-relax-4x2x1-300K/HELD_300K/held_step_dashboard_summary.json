@@ -1,16 +1,16 @@
 {
   "status": "experimental_multispecies_HELD_step_dashboard",
-  "frames": 376,
-  "duration_fs": 363.8176,
+  "frames": 491,
+  "duration_fs": 475.0916,
   "gif_fps": 8.0,
-  "mean_temperature_K": 276.91963085018614,
-  "mean_step_force_rmse_eV_per_A": 2.1522534131983935e-15,
+  "mean_temperature_K": 283.2220801476986,
+  "mean_step_force_rmse_eV_per_A": 2.237620720676464e-15,
   "minimum_step_force_rmse_eV_per_A": 1.5023188276587764e-16,
-  "maximum_step_force_rmse_eV_per_A": 3.802122527809652e-15,
+  "maximum_step_force_rmse_eV_per_A": 4.1914643935896166e-15,
   "global_step_frequency_minimum_THz": -10.934120286978622,
   "global_step_frequency_maximum_THz": 24.93679885391658,
-  "display_y_min_THz": -8.030267782545856,
-  "display_y_max_THz": 18.652488751306016,
+  "display_y_min_THz": -7.934119784239043,
+  "display_y_max_THz": 18.358967656218983,
   "gif": "Ga2O3-BL-001-4A-HELD-step-dashboard.gif",
   "last_frame_png": "Ga2O3-BL-001-4A-HELD-step-dashboard-last-frame.png"
 }

@@ -1,0 +1,55 @@
+ 
+ Calculating phonon dispersions on a q-point path
+ ... getting q-path from file
+ ... interpolating points for path
+ ... getting small group for each q-point
+ ... building axis for plots
+ ... setting ticks
+ ... calculating frequencies             100.0% |========================================|  0.18001s
+ Calculated dispersion on path in 0.18004s
+ 
+  Settings: 
+       mode Gruneisen parameters:  F
+                 number of bands: 30
+                 number of paths: 4
+   number of points on each path: 100
+ 
+         path 1: from GM to X
+   starting point: cartesian 0.000000  0.000000  0.000000 fractional 0.000000  0.000000  0.000000 
+     ending point: cartesian 0.076623 -0.024429  0.000000 fractional 0.500000  0.000000  0.000000 
+         path 2: from X to M
+   starting point: cartesian 0.076623 -0.024429  0.000000 fractional 0.500000  0.000000  0.000000 
+     ending point: cartesian 0.076623  0.024428  0.000000 fractional 0.500000  0.500000  0.000000 
+         path 3: from M to Y
+   starting point: cartesian 0.076623  0.024428  0.000000 fractional 0.500000  0.500000  0.000000 
+     ending point: cartesian 0.000000  0.048858  0.000000 fractional 0.000000  0.500000  0.000000 
+         path 4: from Y to GM
+   starting point: cartesian 0.000000  0.048858  0.000000 fractional 0.000000  0.500000  0.000000 
+     ending point: cartesian 0.000000  0.000000  0.000000 fractional 0.000000  0.000000  0.000000 
+  
+ ...            got the phonon bandstructure in  0.180109238s
+ 
+ Determining activity
+ ... Raman active
+ ... IR active
+ ... transformed Raman coefficient
+ ... transformed IR coefficient
+ ... found            2  active q-points
+ ... found           30  Raman active modes
+ ... found           30  IR active modes
+ ... activity written to outfile.mode_activity.csv
+  
+ Calculating phonon dispersion across the Brillouin zone
+ 
+ Calculating full dispersion relations over 1 MPI ranks
+  ... irreducible dispersions            100.0% |========================================|  0.10508s
+  ... full dispersions                   100.0% |========================================|  0.01650s
+ Calculated the full dispersion relations in 0.12212s
+ 
+ Calculating phonon density of states
+ ... adaptive gaussian integration, scalingfactor = 1.00000, N energy points: 400
+  ... integrating phonon DOS             100.0% |========================================|  0.00547s
+ ... raw normalization (should be 1):  0.98871802749551818     
+ Finished calculating the phonon density of states (0.00569s)
+  
+ All done in 0.96026s

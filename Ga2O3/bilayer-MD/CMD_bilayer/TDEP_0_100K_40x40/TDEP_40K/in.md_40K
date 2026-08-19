@@ -1,0 +1,36 @@
+clear
+units           metal
+boundary        p p p
+atom_style      atomic
+read_data       ../phonopy_0K_tabgap_40x40_amp002/Ga2O3-BL-40x40.data
+
+pair_style      hybrid/overlay eam/fs tabgap
+pair_coeff      * * eam/fs ../potential/tabGAP_20220921/Ga-O.eam.fs Ga O
+pair_coeff      * * tabgap ../potential/tabGAP_20220921/Ga-O.tabgap Ga O no yes
+
+neighbor        2.0 bin
+neigh_modify    every 1 delay 0 check yes
+timestep        0.001
+thermo          1000
+thermo_style    custom step time temp pe ke etotal press pxx pyy pzz
+thermo_modify   flush yes lost error
+
+# Equilibrate for 5 ps at 40 K.
+velocity        all create 40.0 404040 mom yes rot no dist gaussian
+fix             eq all nvt temp 40.0 40.0 0.1
+fix             mom1 all momentum 100 linear 1 1 1
+run             5000
+unfix           eq
+unfix           mom1
+
+# Produce 25 ps and save 26 snapshots separated by 1 ps.
+reset_timestep  0
+fix             prod all nvt temp 40.0 40.0 0.1
+fix             mom2 all momentum 100 linear 1 1 1
+compute         atom_pe all pe/atom
+compute         atom_ke all ke/atom
+dump            traj all custom 1000 trajectory_40K.lammpstrj id type xu yu zu fx fy fz c_atom_pe c_atom_ke
+dump_modify     traj sort id
+run             25000
+
+write_data      final_40K.data

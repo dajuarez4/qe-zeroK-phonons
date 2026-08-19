@@ -1,0 +1,160 @@
+LAMMPS (22 Jul 2025 - Update 1)
+OMP_NUM_THREADS environment is not set. Defaulting to 1 thread.
+  using 1 OpenMP thread(s) per MPI task
+clear
+OMP_NUM_THREADS environment is not set. Defaulting to 1 thread.
+  using 1 OpenMP thread(s) per MPI task
+units           metal
+boundary        p p p
+atom_style      atomic
+read_data       ../phonopy_0K_tabgap_40x40_amp002/Ga2O3-BL-40x40.data
+Reading data file ...
+  triclinic box = (0 0 0) to (138.12499 216.61998 30) with tilt (69.063901 0 0)
+  2 by 3 by 1 MPI processor grid
+  reading atoms ...
+  16000 atoms
+  read_data CPU = 0.045 seconds
+
+pair_style      hybrid/overlay eam/fs tabgap
+pair_coeff      * * eam/fs ../potential/tabGAP_20220921/Ga-O.eam.fs Ga O
+Reading eam/fs potential file ../potential/tabGAP_20220921/Ga-O.eam.fs with DATE: 2022-09-23
+pair_coeff      * * tabgap ../potential/tabGAP_20220921/Ga-O.tabgap Ga O no yes
+Reading tabgap potential file ../potential/tabGAP_20220921/Ga-O.tabgap with DATE: 2022-09-23
+
+neighbor        2.0 bin
+neigh_modify    every 1 delay 0 check yes
+timestep        0.001
+thermo          1000
+thermo_style    custom step time temp pe ke etotal press pxx pyy pzz
+thermo_modify   flush yes lost error
+
+# Equilibrate for 5 ps at 70 K.
+velocity        all create 70.0 707070 mom yes rot no dist gaussian
+fix             eq all nvt temp 70.0 70.0 0.1
+fix             mom1 all momentum 100 linear 1 1 1
+run             5000
+Neighbor list info ...
+  update: every = 1 steps, delay = 0 steps, check = yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 7
+  ghost atom cutoff = 7
+  binsize = 3.5, bins = 60 62 9
+  2 neighbor lists, perpetual/occasional/extra = 2 0 0
+  (1) pair eam/fs, perpetual, half/full from (2)
+      attributes: half, newton on, cut 7
+      pair build: halffull/newton/tri
+      stencil: none
+      bin: none
+  (2) pair tabgap, perpetual
+      attributes: full, newton on
+      pair build: full/bin/atomonly
+      stencil: full/bin/3d
+      bin: standard
+Per MPI rank memory allocation (min/avg/max) = 4.422 | 4.423 | 4.424 Mbytes
+   Step          Time           Temp          PotEng         KinEng         TotEng         Press           Pxx            Pyy            Pzz      
+         0   0              70            -88860.996      144.76231     -88716.234      264.71942      705.22216     -84.718114      173.65421    
+      1000   1              71.35395      -88710.91       147.56233     -88563.348     -370.48369     -1740.264       577.76442      51.048551    
+      2000   2              69.226332     -88749.926      143.16234     -88606.763     -1821.7007     -2459.9862     -2998.7937     -6.3223031    
+      3000   3              69.506871     -88764.066      143.74251     -88620.324     -2205.6202     -2573.3963     -3969.6549     -73.809487    
+      4000   4              70.160783     -88772.977      145.09482     -88627.882     -2163.4954     -2348.7325     -4153.9946      12.240983    
+      5000   5              69.770001     -88777.243      144.28667     -88632.956     -2255.6642     -2367.5516     -4381.6421     -17.798815    
+Loop time of 108.189 on 6 procs for 5000 steps with 16000 atoms
+
+Performance: 3.993 ns/day, 6.011 hours/ns, 46.215 timesteps/s, 739.444 katom-step/s
+100.0% CPU use with 6 MPI tasks x 1 OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 90.655     | 92.165     | 93.595     |  11.4 | 85.19
+Neigh   | 0.10155    | 0.10837    | 0.11551    |   1.5 |  0.10
+Comm    | 13.845     | 15.283     | 16.79      |  28.1 | 14.13
+Output  | 0.00031656 | 0.00056984 | 0.0018193  |   0.0 |  0.00
+Modify  | 0.43497    | 0.44416    | 0.4476     |   0.7 |  0.41
+Other   |            | 0.1887     |            |       |  0.17
+
+Nlocal:        2666.67 ave        2703 max        2640 min
+Histogram: 2 0 1 0 1 0 0 1 0 1
+Nghost:        1186.33 ave        1203 max        1158 min
+Histogram: 1 0 0 0 1 1 0 1 0 2
+Neighs:        51997.5 ave       52929 max       51255 min
+Histogram: 2 0 0 1 1 0 0 0 1 1
+FullNghs:       103995 ave      105517 max      102363 min
+Histogram: 1 0 1 0 1 1 0 0 1 1
+
+Total # of neighbors = 623970
+Ave neighs/atom = 38.998125
+Neighbor list builds = 33
+Dangerous builds = 0
+unfix           eq
+unfix           mom1
+
+# Produce 25 ps and save 26 snapshots separated by 1 ps.
+reset_timestep  0
+fix             prod all nvt temp 70.0 70.0 0.1
+fix             mom2 all momentum 100 linear 1 1 1
+compute         atom_pe all pe/atom
+compute         atom_ke all ke/atom
+dump            traj all custom 1000 trajectory_70K.lammpstrj id type xu yu zu fx fy fz c_atom_pe c_atom_ke
+dump_modify     traj sort id
+run             25000
+Per MPI rank memory allocation (min/avg/max) = 4.812 | 4.814 | 4.815 Mbytes
+   Step          Time           Temp          PotEng         KinEng         TotEng         Press           Pxx            Pyy            Pzz      
+         0   0              69.770001     -88777.243      144.28667     -88632.956     -2255.6642     -2367.5516     -4381.6421     -17.798815    
+      1000   1              70.305043     -88783.899      145.39315     -88638.506     -2233.1874     -2254.3883     -4421.2786     -23.895272    
+      2000   2              69.589507     -88788.578      143.9134      -88644.665     -2366.7577     -2462.2342     -4620.2151     -17.823735    
+      3000   3              70.503601     -88798.102      145.80378     -88652.298     -2319.7715     -2337.3012     -4638.106       16.09282     
+      4000   4              69.285929     -88802.089      143.28559     -88658.803     -2289.9963     -2276.2641     -4611.2292      17.504397    
+      5000   5              70.529646     -88806.622      145.85764     -88660.765     -2265.1257     -2248.8613     -4616.5787      70.063039    
+      6000   6              69.813869     -88817.338      144.37739     -88672.961     -2302.5706     -2194.1901     -4735.7817      22.259917    
+      7000   7              69.745077     -88821.991      144.23512     -88677.756     -2354.1196     -2327.9217     -4719.1118     -15.325168    
+      8000   8              70.00455      -88828.54       144.77172     -88683.768     -2301.0929     -2292.6526     -4646.2615      35.635317    
+      9000   9              70.372754     -88835.082      145.53318     -88689.549     -2410.2347     -2448.2045     -4718.6172     -63.882383    
+     10000   10             70.552285     -88838.854      145.90446     -88692.949     -2376.4549     -2372.5393     -4776.9245      20.09905     
+     11000   11             69.365757     -88842.493      143.45068     -88699.043     -2297.1951     -2278.8919     -4611.496      -1.1974627    
+     12000   12             69.767842     -88852.119      144.2822      -88707.837     -2361.7567     -2386.5227     -4686.7868     -11.960635    
+     13000   13             70.845415     -88855.338      146.51066     -88708.827     -2321.281      -2389.9487     -4637.0415      63.147139    
+     14000   14             70.108045     -88859.779      144.98576     -88714.794     -2388.8046     -2476.5874     -4679.2677     -10.558628    
+     15000   15             68.801739     -88864.385      142.28427     -88722.101     -2409.7265     -2600.4291     -4598.9942     -29.756117    
+     16000   16             70.469791     -88864.697      145.73386     -88718.963     -2406.8405     -2570.5805     -4702.2662      52.325084    
+     17000   17             69.991064     -88870.268      144.74383     -88725.524     -2406.2365     -2573.6447     -4690.7066      45.641848    
+     18000   18             69.324644     -88872.838      143.36566     -88729.473     -2466.0744     -2719.8555     -4641.6872     -36.680307    
+     19000   19             69.489127     -88878.123      143.70581     -88734.417     -2455.5985     -2749.9822     -4609.8293     -6.9841324    
+     20000   20             69.813567     -88879.295      144.37676     -88734.918     -2428.8437     -2665.0684     -4631.3325      9.8696844    
+     21000   21             69.907115     -88880.69       144.57023     -88736.12      -2411.874      -2616.5444     -4653.5609      34.483392    
+     22000   22             70.294234     -88883.488      145.3708      -88738.118     -2526.9398     -2837.3146     -4729.5494     -13.955452    
+     23000   23             69.149008     -88883.886      143.00243     -88740.884     -2440.4758     -2710.8456     -4654.4801      43.898448    
+     24000   24             69.24283      -88883.977      143.19646     -88740.78      -2457.5516     -2727.523      -4659.7578      14.626009    
+     25000   25             70.90654      -88885.83       146.63707     -88739.193     -2539.1711     -2795.8495     -4814.2868     -7.3769917    
+Loop time of 516.983 on 6 procs for 25000 steps with 16000 atoms
+
+Performance: 4.178 ns/day, 5.744 hours/ns, 48.358 timesteps/s, 773.720 katom-step/s
+100.0% CPU use with 6 MPI tasks x 1 OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 425.08     | 436.13     | 444.07     |  32.5 | 84.36
+Neigh   | 0.34051    | 0.35179    | 0.36567    |   1.3 |  0.07
+Comm    | 68.815     | 76.783     | 87.863     |  77.8 | 14.85
+Output  | 0.21395    | 0.24861    | 0.27994    |   4.6 |  0.05
+Modify  | 2.3578     | 2.4092     | 2.4752     |   2.6 |  0.47
+Other   |            | 1.063      |            |       |  0.21
+
+Nlocal:        2666.67 ave        2698 max        2637 min
+Histogram: 1 1 0 0 2 0 0 1 0 1
+Nghost:        2664.17 ave        2697 max        2613 min
+Histogram: 1 1 0 0 0 1 0 0 0 3
+Neighs:        50490.5 ave       52009 max       49469 min
+Histogram: 2 0 1 0 1 0 1 0 0 1
+FullNghs:       100981 ave      102796 max       99678 min
+Histogram: 1 1 0 1 1 1 0 0 0 1
+
+Total # of neighbors = 605886
+Ave neighs/atom = 37.867875
+Neighbor list builds = 139
+Dangerous builds = 0
+
+write_data      final_70K.data
+System init for write_data ...
+Total wall time: 0:10:26

@@ -1,0 +1,91 @@
+ READ STRUCTURE AND SETUP CUTOFFS
+ ... reading unitcell
+ ... min cutoff:       1.94881
+ ... max cutoff:      14.99995
+ --> rc2 cutoff:       5.50000
+ --> rc3 cutoff:      -1.00000
+ --> rc4 cutoff:      -1.00000
+ 
+ DETERMINING SYMMETRY OF INTERACTION TENSORS
+ ... constructed distance tables (28.85835s)
+ ... built singlets
+ ... built pairs
+ ... built prototype tuplets (0.01595s)
+ ... expanded symmetry operations (0.01852s)
+  ... reducing pairs                     100.0% |========================================|  0.00047s
+  ... mapping pairs                      100.0% |========================================|  0.67085s
+ N singlet shells:          10
+          shell:  1   1
+          shell:  2   1
+          shell:  3   1
+          shell:  4   1
+          shell:  5   1
+          shell:  6   1
+          shell:  7   1
+          shell:  8   1
+          shell:  9   1
+          shell: 10   1
+ N pair shells:         120
+    shell:           1           1   0.0000000000000000     
+    shell:           2           1   0.0000000000000000     
+    shell:           3           1   0.0000000000000000     
+    shell:           4           1   0.0000000000000000     
+    shell:           5           1   0.0000000000000000     
+    shell:           6           1   0.0000000000000000     
+    shell:           7           1   0.0000000000000000     
+    shell:           8           1   0.0000000000000000     
+    shell:           9           1   0.0000000000000000     
+    shell:          10           1   0.0000000000000000     
+    shell:          11           2   1.8089933454801457     
+    shell:          12           2   1.8089933456105298     
+    shell:          13           2   1.8162024182044780     
+    shell:          14           2   1.8162024183161962     
+    shell:          15           2   1.9211481239625934     
+    shell:          16           2   1.9211481240587502     
+    shell:          17           2   1.9211489045774215     
+    shell:          18           2   1.9211489047211205     
+    shell:          19           2   1.9468616021907552     
+    shell:          20           2   1.9468616021931353     
+     ... and 100 more shells
+ ... determined singlet nullspace
+ ... determined pair nullspace
+ ... determined dielectric tensor nullspace
+ ... determined Born charge nullspace
+ Interactions:
+        firstorder forceconstant:          10          27
+       secondorder forceconstant:         120         990
+        thirdorder forceconstant:           0           0
+       fourthorder forceconstant:           0           0
+             dielectric constant:           0           0
+              dielectric singlet:          10         162
+                 dielectric pair:           0           0
+   born effective charge singlet:          10           0
+      born effective charge pair:           0           0
+   born effective charge triplet:           0           0
+ 
+ READING SIMULATION FROM FILE
+ ... made space and decided on heuristics
+ ... reading simulation                  100.0% |========================================|  0.28645s
+ ... got displacements
+ ... short summary of simulation:
+                       number of atoms: 16000
+              number of configurations: 7
+                         timestep (fs): 1000.00000
+               average temperature (K): 10.02605
+                 thermostat set to (K): 10.00000
+                average pressure (GPa): 0.00000
+   average stresstensor xx xy xz (GPa):       0.0000       0.0000       0.0000 
+   average stresstensor yx yy yz (GPa):       0.0000       0.0000       0.0000 
+   average stresstensor zx zy zz (GPa):       0.0000       0.0000       0.0000 
+ ... finished reading simulation (0.32351s)
+ 
+ REPORT GRADE OF OVERDETERMINATION
+     total number of equations:       336000
+      number of FC up 1. order:           27   --> overdetermination ratio:      12444.4
+      number of FC up 2. order:         1017   --> overdetermination ratio:        330.4
+ 
+ SOLVING FOR INTERACTION TENSORS
+ ... distributed data
+ ... no polar interactions to worry about
+ 
+ GENERATING CONSTRAINTS

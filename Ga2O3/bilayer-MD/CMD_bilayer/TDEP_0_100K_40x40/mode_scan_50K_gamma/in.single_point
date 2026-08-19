@@ -1,0 +1,17 @@
+clear
+units           metal
+boundary        p p p
+atom_style      atomic
+read_data       ${datafile}
+
+pair_style      hybrid/overlay eam/fs tabgap
+pair_coeff      * * eam/fs ../potential/tabGAP_20220921/Ga-O.eam.fs Ga O
+pair_coeff      * * tabgap ../potential/tabGAP_20220921/Ga-O.tabgap Ga O no yes
+neighbor        2.0 bin
+neigh_modify    every 1 delay 0 check yes
+
+thermo          1
+thermo_style    custom step pe press pxx pyy pzz
+run             0
+variable        energy equal pe
+print           "ENERGY ${energy}"

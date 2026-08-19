@@ -1,0 +1,4 @@
+16000 # N atoms
+5 # N configurations
+1000.0 # trajectory sampling interval, fs
+70.0 # temperature, K

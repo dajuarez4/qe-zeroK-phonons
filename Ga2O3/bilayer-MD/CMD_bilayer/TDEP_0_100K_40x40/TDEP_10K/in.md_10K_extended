@@ -1,0 +1,32 @@
+clear
+units           metal
+boundary        p p p
+atom_style      atomic
+box             tilt large
+read_data       final_10K.data
+
+pair_style      hybrid/overlay eam/fs tabgap
+pair_coeff      * * eam/fs ../potential/tabGAP_20220921/Ga-O.eam.fs Ga O
+pair_coeff      * * tabgap ../potential/tabGAP_20220921/Ga-O.tabgap Ga O no yes
+
+neighbor        2.0 bin
+neigh_modify    every 1 delay 0 check yes
+timestep        0.001
+
+thermo          1000
+thermo_style    custom step time temp pe ke etotal press pxx pyy pzz
+thermo_modify   flush yes lost error
+
+# Continue from the equilibrated 10 K state.  final_10K.data retains velocities.
+reset_timestep  0
+fix             prod all nvt temp 10.0 10.0 0.1
+fix             mom all momentum 100 linear 1 1 1
+compute         atom_pe all pe/atom
+compute         atom_ke all ke/atom
+
+# 25 ps continuation, sampled every 1 ps: 26 frames including t=0.
+dump            traj all custom 1000 trajectory_10K_extended.lammpstrj id type xu yu zu fx fy fz c_atom_pe c_atom_ke
+dump_modify     traj sort id
+run             25000
+
+write_data      final_10K_extended.data

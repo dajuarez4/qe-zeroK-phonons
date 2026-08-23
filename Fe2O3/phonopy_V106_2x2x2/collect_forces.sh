@@ -15,10 +15,14 @@ for output in "${outputs[@]}"; do
     echo "Incomplete calculation: $output"
     exit 1
   fi
+  if ! grep -q 'convergence has been achieved' "$output"; then
+    echo "Unconverged SCF calculation: $output"
+    exit 1
+  fi
 done
 
 phonopy --qe -f "${outputs[@]}"
-phonopy-load phonopy_disp.yaml --fc-symmetry --writefc
+phonopy-load phonopy_disp.yaml --writefc
 
 echo "Created FORCE_SETS and force_constants.hdf5/ FORCE_CONSTANTS."
 echo "Next: phonopy-load phonopy_disp.yaml --config band.conf --save"

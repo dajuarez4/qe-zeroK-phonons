@@ -1,0 +1,14 @@
+# Local operating-system and Python cache files
+**/.DS_Store
+**/__pycache__/
+**/*.py[cod]
+
+# Large raw trajectories and generated binary/cache outputs
+**/*.md.out
+**/outfile.dispersion_relations.hdf5
+**/HELD_300K/*step-dashboard.gif
+**/HELD_300K/held_step_dashboard_cache.npz
+**/HELD_300K/held_step_coefficients.csv
+
+# Regenerable raw inputs/outputs for every cumulative TDEP checkpoint
+**/TDEP_300K/anharmonicity_convergence/nframes_*/

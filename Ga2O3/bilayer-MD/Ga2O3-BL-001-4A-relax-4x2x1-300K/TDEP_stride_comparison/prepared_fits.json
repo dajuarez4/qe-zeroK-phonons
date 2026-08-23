@@ -1,0 +1,50 @@
+[
+  {
+    "directory": "TDEP_300K_stride_10_cutoff_5A",
+    "stride": 10,
+    "cutoff_angstrom": 5.0,
+    "n_frames": 62,
+    "first_frame": 8,
+    "last_frame": 618
+  },
+  {
+    "directory": "TDEP_300K_stride_10_cutoff_5p5A",
+    "stride": 10,
+    "cutoff_angstrom": 5.5,
+    "n_frames": 62,
+    "first_frame": 8,
+    "last_frame": 618
+  },
+  {
+    "directory": "TDEP_300K_stride_10_cutoff_6A",
+    "stride": 10,
+    "cutoff_angstrom": 6.0,
+    "n_frames": 62,
+    "first_frame": 8,
+    "last_frame": 618
+  },
+  {
+    "directory": "TDEP_300K_stride_20_cutoff_5A",
+    "stride": 20,
+    "cutoff_angstrom": 5.0,
+    "n_frames": 31,
+    "first_frame": 18,
+    "last_frame": 618
+  },
+  {
+    "directory": "TDEP_300K_stride_20_cutoff_5p5A",
+    "stride": 20,
+    "cutoff_angstrom": 5.5,
+    "n_frames": 31,
+    "first_frame": 18,
+    "last_frame": 618
+  },
+  {
+    "directory": "TDEP_300K_stride_20_cutoff_6A",
+    "stride": 20,
+    "cutoff_angstrom": 6.0,
+    "n_frames": 31,
+    "first_frame": 18,
+    "last_frame": 618
+  }
+]

@@ -1,0 +1,25 @@
+{
+  "n_unit_atoms": 10,
+  "n_supercell_atoms": 80,
+  "replication": [
+    4,
+    2,
+    1
+  ],
+  "reference_replication_max_error_fractional": 1.1102230246251565e-16,
+  "n_frames": 62,
+  "excluded_incomplete_position_blocks": 1,
+  "timestep_fs": 0.9676,
+  "trajectory_time_fs": 597.9768,
+  "mean_temperature_K": 292.4904043001613,
+  "latest_complete_temperature_K": 313.45004811,
+  "qe_job_completed": false,
+  "source_total_frames": 618,
+  "selection_stride_steps": 10,
+  "source_timestep_fs": 0.9676,
+  "effective_sample_spacing_fs": 9.676,
+  "first_selected_frame_1based": 8,
+  "last_selected_frame_1based": 618,
+  "selected_trajectory_span_fs": 590.236,
+  "cutoff_angstrom": 5.5
+}

@@ -1,32 +1,32 @@
 # Experimental HELD diagnostic for the 4 Angstrom bilayer
 
 This directory contains an experimental multi-species Ga/O HELD fit using the
-491 valid position--force pairs in the separate `nraise=20` trajectory. The adapter
+594 valid position--force pairs in the separate `nraise=20` trajectory. The adapter
 uses species-aware symmetry and separate Ga/O masses; the installed HELD CLI
 itself officially targets monoatomic BCC/FCC/HCP systems.
 
 ## Result
 
-- Complete configurations: 491
+- Complete configurations: 594
 - Unfinished coordinate blocks excluded: 1
-- Represented trajectory time: 475.0916 fs
-- Mean sampled temperature: 283.222 K
-- Latest complete-frame temperature: 323.140 K
+- Represented trajectory time: 574.7544 fs
+- Mean sampled temperature: 291.062 K
+- Latest complete-frame temperature: 324.211 K
 - Cutoff: 5.5 Angstrom
 - Coefficients: 1,008
 - Equations per frame: 240
 - Per-frame rank: 240 (underdetermined relative to 1,008 coefficients)
-- Global equations: 117,840
+- Global equations: 142,560
 - Global design rank: 1,008 (full rank)
-- Global condition number: 136.35
+- Global condition number: 133.82
 - Aggregation: global least squares
-- Force-component RMSE: 0.2015 eV/Angstrom
-- Force-vector RMSE: 0.3490 eV/Angstrom
-- Frequency range: -1.313 to 25.092 THz
+- Force-component RMSE: 0.2089 eV/Angstrom
+- Force-vector RMSE: 0.3618 eV/Angstrom
+- Frequency range: -1.206 to 24.873 THz
 
 This is not a validated HELD prediction or a converged finite-temperature
-spectrum. The full 399.6 fs sample includes the strong initial cooling
-transient but now averages 282 K, while the newest complete frames remain above 300 K.
+spectrum. The full 574.8 fs sample includes the strong initial cooling
+transient but now averages 291 K, while the newest complete frame remains above 300 K.
 Imaginary branches must be treated as a
 trajectory diagnostic rather than proof of physical instability.
 
@@ -36,7 +36,7 @@ Important outputs are `Ga2O3-BL-001-4A-HELD-experimental.png`,
 
 ## Frame-by-frame dashboard
 
-`Ga2O3-BL-001-4A-HELD-step-dashboard.gif` contains all 491 frames at 8 fps.
+`Ga2O3-BL-001-4A-HELD-step-dashboard.gif` contains all 594 frames at 8 fps.
 At the 5.5 Angstrom cutoff each individual frame
 has only 240 equations for 1,008 coefficients, so its per-frame HELD fit is
 underdetermined. The near-zero per-frame force errors and the animated

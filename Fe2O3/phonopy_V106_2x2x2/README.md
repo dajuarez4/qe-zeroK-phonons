@@ -26,5 +26,13 @@ phonopy-load phonopy_disp.yaml --config band.conf --save
 phonopy-load phonopy_disp.yaml --config mesh.conf
 ```
 
+## Current result status
+
+The V106 phonon products were generated on 2026-08-19. Displacement 003 did
+not reach electronic convergence and contains no QE force block, despite its
+`JOB DONE` footer. The current force set therefore reconstructs that member
+of the exact 003/004 central-displacement pair. See
+`FORCE_SETS_PROVENANCE.md` before using these results quantitatively.
+
 Keep all electronic, magnetic, displacement, and sampling settings identical
 between volumes. Do not relax a displaced supercell.

@@ -1,7 +1,6 @@
 # QE Zero-K Phonons
 
-A gen
-eral Quantum ESPRESSO workflow for calculating harmonic phonons and phonon dispersions at 0 K for crystalline materials.
+A general Quantum ESPRESSO workflow for calculating harmonic phonons and phonon dispersions at 0 K for crystalline materials.
 
 This repository is designed as a reusable template for different materials. The workflow starts from a converged ground-state calculation and produces phonon frequencies, force constants, and phonon dispersion plots.
 

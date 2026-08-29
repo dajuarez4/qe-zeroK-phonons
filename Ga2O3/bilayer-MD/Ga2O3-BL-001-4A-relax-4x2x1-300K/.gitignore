@@ -1,0 +1,3 @@
+# Large local simulation artifacts. Keep them on disk, not in Git.
+Ga2O3-BL-001-4x2x1.md.out
+HELD_300K/Ga2O3-BL-001-4A-HELD-step-dashboard.gif

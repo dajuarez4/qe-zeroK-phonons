@@ -7,11 +7,11 @@
  --> rc4 cutoff:      -1.00000
  
  DETERMINING SYMMETRY OF INTERACTION TENSORS
- ... constructed distance tables (0.01888s)
+ ... constructed distance tables (0.00606s)
  ... built singlets
  ... built pairs
- ... built prototype tuplets (0.00051s)
- ... expanded symmetry operations (0.00565s)
+ ... built prototype tuplets (0.00012s)
+ ... expanded symmetry operations (0.00258s)
   ... reducing pairs                       0.395256907     %
   ... reducing pairs                        1.18577075     %
   ... reducing pairs                        1.97628462     %
@@ -293,174 +293,170 @@
  
  READING SIMULATION FROM FILE
  ... made space and decided on heuristics
- ... reading simulation                     24.5468674     %
- ... reading simulation                     50.1294670     %
- ... reading simulation                     75.7120667     %
+ ... reading simulation                     10.5792437     %
+ ... reading simulation                     21.1987133     %
+ ... reading simulation                     31.8181820     %
  ... got displacements
  ... short summary of simulation:
                        number of atoms: 80
-              number of configurations: 644
+              number of configurations: 829
                          timestep (fs): 0.96760
-               average temperature (K): 293.27937
-                 thermostat set to (K): 293.27937
+               average temperature (K): 297.67129
+                 thermostat set to (K): 297.67129
                 average pressure (GPa): 0.00000
    average stresstensor xx xy xz (GPa):       0.0000       0.0000       0.0000 
    average stresstensor yx yy yz (GPa):       0.0000       0.0000       0.0000 
    average stresstensor zx zy zz (GPa):       0.0000       0.0000       0.0000 
- ... finished reading simulation (0.16408s)
+ ... finished reading simulation (0.07579s)
  
  REPORT GRADE OF OVERDETERMINATION
-     total number of equations:       154560
-      number of FC up 1. order:           27   --> overdetermination ratio:       5724.4
-      number of FC up 2. order:         1125   --> overdetermination ratio:        137.4
+     total number of equations:       198960
+      number of FC up 1. order:           27   --> overdetermination ratio:       7368.9
+      number of FC up 2. order:         1125   --> overdetermination ratio:        176.9
  
  SOLVING FOR INTERACTION TENSORS
  ... distributed data
  ... no polar interactions to worry about
  
  GENERATING CONSTRAINTS
- ... 126 secondorder constraints (0.37646s)
- ... created 126 constraints (0.37648s)
- ... creating fc coefficients              0.777604997     %
- ... creating fc coefficients               1.71073091     %
- ... creating fc coefficients               2.64385700     %
- ... creating fc coefficients               3.57698298     %
- ... creating fc coefficients               4.51010895     %
- ... creating fc coefficients               5.44323492     %
- ... creating fc coefficients               6.37636089     %
- ... creating fc coefficients               7.30948687     %
- ... creating fc coefficients               8.24261284     %
- ... creating fc coefficients               9.17573833     %
- ... creating fc coefficients               10.1088648     %
- ... creating fc coefficients               11.0419903     %
- ... creating fc coefficients               11.9751167     %
- ... creating fc coefficients               12.9082422     %
- ... creating fc coefficients               13.8413687     %
- ... creating fc coefficients               14.7744942     %
- ... creating fc coefficients               15.7076206     %
- ... creating fc coefficients               16.6407471     %
- ... creating fc coefficients               17.5738716     %
- ... creating fc coefficients               18.5069981     %
- ... creating fc coefficients               19.4401245     %
- ... creating fc coefficients               20.3732510     %
- ... creating fc coefficients               21.3063755     %
- ... creating fc coefficients               22.2395020     %
- ... creating fc coefficients               23.1726284     %
- ... creating fc coefficients               24.1057549     %
- ... creating fc coefficients               25.0388794     %
- ... creating fc coefficients               25.9720058     %
- ... creating fc coefficients               26.9051323     %
- ... creating fc coefficients               27.8382587     %
- ... creating fc coefficients               28.7713833     %
- ... creating fc coefficients               29.7045097     %
- ... creating fc coefficients               30.6376362     %
- ... creating fc coefficients               31.5707626     %
- ... creating fc coefficients               32.5038872     %
- ... creating fc coefficients               33.4370155     %
- ... creating fc coefficients               34.3701401     %
- ... creating fc coefficients               35.3032646     %
- ... creating fc coefficients               36.2363930     %
- ... creating fc coefficients               37.1695175     %
- ... creating fc coefficients               38.1026421     %
- ... creating fc coefficients               39.0357704     %
- ... creating fc coefficients               39.9688950     %
- ... creating fc coefficients               40.9020233     %
- ... creating fc coefficients               41.8351479     %
- ... creating fc coefficients               42.7682724     %
- ... creating fc coefficients               43.7014008     %
- ... creating fc coefficients               44.6345253     %
- ... creating fc coefficients               45.5676498     %
- ... creating fc coefficients               46.5007782     %
- ... creating fc coefficients               47.4339027     %
- ... creating fc coefficients               48.3670311     %
- ... creating fc coefficients               49.3001556     %
- ... creating fc coefficients               50.2332802     %
- ... creating fc coefficients               51.1664085     %
- ... creating fc coefficients               52.0995331     %
- ... creating fc coefficients               53.0326576     %
- ... creating fc coefficients               53.9657860     %
- ... creating fc coefficients               54.8989105     %
- ... creating fc coefficients               55.8320389     %
- ... creating fc coefficients               56.7651634     %
- ... creating fc coefficients               57.6982880     %
- ... creating fc coefficients               58.6314163     %
- ... creating fc coefficients               59.5645409     %
- ... creating fc coefficients               60.4976654     %
- ... creating fc coefficients               61.4307938     %
- ... creating fc coefficients               62.3639183     %
- ... creating fc coefficients               63.2970467     %
- ... creating fc coefficients               64.2301712     %
- ... creating fc coefficients               65.1632996     %
- ... creating fc coefficients               66.0964203     %
- ... creating fc coefficients               67.0295486     %
- ... creating fc coefficients               67.9626770     %
- ... creating fc coefficients               68.8957977     %
- ... creating fc coefficients               69.8289261     %
- ... creating fc coefficients               70.7620544     %
- ... creating fc coefficients               71.6951752     %
- ... creating fc coefficients               72.6283035     %
- ... creating fc coefficients               73.5614319     %
- ... creating fc coefficients               74.4945602     %
- ... creating fc coefficients               75.4276810     %
- ... creating fc coefficients               76.3608093     %
- ... creating fc coefficients               77.2939377     %
- ... creating fc coefficients               78.2270584     %
- ... creating fc coefficients               79.1601868     %
- ... creating fc coefficients               80.0933151     %
- ... creating fc coefficients               81.0264359     %
- ... creating fc coefficients               81.9595642     %
- ... creating fc coefficients               82.8926926     %
- ... creating fc coefficients               83.8258133     %
- ... creating fc coefficients               84.7589417     %
- ... creating fc coefficients               85.6920700     %
- ... creating fc coefficients               86.6251907     %
- ... creating fc coefficients               87.5583191     %
- ... creating fc coefficients               88.4914474     %
- ... creating fc coefficients               89.4245758     %
- ... creating fc coefficients               90.3576965     %
- ... creating fc coefficients               91.2908249     %
- ... creating fc coefficients               92.2239532     %
- ... creating fc coefficients               93.1570740     %
- ... creating fc coefficients               94.0902023     %
- ... creating fc coefficients               95.0233307     %
- ... creating fc coefficients               95.9564514     %
- ... creating fc coefficients               96.8895798     %
- ... creating fc coefficients               97.8227081     %
- ... creating fc coefficients               98.7558289     %
- ... creating fc coefficients               99.6889572     %
+ ... 126 secondorder constraints (0.08705s)
+ ... created 126 constraints (0.08706s)
+ ... creating fc coefficients              0.845410645     %
+ ... creating fc coefficients               1.81159425     %
+ ... creating fc coefficients               2.77777767     %
+ ... creating fc coefficients               3.74396133     %
+ ... creating fc coefficients               4.71014500     %
+ ... creating fc coefficients               5.67632866     %
+ ... creating fc coefficients               6.64251184     %
+ ... creating fc coefficients               7.60869551     %
+ ... creating fc coefficients               8.57487965     %
+ ... creating fc coefficients               9.54106236     %
+ ... creating fc coefficients               10.5072460     %
+ ... creating fc coefficients               11.4734297     %
+ ... creating fc coefficients               12.4396133     %
+ ... creating fc coefficients               13.4057970     %
+ ... creating fc coefficients               14.3719807     %
+ ... creating fc coefficients               15.3381643     %
+ ... creating fc coefficients               16.3043480     %
+ ... creating fc coefficients               17.2705307     %
+ ... creating fc coefficients               18.2367153     %
+ ... creating fc coefficients               19.2028980     %
+ ... creating fc coefficients               20.1690826     %
+ ... creating fc coefficients               21.1352654     %
+ ... creating fc coefficients               22.1014500     %
+ ... creating fc coefficients               23.0676327     %
+ ... creating fc coefficients               24.0338173     %
+ ... creating fc coefficients               25.0000000     %
+ ... creating fc coefficients               25.9661827     %
+ ... creating fc coefficients               26.9323673     %
+ ... creating fc coefficients               27.8985500     %
+ ... creating fc coefficients               28.8647346     %
+ ... creating fc coefficients               29.8309174     %
+ ... creating fc coefficients               30.7971020     %
+ ... creating fc coefficients               31.7632847     %
+ ... creating fc coefficients               32.7294693     %
+ ... creating fc coefficients               33.6956520     %
+ ... creating fc coefficients               34.6618347     %
+ ... creating fc coefficients               35.6280174     %
+ ... creating fc coefficients               36.5942039     %
+ ... creating fc coefficients               37.5603867     %
+ ... creating fc coefficients               38.5265694     %
+ ... creating fc coefficients               39.4927521     %
+ ... creating fc coefficients               40.4589386     %
+ ... creating fc coefficients               41.4251213     %
+ ... creating fc coefficients               42.3913040     %
+ ... creating fc coefficients               43.3574867     %
+ ... creating fc coefficients               44.3236732     %
+ ... creating fc coefficients               45.2898560     %
+ ... creating fc coefficients               46.2560387     %
+ ... creating fc coefficients               47.2222214     %
+ ... creating fc coefficients               48.1884041     %
+ ... creating fc coefficients               49.1545906     %
+ ... creating fc coefficients               50.1207733     %
+ ... creating fc coefficients               51.0869560     %
+ ... creating fc coefficients               52.0531387     %
+ ... creating fc coefficients               53.0193253     %
+ ... creating fc coefficients               53.9855080     %
+ ... creating fc coefficients               54.9516907     %
+ ... creating fc coefficients               55.9178734     %
+ ... creating fc coefficients               56.8840561     %
+ ... creating fc coefficients               57.8502426     %
+ ... creating fc coefficients               58.8164253     %
+ ... creating fc coefficients               59.7826080     %
+ ... creating fc coefficients               60.7487907     %
+ ... creating fc coefficients               61.7149773     %
+ ... creating fc coefficients               62.6811600     %
+ ... creating fc coefficients               63.6473427     %
+ ... creating fc coefficients               64.6135254     %
+ ... creating fc coefficients               65.5797119     %
+ ... creating fc coefficients               66.5458908     %
+ ... creating fc coefficients               67.5120773     %
+ ... creating fc coefficients               68.4782639     %
+ ... creating fc coefficients               69.4444427     %
+ ... creating fc coefficients               70.4106293     %
+ ... creating fc coefficients               71.3768082     %
+ ... creating fc coefficients               72.3429947     %
+ ... creating fc coefficients               73.3091812     %
+ ... creating fc coefficients               74.2753601     %
+ ... creating fc coefficients               75.2415466     %
+ ... creating fc coefficients               76.2077332     %
+ ... creating fc coefficients               77.1739120     %
+ ... creating fc coefficients               78.1400986     %
+ ... creating fc coefficients               79.1062775     %
+ ... creating fc coefficients               80.0724640     %
+ ... creating fc coefficients               81.0386505     %
+ ... creating fc coefficients               82.0048294     %
+ ... creating fc coefficients               82.9710159     %
+ ... creating fc coefficients               83.9371948     %
+ ... creating fc coefficients               84.9033813     %
+ ... creating fc coefficients               85.8695679     %
+ ... creating fc coefficients               86.8357468     %
+ ... creating fc coefficients               87.8019333     %
+ ... creating fc coefficients               88.7681122     %
+ ... creating fc coefficients               89.7342987     %
+ ... creating fc coefficients               90.7004852     %
+ ... creating fc coefficients               91.6666641     %
+ ... creating fc coefficients               92.6328506     %
+ ... creating fc coefficients               93.5990372     %
+ ... creating fc coefficients               94.5652161     %
+ ... creating fc coefficients               95.5314026     %
+ ... creating fc coefficients               96.4975815     %
+ ... creating fc coefficients               97.4637680     %
+ ... creating fc coefficients               98.4299545     %
+ ... creating fc coefficients               99.3961334     %
  ... least squares solver
- ... solved second order (36.87329s)
- ... solved first order (37.04557s)
+ ... solved second order (10.43240s)
+ ... solved first order (10.48102s)
  ... finished solving for forceconstants
  ... diagnostics from three-fold cross-validation:
                                    R^2     stddev energy (meV/atom)
-                         input:                 7.0389271
-                  second order:  0.88168        1.4952731
+                         input:                 6.4706001
+                  second order:  0.87676        1.5898008
  residual forces per atom (eV/A):
-           1  -5.0596847382352792E-004   1.8522080416801853E-002  -9.8408885325241896E-004
-           2   1.8110840191306406E-003   1.3534408769648914E-003   1.2301552557224742E-002
-           3   7.5349575209877019E-003  -4.3019704699097598E-002  -2.7601516275501748E-003
-           4   1.2060403370171113E-002   6.4923615880245196E-004   4.5085286838759285E-003
-           5   3.8692958838765002E-003  -7.8148318324667773E-003  -3.5582797369681021E-003
-           6  -8.9583487653531763E-003   1.6128667380892400E-002  -9.3355663962231723E-003
-           7   3.1973516753271906E-003   8.5959220625066654E-003  -7.7573940719650005E-004
-           8   4.1341925130633332E-003  -2.0561554146961501E-002  -1.4665354853647694E-002
-           9  -2.6138984425198224E-002   2.8235878179500150E-002  -2.5043823529145382E-003
-          10   2.9960166818184448E-003  -2.0891343969425369E-003   1.7773481986651931E-002
+           1  -5.7032558828903370E-004   1.7255247383661729E-002   1.4060681946549101E-003
+           2   1.5317197043331981E-003   6.6552537107942601E-004   1.0941558257401660E-002
+           3   5.4462772349917615E-003  -3.1123090683833815E-002  -5.8804301212578630E-003
+           4   8.5576966163364767E-003  -4.0234236534208894E-003   3.5630990710909874E-003
+           5   2.9777834781040606E-003  -6.4448097915722853E-003   1.2991911672572890E-004
+           6  -6.8495500306410403E-003   1.2721108258130569E-002  -3.2885362431845509E-003
+           7   2.8235355102189273E-003   8.5613096058188443E-003   7.4500782136444153E-004
+           8   6.4208375760387501E-003  -1.8785854799898371E-002  -1.3803364224127705E-002
+           9  -2.0532852141772657E-002   2.4972526990270631E-002  -6.1952901964831926E-003
+          10   1.9487764067955654E-004  -3.7985386802358383E-003   1.2381968323815584E-002
 ------------------------------------------------------------------------------------------
-       RMSE:   1.0102106885017314E-002   1.9533350857837344E-002   9.0437771214530900E-003
- RMSE total:   0.238E-01 (eV/AA)
+       RMSE:   7.9510161364302577E-003   1.5970734890978507E-002   7.5005591032776082E-003
+ RMSE total:   0.194E-01 (eV/AA)
 
  .. write to outfile.forceconstant_firstorder
 
  
  ELASTIC CONSTANTS (short range) (GPa):
-          63.20236          14.24952          11.37814          -3.47802           0.89841          -3.74229
-          14.24952          41.00151           5.05150          -5.62004           0.53049           5.07389
-          11.37814           5.05150          11.49555           4.18494           0.13604          -0.21653
-          -3.47802          -5.62004           4.18494          12.04058          -0.29000          -2.08756
-           0.89841           0.53049           0.13604          -0.29000          16.69120          -2.60136
-          -3.74229           5.07389          -0.21653          -2.08756          -2.60136          26.41994
+          64.90247          12.31297          11.81982          -3.15456          -0.08723          -2.14213
+          12.31297          38.79039           6.17740          -4.93630           0.95638           2.66894
+          11.81982           6.17740          11.32566           3.54669           0.20792          -0.10547
+          -3.15456          -4.93630           3.54669          10.92349          -0.12773          -1.63811
+          -0.08723           0.95638           0.20792          -0.12773          16.41831          -2.97605
+          -2.14213           2.66894          -0.10547          -1.63811          -2.97605          24.20608
  ELASTIC CONSTANTS (long range) (GPa):
            0.00000           0.00000           0.00000           0.00000           0.00000           0.00000
            0.00000           0.00000           0.00000           0.00000           0.00000           0.00000
@@ -469,26 +465,26 @@
            0.00000           0.00000           0.00000           0.00000           0.00000           0.00000
            0.00000           0.00000           0.00000           0.00000           0.00000           0.00000
  ELASTIC CONSTANTS (total) (GPa):
-          63.20236          14.24952          11.37814          -3.47802           0.89841          -3.74229
-          14.24952          41.00151           5.05150          -5.62004           0.53049           5.07389
-          11.37814           5.05150          11.49555           4.18494           0.13604          -0.21653
-          -3.47802          -5.62004           4.18494          12.04058          -0.29000          -2.08756
-           0.89841           0.53049           0.13604          -0.29000          16.69120          -2.60136
-          -3.74229           5.07389          -0.21653          -2.08756          -2.60136          26.41994
+          64.90247          12.31297          11.81982          -3.15456          -0.08723          -2.14213
+          12.31297          38.79039           6.17740          -4.93630           0.95638           2.66894
+          11.81982           6.17740          11.32566           3.54669           0.20792          -0.10547
+          -3.15456          -4.93630           3.54669          10.92349          -0.12773          -1.63811
+          -0.08723           0.95638           0.20792          -0.12773          16.41831          -2.97605
+          -2.14213           2.66894          -0.10547          -1.63811          -2.97605          24.20608
  
  ENERGIES (meV/atom):
                      rms          std          std(res)
-          input:    38.717746     7.040435     -
-   second order:    38.838862     7.678612     1.495287
+          input:    38.836739     6.471800     -
+   second order:    38.945944     7.097779     1.589800
  
  FORCES (eV/A):
                      rms          rms(res)     std(res)     R^2(res)     normalized std(res)
-          input:     1.068369     1.068369     0.616823     -            -
-   second order:     1.003176     0.367492     0.212172     0.881681     0.343975             <-- anharmonicity measure
+          input:     1.070338     1.070338     0.617960     -            -
+   second order:     1.002215     0.375750     0.216939     0.876759     0.351057             <-- anharmonicity measure
  
  BASELINE ENERGY (eV/atom):
-             U0:              -1853.106090
+             U0:              -1853.106187
  
  Since we have the first order, predict new reference positions.
  
- Done in 43.07159s
+ Done in 13.40818s

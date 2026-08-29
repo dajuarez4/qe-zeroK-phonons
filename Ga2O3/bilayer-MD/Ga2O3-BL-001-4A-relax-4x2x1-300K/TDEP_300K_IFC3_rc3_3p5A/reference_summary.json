@@ -1,0 +1,17 @@
+{
+  "n_unit_atoms": 10,
+  "n_supercell_atoms": 80,
+  "replication": [
+    4,
+    2,
+    1
+  ],
+  "reference_replication_max_error_fractional": 1.1102230246251565e-16,
+  "n_frames": 711,
+  "excluded_incomplete_position_blocks": 1,
+  "timestep_fs": 0.9676,
+  "trajectory_time_fs": 687.9636,
+  "mean_temperature_K": 295.90858754375546,
+  "latest_complete_temperature_K": 311.7172497,
+  "qe_job_completed": false
+}

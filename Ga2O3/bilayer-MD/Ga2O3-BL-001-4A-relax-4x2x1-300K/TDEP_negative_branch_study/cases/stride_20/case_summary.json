@@ -1,0 +1,21 @@
+{
+  "case": "stride_20",
+  "group": "stride",
+  "cutoff_A": 5.5,
+  "n_frames": 51,
+  "first_frame": 1,
+  "last_frame": 1001,
+  "sample_spacing_steps": 20,
+  "sample_span_fs": 967.6,
+  "mean_temperature_K": 294.8315136296078,
+  "temperature_std_K": 40.431207357079394,
+  "predicted_force_rms_eV_A": 0.977255,
+  "residual_force_rms_eV_A": 0.377725,
+  "residual_force_std_eV_A": 0.218079,
+  "force_fit_R2": 0.870023,
+  "anharmonicity_sigma_A": 0.360523,
+  "minimum_frequency_THz": -1.07488827692,
+  "minimum_q_index": 266,
+  "minimum_band_1based": 1,
+  "negative_values": 97
+}

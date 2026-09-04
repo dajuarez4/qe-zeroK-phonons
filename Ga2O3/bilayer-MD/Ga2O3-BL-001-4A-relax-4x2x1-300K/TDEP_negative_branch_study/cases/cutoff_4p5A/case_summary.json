@@ -1,0 +1,21 @@
+{
+  "case": "cutoff_4p5A",
+  "group": "cutoff",
+  "cutoff_A": 4.5,
+  "n_frames": 1017,
+  "first_frame": 1,
+  "last_frame": 1017,
+  "sample_spacing_steps": 1,
+  "sample_span_fs": 983.0816,
+  "mean_temperature_K": 294.22941160301866,
+  "temperature_std_K": 42.58123433157049,
+  "predicted_force_rms_eV_A": 0.982911,
+  "residual_force_rms_eV_A": 0.409633,
+  "residual_force_std_eV_A": 0.236502,
+  "force_fit_R2": 0.852018,
+  "anharmonicity_sigma_A": 0.384685,
+  "minimum_frequency_THz": -1.08220324374,
+  "minimum_q_index": 239,
+  "minimum_band_1based": 1,
+  "negative_values": 270
+}

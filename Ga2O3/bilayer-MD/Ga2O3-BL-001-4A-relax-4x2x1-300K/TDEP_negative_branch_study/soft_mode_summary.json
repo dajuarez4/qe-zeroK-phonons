@@ -1,0 +1,23 @@
+{
+  "frequency_THz": -1.0502530493418785,
+  "q_index_zero_based": 257,
+  "band_one_based": 1,
+  "q_path_coordinate": 0.4254335753258042,
+  "q_cartesian_reciprocal_Ainv_without_2pi": [
+    -0.0029883118513291673,
+    0.06912669264749842,
+    0.0
+  ],
+  "q_fractional": [
+    -3.765449330178141e-18,
+    0.3924050632911392,
+    0.0
+  ],
+  "dominant_atom_one_based": 6,
+  "dominant_species": "O",
+  "dominant_atom_site_projection": 0.9241779363667807,
+  "polarization_weight_x": 0.6588635384008658,
+  "polarization_weight_y": 0.104953126329888,
+  "polarization_weight_z": 0.23618333526924634,
+  "interpretation": "The mode is strongly localized on the dominant atom if its site projection is near one. Such localization is not a uniform bilayer sliding mode and should prompt inspection of that atom's local environment and reference forces."
+}

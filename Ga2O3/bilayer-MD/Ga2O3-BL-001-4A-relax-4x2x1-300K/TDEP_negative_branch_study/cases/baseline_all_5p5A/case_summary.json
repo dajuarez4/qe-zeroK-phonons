@@ -1,0 +1,21 @@
+{
+  "case": "baseline_all_5p5A",
+  "group": "baseline",
+  "cutoff_A": 5.5,
+  "n_frames": 1017,
+  "first_frame": 1,
+  "last_frame": 1017,
+  "sample_spacing_steps": 1,
+  "sample_span_fs": 983.0816,
+  "mean_temperature_K": 294.22941160301866,
+  "temperature_std_K": 42.58123433157049,
+  "predicted_force_rms_eV_A": 0.993553,
+  "residual_force_rms_eV_A": 0.383101,
+  "residual_force_std_eV_A": 0.221183,
+  "force_fit_R2": 0.870567,
+  "anharmonicity_sigma_A": 0.359769,
+  "minimum_frequency_THz": -1.05025304934,
+  "minimum_q_index": 257,
+  "minimum_band_1based": 1,
+  "negative_values": 97
+}

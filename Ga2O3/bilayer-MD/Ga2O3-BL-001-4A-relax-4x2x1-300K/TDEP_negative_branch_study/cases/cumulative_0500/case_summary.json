@@ -1,0 +1,21 @@
+{
+  "case": "cumulative_0500",
+  "group": "cumulative",
+  "cutoff_A": 5.5,
+  "n_frames": 500,
+  "first_frame": 1,
+  "last_frame": 500,
+  "sample_spacing_steps": 1,
+  "sample_span_fs": 482.8324,
+  "mean_temperature_K": 283.65179625258,
+  "temperature_std_K": 48.0888160823617,
+  "predicted_force_rms_eV_A": 0.990911,
+  "residual_force_rms_eV_A": 0.353402,
+  "residual_force_std_eV_A": 0.204036,
+  "force_fit_R2": 0.887158,
+  "anharmonicity_sigma_A": 0.335919,
+  "minimum_frequency_THz": -0.878387041255,
+  "minimum_q_index": 273,
+  "minimum_band_1based": 1,
+  "negative_values": 137
+}

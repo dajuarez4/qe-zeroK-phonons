@@ -64,6 +64,32 @@ required first stage before computing harmonic force constants.
    path supplied in the FDF (Gamma-A-Z-M-L-V-Gamma), total/projected DOS,
    0--1000 K harmonic thermal properties, and PNG/PDF plots.
 
+## Compressed simulation dataset
+
+Collect all 240 displacement inputs and every currently available QE output
+in a single NumPy archive:
+
+```bash
+/opt/anaconda3/bin/python compress_simulations_npz.py
+```
+
+This writes `Al69_0K_all_simulations.npz`. It contains fractional positions,
+cells, final energies, forces, stresses, completion/convergence flags, and file
+status for all simulations. Missing results are stored as `NaN`; rerun the
+command as more calculations finish. The original QE input/output files are
+not changed.
+
+Load it without Python object deserialization:
+
+```python
+import numpy as np
+
+with np.load("Al69_0K_all_simulations.npz", allow_pickle=False) as data:
+    completed = data["job_done"]
+    energies_ev = data["energy_ev"][completed]
+    forces_ev_angstrom = data["forces_ev_angstrom"][completed]
+```
+
 ## Important limitations
 
 - The ordered 40-atom model represents one atomic arrangement at 68.75% Al;

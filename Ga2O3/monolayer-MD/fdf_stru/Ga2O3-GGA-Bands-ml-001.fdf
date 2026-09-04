@@ -1,0 +1,91 @@
+#---------------------------------------------
+#    2D Ga2O3
+#    G. J. Gonzalez-Loera
+#    2026, June
+#    This is the band structure calculation of Ga2O3 Sist 1
+#--------------------------------------------
+
+SystemName       Ga2O3 monolayer
+SystemLabel      Ga2O3-GGA-Bands
+
+NumberOfAtoms    5
+NumberOfSpecies  2
+%block ChemicalSpeciesLabel
+    1    8     O-gga
+    2    31    Ga-gga-3d
+%endblock ChemicalSpeciesLabel
+
+#--------------------------------------------
+#  Relaxed Structure (from STRUCT_OUT)
+#--------------------------------------------
+LatticeConstant 1.0 Ang
+%block LatticeVectors
+      3.246626537       0.140350018       0.000000000
+      1.253133791       5.730779279       0.000000000
+      0.000000000       0.000000000      22.000000000
+%endblock LatticeVectors
+
+AtomicCoordinatesFormat Fractional
+%block AtomicCoordinatesAndAtomicSpecies
+  0.828286209  0.719307091  0.499175586   2
+  0.518929636  0.302601192  0.463637994   2
+  0.387762194  0.563207436  0.531253441   1
+  0.425735158  0.005207577  0.481134837   1
+  0.938462357  0.455812262  0.431672766   1
+%endblock AtomicCoordinatesAndAtomicSpecies
+
+%block GeometryConstraints
+ cell-vector c
+%endblock GeometryConstraints
+
+#-----------------------------------------------------------
+#  DFT  Control
+#-----------------------------------------------------------
+PAO.BasisSize      DZP
+PAO.SplitNorm      0.15
+PAO.EnergyShift    0.075 eV
+XC.Functional      GGA
+XC.Authors         PBE
+MaxSCFIterations   150
+MeshCutoff         500 Ry
+DM.Tolerance       1.00E-5
+DM.MixingWeight    0.2
+DM.UseSaveDM       .False.
+SolutionMethod     diagon
+
+#-----------------------------------------------------------
+#  K-sampling over the Brillouin zone (SCF)
+#-----------------------------------------------------------
+%block kgrid_Monkhorst_Pack
+24      0       0       0.0
+0       14      0       0.0
+0       0       1       0.0
+%endblock kgrid_Monkhorst_Pack
+
+#-----------------------------------------------------------
+#  Bands
+#-----------------------------------------------------------
+BandLinesScale ReciprocalLatticeVectors
+%block BandLines
+1                0.00000             0.00000             0.0     \Gamma
+100              0.50000             0.00000             0.0     X
+100              0.50000             0.50000             0.0     R
+100              0.00000             0.50000             0.0     Y
+100              0.00000             0.00000             0.0     \Gamma
+%endblock BandLines
+
+#-----------------------------------------------------------
+#  K-sampling over the Brillouin zone (PDOS)
+#-----------------------------------------------------------
+%block PDOS.kgrid_Monkhorst_Pack
+60              0             0       0.0
+0               35            0       0.0
+0               0             1       0.0
+%endblock PDOS.kgrid_Monkhorst_Pack
+
+#-----------------------------------------------------------
+#  Projected Density of states
+#-----------------------------------------------------------
+%block ProjectedDensityOfStates
+-10.0   10.000   0.05    1000 eV
+%endblock ProjectedDensityOfStates
